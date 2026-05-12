@@ -1,0 +1,52 @@
+{
+
+    "run":[
+
+        "deck",
+        "stake",
+        "date",
+        "seed",
+        "state",
+        "ante",
+        "round",
+        "money"
+
+    ],
+
+    "stats": [
+
+        "highestScore"
+
+    ],
+
+    "shop": [
+
+        "isBuyingPack",
+        "shopState"
+
+    ],
+
+    "gameState": [
+
+        "skipTags",
+        "blindState",
+        "currentScore",
+        "alreadyPlayedCards",
+        "handCards",
+        "currentHands",
+        "currentDiscards"
+
+    ],
+
+    "inventory": [
+
+        "pokerLevels",
+        "jokers",
+        "vouchers",
+        "consumables"
+
+    ],
+    
+    "deckState": "deckState"
+
+}

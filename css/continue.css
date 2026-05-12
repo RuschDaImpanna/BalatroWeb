@@ -1,0 +1,292 @@
+#nothing {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    height: 80%;
+
+    h2 {
+
+        font-size: 2.5em;
+
+    }
+
+    button {
+
+        margin: 5px;
+        border-radius: 15px;
+        background-color: #DF2525;
+        color: white;
+
+        cursor: pointer;
+        font-size: 1.5em;
+        border: none;
+        box-shadow: 5px 5px 0 black;
+
+        height: 3em;
+        width: 50%;
+
+    }
+
+    button:active {
+
+        background-color: #971010;
+        transform: translate(5px, 5px);
+        box-shadow: 2px 2px 0 black;
+
+    }
+
+}
+
+#continueWrap {
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    .infoTinyWrap {
+
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        transform: translate(-50%, -40%);
+        left: 50%;
+
+        text-align: center;
+
+        width: 125px;
+        height: 85px;
+
+        background-color: #141F20;
+        border-radius: 10px;
+
+        display: grid;
+        grid-template-rows: 0.5fr 2fr;
+
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        h6 {
+
+            margin: 5px 0;
+            color: white;
+
+            font-size: 1.2em;
+
+        }
+
+        p {
+
+            margin: 7px;
+            padding-top: 2px;
+
+            background-color: white;
+            color: #141F20;
+
+            border-radius: 5px;
+
+            font-size: 0.8em;
+
+        }
+
+    }
+
+    #currentDeckImg {
+
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+
+        width: 80%;
+        height: 80%;
+
+    }
+
+    #currentDeckImg:hover #deckTinyInfo {
+
+        transform: translate(-50%, -50%);
+        opacity: 1;
+
+        visibility: visible;
+
+        transition-delay: 0.3s;
+
+    }
+
+    #continueInfo {
+
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+
+        width: 80%;
+        height: 80%;
+
+        display: grid;
+        grid-template-rows: 1fr 3fr 1fr;
+        gap: 10px;
+
+        background-color: #141F20;
+        border-radius: 10px;
+
+        h2, h3, h4, h6:not(.infoTinyWrap), p:not(.infoTinyWrap) {
+
+            margin: 0;
+
+        }
+
+        .titles{
+
+            text-align: center;
+            color: white;
+
+            #continueDeck {
+
+                margin-top: 10px;
+
+            }
+
+        }
+
+        #infoContWrap {
+
+            margin: 0 20px;
+            padding: 10px;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            .infoTinyWrap {
+
+                transform: translate(-60%, -50%);
+
+                p {
+
+                    margin: 5px;
+
+                }
+
+            }
+
+            #stakeContWrap, #bestContWrap {
+
+                cursor: help;
+
+            }
+
+            #stakeContWrap:hover #stakeTinyInfo{
+
+                transform: translate(-50%, -50%);
+                opacity: 1;
+
+                visibility: visible;
+
+                transition-delay: 0.3s;
+
+            }
+
+            #bestTinyInfo {
+
+                grid-template-rows: repeat(2, 1fr);
+                width: 200px;
+                left: 65%;
+
+                h6 {
+
+                    margin-top: 15px;
+                    font-size: 1em;
+
+                }
+
+                #scoreWrap {
+
+                    display: grid;
+                    grid-template-columns: 2fr 0.5fr 2fr;
+
+                }
+
+                p {
+
+                    color: white;
+                    background-color: transparent;
+
+                }
+
+                #bestContChips {
+
+                    position: relative;
+                    background-color: #1199F0;
+                    margin: 5px;
+                    border-radius: 5px;
+
+                }
+
+                #bestContMult {
+
+                    position: relative;
+                    background-color: #DF2525;
+                    margin: 5px;
+                    border-radius: 5px;
+
+                }
+
+                p:nth-child(2) {
+                    
+                    font-size: 1.5em;
+
+                }
+
+            }
+
+            #bestContWrap:hover #bestTinyInfo{
+
+                transform: translate(-50%, -50%);
+                opacity: 1;
+
+                visibility: visible;
+
+                transition-delay: 0.3s;
+
+            }
+
+        }
+
+        #continuePlay {
+
+            height: 70%;
+
+            border-radius: 15px;
+            background-color: #1199F0;
+            color: white;
+            border: none;
+            box-shadow: 5px 5px 0 black;
+
+            text-align: center;
+
+            margin: 0 18px;
+            margin-right: 23px;
+
+        }
+        #continuePlay:active:not(:disabled) {
+
+            transform: translate(5px, 5px);
+            box-shadow: 2px 2px 0 black;
+
+        }
+
+    }
+
+    
+
+}

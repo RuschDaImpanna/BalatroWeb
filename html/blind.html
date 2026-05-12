@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Rusch Da Impanna">
+
+        <meta name="description" content="Balatro blind play">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>##BLIND## - Balatro Web Port</title>
+
+        <link rel="stylesheet" href="../css/blind.css">
+        <link rel="stylesheet" href="../css/info.css">
+        <link rel="stylesheet" href="../css/objects.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+
+    </head>
+    <body>
+
+        <div id="deck">
+
+            <img src="" alt="deck" id="deckImg">
+
+            <h4>Check deck</h4>
+
+        </div>
+
+        <article class="info">
+
+            <div id="blind">
+
+                <h3 id="blindTxt">##BLIND##</h3>
+                <p id="blindCond">##BLINDCONDITION##</p>
+                <div id="blindInfo">
+
+                    <img src="" alt="Boss Blind Img">
+                    <div id="infoWrap">
+
+                        <div id="scoreWrap">
+
+                            <h6>Score at least</h6>
+                            <h3 id="minScore">##MINSCORE##</h3>
+
+                        </div>
+                        <div id="rewardWrap">
+
+                            <h6>Reward</h6>
+                            <h6 id="reward">##REWARD##</h6>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="tagsWrap">
+
+                <div id="tagsTxt"> 
+
+                    <h6>Tags</h6>
+
+                </div>
+
+                <div id="tags">
+
+
+                </div>
+
+            </div>
+
+            <div id="playerScore">
+
+                <h3>Your Score</h3>
+                <h3 id="currentScore">##SCORE##</h3>
+
+            </div>
+
+            <div id="calculateWrap">
+
+                <h3 id="handType">##HANDTYPE##</h3>
+
+                <div id="calculate">
+
+                    <div id="chipsWrap"> <h4 id="chips">##CHIPS##</h4> </div>
+                    <div id="symbolWrap"> <h4>×</h4> </div>
+                    <div id="multWrap"> <h4 id="mult">##MULT##</h4> </div>
+
+                </div>
+
+            </div>
+
+            <div id="bottomInfo">
+
+                <div id="buttons">
+
+                    <button type="button" id="runInfo">Run Info</button>
+                    <button type="button" id="options">Options</button>
+
+                </div>
+
+                <div id="misc">
+
+                    <div id="dollarsWrap"> <h3 id="dollars">##DOLLARS##</h3> </div>
+
+                    <div id="roundWrap">
+
+                        <div>
+
+                            <h6>Ante</h6>
+                            <h4 id="ante">##ANTE##</h4>
+
+                        </div>
+
+                        <div>
+
+                            <h6>Round</h6>
+                            <h4 id="round">##ROUND##</h4>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="play">
+
+            <div class="objects">
+
+                <div class="jokers"></div>
+                <div class="consumables"></div>
+
+            </div>
+
+            <div class="onPlay"></div>
+
+            <div class="inHand"></div>
+            <div class="action">
+
+                <div>
+
+                    <button type="button" id="play">Play</button>
+                    <div>
+
+                        <img src="" alt="Hands">
+
+                        <p id="handsCount">##HANDS##</p>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <button type="button" id="rank">Rank</button>
+                    <button type="button" id="suit">Suit</button>
+
+                </div>
+
+                <div>
+
+                    <div>
+
+                        <p id="discardCount">##DISCARDS##</p>
+
+                        <img src="" alt="Discards">
+
+                    </div>
+                    <button type="button" id="discard">Discard</button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="deck">
+
+            <div></div>
+
+        </article>
+        
+    </body>
+
+    <script type="module" src="../js/infoTabs.js"></script>
+    <script src="../js/blind.js"></script>
+
+</html>

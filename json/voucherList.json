@@ -1,0 +1,420 @@
+[
+
+    {
+        
+        "id": 0,
+        "vouchers": [
+
+            { 
+
+                "name": "Overstock",
+                "description": "+1 card slot available in shop",
+                "property": "shopSize",
+                "value": 1
+
+            },
+            { 
+                
+                "name": "Overstock Plus",
+                "description": "+1 card slot available in shop",
+                "property": "shopSize",
+                "value": 2
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 1,
+        "vouchers": [
+
+            { 
+
+                "name": "Clearance Sale",
+                "description": "All cards and packs in shop are 25% off",
+                "property": "cardPrice",
+                "value": 0.75
+
+            },
+            { 
+                
+                "name": "Liquidation",
+                "description": "All cards and packs in shop are 50% off",
+                "property": "cardPrice",
+                "value": 0.5
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 2,
+        "vouchers": [
+
+            { 
+
+                "name": "Hone",
+                "description": "Foil, Holographic, and Polychrome cards appear 2× more often",
+                "property": "editionWeight",
+                "value": 3
+
+            },
+            { 
+                
+                "name": "Glow Up",
+                "description": "Foil, Holographic, and Polychrome cards appear 4× more often",
+                "property": "editionWeight",
+                "value": 7
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 3,
+        "vouchers": [
+
+            { 
+
+                "name": "Reroll Surplus",
+                "description": "Rerolls cost $2 less",
+                "property": "rerollPrice",
+                "value": -2
+
+            },
+            { 
+                
+                "name": "Reroll Glut",
+                "description": "Rerolls cost $2 less",
+                "property": "rerollPrice",
+                "value": -4
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 4,
+        "vouchers": [
+
+            { 
+
+                "name": "Crystal Ball",
+                "description": "+1 Consumable Slot",
+                "property": "consumableSize",
+                "value": 1
+
+            },
+            { 
+                
+                "name": "Omen Globe",
+                "description": "Rerolls cost $2 less",
+                "property": ["consumableSize", "spectralArcanaChance"],
+                "value": [1, 0.2]
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 5,
+        "vouchers": [
+
+            { 
+
+                "name": "Telescope",
+                "description": "Celestial Packs always contain the Planet card for your most played poker hand",
+                "property": "favPlanet",
+                "value": true
+
+            },
+            { 
+                
+                "name": "Observatory",
+                "description": "Planet cards in your consumable area give ×1.5 Mult for their specified poker hand",
+                "property": ["favPlanet", "heldPlanetMult"],
+                "value": [true, true]
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 6,
+        "vouchers": [
+
+            { 
+
+                "name": "Grabber",
+                "description": "Permanently gain +1 hand per round",
+                "property": "handCount",
+                "value": 1
+
+            },
+            { 
+                
+                "name": "Nacho Tong",
+                "description": "Permanently gain +1 hand per round",
+                "property": "handCount",
+                "value": 2
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 7,
+        "vouchers": [
+
+            { 
+
+                "name": "Wasteful",
+                "description": "Permanently gain +1 discard each round",
+                "property": "discardCount",
+                "value": 1
+
+            },
+            { 
+                
+                "name": "Recyclomancy",
+                "description": "Permanently gain +1 discard each round",
+                "property": "discardCount",
+                "value": 2
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 8,
+        "vouchers": [
+
+            { 
+
+                "name": "Tarot Merchant",
+                "description": "Tarot cards appear 2× more frequently in the shop",
+                "property": "tarotWeight",
+                "value": 8
+
+            },
+            { 
+                
+                "name": "Tarot Tycoon",
+                "description": "Tarot cards appear 4× more frequently in the shop",
+                "property": "tarotWeight",
+                "value": 32
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 9,
+        "vouchers": [
+
+            { 
+
+                "name": "Planet Merchant",
+                "description": "Planet cards appear 2× more frequently in the shop",
+                "property": "planetWeight",
+                "value": 8
+
+            },
+            { 
+                
+                "name": "Planet Tycoon",
+                "description": "Planet cards appear 4× more frequently in the shop",
+                "property": "planetWeight",
+                "value": 32
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 10,
+        "vouchers": [
+
+            { 
+
+                "name": "Seed Money",
+                "description": "Raise the cap on interest earned in each round to $10",
+                "property": "interestCap",
+                "value": 10
+
+            },
+            { 
+                
+                "name": "Money Tree",
+                "description": "Raise the cap on interest earned in each round to $20",
+                "property": "interestCap",
+                "value": 20
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 11,
+        "vouchers": [
+
+            { 
+
+                "name": "Blank",
+                "description": "Does Nothing?",
+                "property": "jokerSize",
+                "value": 0
+
+            },
+            { 
+                
+                "name": "Antimatter",
+                "description": "+1 Joker slot",
+                "property": "jokerSize",
+                "value": 1
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 12,
+        "vouchers": [
+
+            { 
+
+                "name": "Magic Trick",
+                "description": "Playing cards can be purchased from the shop",
+                "property": "cardsWeight",
+                "value": 4
+
+            },
+            { 
+                
+                "name": "Illusion",
+                "description": "Playing cards in shop may have an Enhancement, Edition, and/or a Seal",
+                "property": ["cardsWeight", "cardsPowered"],
+                "value": [4, true]
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 13,
+        "vouchers": [
+
+            { 
+
+                "name": "Hieroglyph",
+                "description": "-1 Ante, -1 hand each round",
+                "property": ["ante", "handCount"],
+                "value": [-1, -1]
+
+            },
+            { 
+                
+                "name": "Petroglyph",
+                "description": "-1 Ante again, -1 discard each round",
+                "property": ["ante", "handCount", "discardCount"],
+                "value": [-2, -1, -1]
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 14,
+        "vouchers": [
+
+            { 
+
+                "name": "Director's Cut",
+                "description": "Reroll Boss Blind 1 time per Ante, $10 per roll",
+                "property": ["canReroll", "isInfiniteReroll"],
+                "value": [true, false]
+
+            },
+            { 
+                
+                "name": "Retcon",
+                "description": "Reroll Boss Blind unlimited times, $10 per roll",
+                "property": ["canReroll", "isInfiniteReroll"],
+                "value": [true, true]
+            
+            }
+
+        ],
+        "phase": 0
+
+    },
+    {
+        
+        "id": 15,
+        "vouchers": [
+
+            { 
+
+                "name": "Paint Brush",
+                "description": "+1 hand size",
+                "property": "handSize",
+                "value": 1
+
+            },
+            { 
+                
+                "name": "Pallete",
+                "description": "+1 hand size",
+                "property": "handSize",
+                "value": 2
+            
+            }
+
+        ],
+        "phase": 0
+
+    }
+
+]

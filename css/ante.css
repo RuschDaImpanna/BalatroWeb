@@ -1,0 +1,244 @@
+.play {
+
+    position: absolute;
+    right: 0;
+
+    width: 80%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 70%;
+
+    gap: 5%;
+
+}
+
+.objects {
+
+    right: 0;
+
+}
+
+
+.blinds {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    padding: 0 15%;
+    
+}
+
+.blind {
+
+    position: relative;
+
+    display: grid;
+    grid-template-rows: 60% 7% 30%;
+
+    background-color: #2D383A;
+    padding: 20px;
+
+    height: 100%;
+
+    border: 5px solid;
+    border-radius: 15px 15px 0 0;
+
+    h2, h3, h4, p, button {
+
+        text-align: center;
+        margin: 5px;
+
+        color: white;
+
+    }
+
+    .scoreTxt {
+
+        color: #DF2525;
+
+    }
+
+    .rewardTxt, #anteUp {
+
+        color: #F3AD16;
+
+    }
+
+    .skipMark {
+
+        position: absolute;
+        transform: rotate(-45deg) translate(-50%, -50%);
+        left: 50%;
+        top: 6.25%;
+
+        font-size: 5em;
+
+        z-index: 1;
+
+        color: white;
+
+    }
+
+    .noSkip {
+
+        display: none;
+
+    }
+
+    .blindSelInfo {
+
+        display: grid;
+        grid-template-rows: 1fr 1.5fr 3fr 1fr 4fr;
+        gap: 2px;
+
+        background-color: #3C565E;
+        border-radius: 15px;
+
+        button {
+
+            margin-right: 10px;
+            border-radius: 10px;
+
+            background-color: #F3AD16;
+
+        }
+        button:active {
+
+            background-color: #EC7717;
+            
+        }
+        button:disabled {
+
+            margin-right: 5px;
+            background-color: #8F775D;
+
+            border: none;
+
+        }
+
+        img {
+
+            margin: 0 25%;
+
+        }
+
+        .title {
+
+            border-radius: 15px;
+
+            padding: 5px;
+
+        }
+    
+
+        .scoreInfo {
+
+            display: grid;
+            grid-template-rows: 30% 40% 30%;
+
+            padding: 10px;
+            margin: 5px;
+
+            background-color: #1E2729;
+            border-radius: 15px;
+
+            div {
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+    }
+
+    .tagSelInfo {
+
+        height: 30%;
+
+        display: grid;
+        grid-template-columns: 35% 65%;
+
+        button {
+
+            margin: 5px;
+            border-radius: 10px;
+
+            background-color: #DF2525;
+
+        }
+        button:active {
+
+            background-color: #971010;
+
+        }
+        button:disabled {
+
+            background-color: #853535;
+
+            border: none
+
+        }
+
+    }
+
+    .anteInfo {
+
+        position: relative;
+
+        top: -10%;
+
+        height: 60%;
+
+        background-color: #3c565e;
+        border-radius: 15px;
+
+
+    }
+
+}
+
+.current {
+
+    bottom: 15px;
+
+}
+
+#small {
+
+    border-color: #126698;
+
+    .title {
+
+        background-color: #126698;
+
+    }
+
+}
+#big {
+
+    border-color: #F3AD16;
+
+    .title {
+
+        background-color: #F3AD16;
+
+    }
+
+}
+
+.normal:has(.skipMark.noSkip) > div {
+
+    opacity: 1;
+
+}
+
+.normal:not(:has(.skipMark.noSkip)) > div {
+
+    opacity: 0.5;
+
+}

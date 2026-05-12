@@ -1,0 +1,45 @@
+[{
+    
+    "small" : 1,
+    "big": 1.5,
+
+    "hook": 2,
+    "club": 2,
+    "goad": 2,
+    "window": 2,
+    "head": 2,
+    "psychic": 2,
+    "manacle": 2,
+    "pillar": 2,
+
+    "house": 2,
+    "wall": 4,
+    "wheel": 2,
+    "arm": 2,
+    "fish": 2,
+    "water": 2,
+    "mouth": 2,
+    "needle": 1,
+    "flint": 2,
+    "mark": 2,
+
+    "eye": 2,
+    "tooth": 2,
+
+    "plant": 2,
+
+    "serpent": 2,
+    
+    "ox": 2
+
+} ,
+
+{
+
+    "acorn": 2,
+    "leaf": 2,
+    "vessel": 6,
+    "heart": 2,
+    "bell": 2
+
+}]

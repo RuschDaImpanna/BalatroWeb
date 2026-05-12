@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Rusch Da Impanna">
+
+        <meta name="description" content="Balatro blind selection">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Ante ##ANTE## - Balatro Web Port</title>
+
+        <link rel="stylesheet" href="../css/info.css">
+        <link rel="stylesheet" href="../css/ante.css">
+        <link rel="stylesheet" href="../css/objects.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div id="deck">
+
+            <img src="" alt="deck" id="deckImg">
+
+            <h4>Check deck</h4>
+
+        </div>
+
+        <article class="info">
+
+            <div id="blind">
+
+                <h3 id="blindTxt">Choose your</h3>
+                <p id="blindCond">Next Blind</p>
+                <button type="button" id="rerollBlind" disabled >Reroll Blind $10</button>
+
+            </div>
+
+            <div id="tagsWrap">
+
+                <div id="tagsTxt"> 
+
+                    <h6>Tags</h6>
+
+                </div>
+
+                <div id="tags">
+
+
+                </div>
+
+            </div>
+
+            <div id="playerScore">
+
+                <h3>Your Score</h3>
+                <h3 id="currentScore">##SCORE##</h3>
+
+            </div>
+
+            <div id="calculateWrap">
+
+                <h3 id="handType">##HANDTYPE##</h3>
+
+                <div id="calculate">
+
+                    <div id="chipsWrap"> <h4 id="chips">##CHIPS##</h4> </div>
+                    <div id="symbolWrap"> <h4>×</h4> </div>
+                    <div id="multWrap"> <h4 id="mult">##MULT##</h4> </div>
+
+                </div>
+
+            </div>
+
+            <div id="bottomInfo">
+
+                <div id="buttons">
+
+                    <button type="button" id="runInfo">Run Info</button>
+                    <button type="button" id="options">Options</button>
+
+                </div>
+                
+                <div id="misc">
+
+                    <div id="dollarsWrap"> <h3 id="dollars">##DOLLARS##</h3> </div>
+
+                    <div id="roundWrap">
+
+                        <div>
+
+                            <h6>Ante</h6>
+                            <h4 id="ante">##ANTE##</h4>
+
+                        </div>
+
+                        <div>
+
+                            <h6>Round</h6>
+                            <h4 id="round">##ROUND##</h4>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="play">
+
+            <div class="objects">
+
+                <div class="jokers"></div>
+                <div class="consumables"></div>
+
+            </div>
+
+            <div class="blinds">
+
+                <div class="blind normal current" id="small">
+
+                    <h1 class="skipMark noSkip">SKIPPED</h1>
+
+                    <div class="blindSelInfo">
+
+                        <button type="button" class="blindBtn" id="smallSelect">Select</button>
+
+                        <h2 class="title">Small Blind</h2>
+
+                        <img src="" alt="Small Blind">
+
+                        <br>
+                        
+                        <div class="scoreInfo">
+
+                            <h3>Score at least</h3>
+                            <h2 class="scoreTxt" id="smallScore">##SCORE##</h2>
+                            <div>
+
+                                <h4>Reward:</h4>
+                                <h4 class="rewardTxt">$$$</h4>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h4>or</h4>
+                    
+                    <div class="tagSelInfo">
+                        
+                        <div class="skipWrap">
+
+                            <img src="" alt="SkipTag" class="skipTag">
+
+                            <div class="infoWrap">
+
+                                <h6 id="tagSmallTitle">##TAGTITLE##</h6>
+                                <p id="tagSmallInfo">##TAGINFO##</p>
+
+                            </div>
+
+                        </div>
+                        <button type="button" class="tagBtn" id="smallTagSelect">Skip</button>
+
+                    </div>
+
+                </div>
+
+                <div class="blind normal" class="blindBtn" id="big">
+
+                    <h1 class="skipMark noSkip">SKIPPED</h1>
+
+                    <div class="blindSelInfo">
+
+                        <button type="button" id="bigSelect" disabled>Select</button>
+
+                        <h2 class="title">Big Blind</h2>
+
+                        <img src="" alt="Big Blind">
+
+                        <br>
+
+                        <div class="scoreInfo">
+
+                            <h3>Score at least</h3>
+                            <h2 class="scoreTxt" id="bigScore">##SCORE##</h2>
+
+                            <div>
+
+                                <h4>Reward:</h4>
+                                <h4 class="rewardTxt">$$$$</h4>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h4>or</h4>
+
+                    <div class="tagSelInfo">
+
+                        <div class="skipWrap">
+
+                            <img src="" alt="SkipTag" class="skipTag">
+
+                            <div class="infoWrap">
+
+                                <h6 id="tagBigTitle">##TAGTITLE##</h6>
+                                <p id="tagBigInfo">##TAGINFO##</p>
+
+                            </div>
+
+                        </div>
+                        <button type="button" class="tagBtn" id="bigTagSelect" disabled>Skip</button>
+
+                    </div>
+
+                    
+                </div>
+
+                <div class="blind" id="boss">
+
+                    <div class="blindSelInfo">
+
+                        <button type="button" class="blindBtn" id="bossSelect" disabled>Select</button>
+
+                        <h2 class="title" id="bossTitle">##BOSSBLIND##</h2>
+
+                        <img src="" alt="Boss Blind" id="bossBlindImg">
+
+                        <p id="bossCondition">##BOSSCONDITION##</p>
+
+                        <div class="scoreInfo">
+
+                            <h3>Score at least</h3>
+                            <h2 class="scoreTxt" id="bossScore">##SCORE##</h2>
+                            
+                            <div>
+
+                                <h4>Reward:</h4>
+                                <h4 class="rewardTxt" id="bossReward">##BOSSREWARD##</h4>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <br>
+                
+                    <div class="anteInfo">
+
+                        <h3 id="anteUp">Up the Ante</h3>
+                        <p>Raise all Blinds</p>
+                        <p>Refresh Blinds</p>
+
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+
+        </article>
+
+        
+        
+    </body>
+
+    <script src="../js/infoTabs.js"></script>
+
+</html>

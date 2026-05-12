@@ -1,0 +1,33 @@
+.objects {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    margin: 10px;
+
+}
+
+.jokers, .consumables {
+
+    background-color: rgba(0, 0, 0, 0.145);
+    border-radius: 15px 15px 15px 0;
+
+}
+
+.jokers::after, .consumables::after {
+
+    content: '';
+    display: block;
+
+    position: relative;
+
+    width: 20%;
+    height: 15%;
+
+    background-color: rgba(0, 0, 0, 0.145);
+
+    top: 100%;
+    border-radius: 0 0 15px 15px;
+
+}
