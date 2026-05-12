@@ -1398,14 +1398,10 @@ function placeHandCardsInfo (container, id) {
             //Check if straight
             if (!getHandCondition(4).check(charge, 0)) {
 
-                charge.forEach((v, i) => {
+                const numbers = charge.map(c => Number(c.slice(1)))
+                const target = numbers.includes(1) ? 1:Math.max(...numbers)
 
-                    const number = charge.map(c => Number(c.slice(1)))
-                    const getCond = Math.max(...number) == number[i]
-
-                    select.push(getCond)
-                    
-                });
+                select.push(...numbers.map(n => n === target))
 
                 generateCards(charge, select)
 
@@ -1571,8 +1567,8 @@ function placeHandCardsInfo (container, id) {
             //Check selected
             charge.forEach(card => select.push(isNaN(card)));
 
-            const empty = charge.findIndex(e => !isNaN(e))
-            charge[empty] = template[Math.floor(Math.random()*52)][1]
+            //Find empty and fill with random cards
+            fillEmpty(charge)
 
             generateCards(charge, select)
 
@@ -1820,7 +1816,7 @@ function placeHandCardsInfo (container, id) {
             }
 
                 const bgImg = document.createElement('img')
-                bgImg.src = `../cards/playCards/cards__b0.png`
+                bgImg.src = `../cards/playCards/cards__e0.png`
 
                 bgImg.style.position = 'absolute'
                 bgImg.style.left = 0
