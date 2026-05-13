@@ -13,11 +13,15 @@ body {
     font-family: 'Balatro Font', sans-serif;
     letter-spacing: 1px;
 
-    height: 100vh;
-    position: relative;
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
 
     margin: 0;
     padding: 0;
+
+    overflow: hidden;
 
     button, input, img {
 
@@ -52,14 +56,8 @@ body {
 
 .selectRun {
 
-    position: relative;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-
-    width: 70%;
-    height: 80%;
-    min-height: 70%;
+    width: min(1000px, 90vw);
+    height: min(500px, 90vh);
 
     background-color: #3C565E;
 
@@ -68,7 +66,7 @@ body {
 
     display: grid;
     grid-template-rows: auto auto 1fr;
-    gap: 10px;
+    gap: 20px;
 
     h1 {
 
@@ -85,10 +83,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
 
-        width: 100%;
-        height: 100%;
+        min-height: 0;
     
-
+        box-sizing: border-box;
+        padding: 0 5% 20px;
     }
 
     #buttonsWrap {
@@ -137,20 +135,15 @@ body {
 #decksWrap,  #stakesWrap, .settings, .run {
 
     position: relative;
-    width: 100%;
-    height: 100%;
+    min-height: 0;
+    min-width: 0;
 
 }
 
 .decks, .stakes {
 
-    position: relative;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
 
     background-color: #141F20;
     border-radius: 10px;
@@ -163,12 +156,12 @@ body {
 
     display: grid;
     place-items: center;
-    grid-auto-columns: calc(100% - 20px);
+    grid-auto-columns: 100%;
     grid-auto-flow: column;
     gap: 20px;
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 
     .deck{
 
@@ -176,19 +169,19 @@ body {
 
         position: relative;
         
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
 
         overflow: hidden;
         box-sizing: border-box;
         
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50%);
+        gap: 10px;
+
+        place-items: center;
 
         img {
-
-            width: 80%;
-            height: auto;
 
             display: block;
             object-fit: contain;
@@ -197,10 +190,18 @@ body {
 
         }
 
+        .deckImg {
+
+            height: 100%;
+
+        }
+    
         .infoWrapper {
 
-            width: 100%;
+            width: 80%;
             height: 100%;
+
+            margin-bottom: 10px;
 
             text-align: center;
 
@@ -226,6 +227,12 @@ body {
 
                 background-color: white;
                 border-radius: 10px;
+
+                p {
+
+                    padding: 0 10px;
+
+                }
 
             }
 
@@ -260,7 +267,7 @@ body {
     height: 100%;
 
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1.5fr 1fr;
     gap: 10px;
 
 
@@ -282,10 +289,9 @@ body {
             grid-template-columns: 1fr 2fr;
             gap: 5px;
 
-            img {
+            place-items: center;
 
-                height: 80%;
-                width: auto;
+            img {
 
                 display: block;
                 object-fit: contain;
@@ -294,10 +300,17 @@ body {
 
             }
 
+            .chipImg {
+
+                width: 60%;
+
+            }
+
+
             .infoWrapper {
 
                 width: 100%;
-                height: 100%;
+                height: 80%;
 
                 text-align: center;
 
@@ -306,6 +319,8 @@ body {
 
                 background-color: #3C565E;
                 border-radius: 15px;
+
+                margin-bottom: 10px;
 
                 h2 {
                     
@@ -326,8 +341,7 @@ body {
 
                     p {
 
-                        margin: 0 5px;
-                        margin-top: 10px;
+                        margin: 10px 5px;
 
                     }
 
@@ -349,11 +363,10 @@ body {
 
         #runSeed {
 
-            width: 90%;
-            height: 85%;
+            width: 100%;
+            height: 100%;
 
             padding: 10px;
-            margin: 0 calc(10% / 2) 0 calc((10% / 2) - 10px);
 
             border-radius: 15px;
             box-sizing: border-box;

@@ -54,21 +54,21 @@ const stakeList = {
 
 decks.addEventListener('scroll', () => {
 
-    deckPos = updateByScroll(decks, deckPos)
+    deckPos = updateByScroll(decks)
 
     enableButtons (deckPos, decks, deckR, deckL)
 
 })
 deckL.addEventListener('click', () => {
 
-    moveLeft (deckPos, decks)
+    deckPos = moveLeft (deckPos, decks)
 
     enableButtons (deckPos, decks, deckR, deckL)
 
 })
 deckR.addEventListener('click', () => {
 
-    moveRight (deckPos, decks)
+    deckPos = moveRight (deckPos, decks)
 
     enableButtons (deckPos, decks, deckR, deckL)
 
@@ -77,21 +77,21 @@ deckR.addEventListener('click', () => {
 
 stakes.addEventListener('scroll', () => {
 
-    stakePos = updateByScroll(stakes, stakePos)
+    stakePos = updateByScroll(stakes)
 
     enableButtons (stakePos, stakes, stakeR, stakeL)
 
 })
 stakeL.addEventListener('click', () => {
 
-    moveLeft (stakePos, stakes)
+    stakePos = moveLeft (stakePos, stakes)
 
     enableButtons (stakePos, stakes, stakeR, stakeL)
 
 })
 stakeR.addEventListener('click', () => {
 
-    moveRight (stakePos, stakes)
+    stakePos = moveRight (stakePos, stakes)
 
     enableButtons (stakePos, stakes, stakeR, stakeL)
 
@@ -151,28 +151,28 @@ document.addEventListener('keydown', (event) => {
 
         if (keyName === 'ArrowLeft' || keyName.toLowerCase() === 'a') {
 
-            moveLeft (deckPos, decks)
+            deckPos = moveLeft (deckPos, decks)
 
             enableButtons (deckPos, decks, deckR, deckL)
 
         }
         if (keyName === 'ArrowRight' || keyName.toLowerCase() === 'd') {
 
-            moveRight (deckPos, decks)
+            deckPos = moveRight (deckPos, decks)
 
             enableButtons (deckPos, decks, deckR, deckL)
 
         }
         if (keyName === 'ArrowUp' || keyName.toLowerCase() === 'w') {
 
-            moveRight (stakePos, stakes)
+            stakePos = moveRight (stakePos, stakes)
 
             enableButtons (stakePos, stakes, stakeR, stakeL)
 
         }
         if (keyName === 'ArrowDown' || keyName.toLowerCase() === 's') {
 
-            moveLeft (stakePos, stakes)
+            stakePos = moveLeft (stakePos, stakes)
 
             enableButtons (stakePos, stakes, stakeR, stakeL)
 
@@ -286,17 +286,30 @@ document.addEventListener('keydown', (event) => {
 });
 
 
-function updateByScroll (container, position) {
+function updateByScroll(container) {
 
-    const itemsWidth = container.children[position].clientWidth * 1.167
+    let closestIndex = 0
+    let closestDistance = Infinity
 
-    return Math.round(container.scrollLeft / itemsWidth);
+    Array.from(container.children).forEach((child, index) => {
 
+        const distance = Math.abs(container.scrollLeft - child.offsetLeft)
+
+        if (distance < closestDistance) {
+
+            closestDistance = distance
+            closestIndex = index
+            
+        }
+
+    })
+
+    return closestIndex
+    
 }
 function enableButtons (position, container, R, L) {
 
-
-    if (position >= container.children.length -1) {
+    if (position >= container.children.length - 1) {
 
         R.disabled = true
         L.disabled = false
@@ -317,18 +330,18 @@ function enableButtons (position, container, R, L) {
 
 function moveRight (position, container) {
 
-    const itemsWidth = container.children[position].clientWidth * 1.167
-
     position = Math.min(position + 1, container.children.length - 1)
-    container.scrollTo({ left: position * itemsWidth, behavior: 'smooth' })
+    container.scrollTo({ left: container.children[position].offsetLeft, behavior: 'smooth' })
+
+    return position
     
 }
 function moveLeft (position, container) {
 
-    const itemsWidth = container.children[position].clientWidth * 1.167
-
     position = Math.max(position - 1, 0)
-    container.scrollTo({ left: position * itemsWidth, behavior: 'smooth' })
+    container.scrollTo({ left: container.children[position].offsetLeft, behavior: 'smooth' })
+
+    return position
 
 }
 
