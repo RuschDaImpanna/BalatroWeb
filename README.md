@@ -34,13 +34,13 @@ Entre las áreas trabajadas se incluyen:
 ### 🎨 Manual de identidad visual
 Este proyecto toma la identidad oficial del juego propio, sin embargo, debido a su carácter académico y fanmade, todos los derechos de marca e identidad es reservada por LocalThunk, PlayStack y todos sus involucrados. Este juego contiene una línea visual inspirada en interfaces arcade tipo pixel art.
 
-###Tipografía
+### Tipografía
 [m6x11](https://managore.itch.io/m6x11)
 
-##Paleta de colores
+### Paleta de colores
 La paleta está basada en tonos rojizos (#fd5f55) y azulados (#009cfd), sin embargo, también es predominante ciertas tonalidades anaranjadas (#fda200), grises (#4f6367) y verdosos (#24b371)
 
-##Estilo visual
+### Estilo visual
 - Estética casino (fichas, cartas, alto contraste)
 - Pixel art
 - Animaciones suaves y satisfactorias
