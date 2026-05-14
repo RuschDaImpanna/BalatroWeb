@@ -17,7 +17,7 @@
 
 .jokers::after, .consumables::after {
 
-    content: '';
+    content: '0/0';
     display: block;
 
     position: relative;
@@ -29,5 +29,8 @@
 
     top: 100%;
     border-radius: 0 0 15px 15px;
+
+    box-sizing: border-box;
+    padding-left: clamp(10px, 30px, 70px);
 
 }

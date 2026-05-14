@@ -2,8 +2,6 @@ import deck from '../json/standardDeck.json' with { type: 'json' }
 import { getHandCondition } from "./playHand.js"
 
 const runBtn = document.getElementById('runInfo')
-const optionBtn = document.getElementById('options')
-const deckBtn = document.getElementById('deck')
 
 runBtn.addEventListener('click', () => {
 
