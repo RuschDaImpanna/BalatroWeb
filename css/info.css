@@ -705,6 +705,8 @@ body {
 
             .pokerMult {
 
+                position: relative;
+
                 background-color: #141F20;
                 border-radius: 10px;
 
@@ -764,6 +766,12 @@ body {
                 margin: 10px 0;
 
                 overflow-y: auto;
+                
+                box-sizing: border-box;
+                padding: 5px 0;
+
+                border-radius: 15px;
+                border: solid #DF2525 3px;
 
                 .pokerHandLine {
 
@@ -797,15 +805,25 @@ body {
 
             }
 
+            #poker0::-webkit-scrollbar {
+
+                width: 10px;
+                height: 10px;
+
+            }
+
+            #poker0::-webkit-scrollbar-thumb{
+
+                background-color: #DF2525;
+                border-radius: 5px;
+
+            }
+
             #poker1 {
 
-                position: relative;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
-
-                width: 80%;
-                height: 80%;
+                width: 100%;
+                min-height: 300px;
+                max-height: 340px;
 
                 border: 3px solid #DF2525;
                 border-bottom: none;
@@ -819,33 +837,50 @@ body {
 
                 display: grid;
                 place-items: center;
-                grid-auto-columns: calc(100% - 20px);
+                grid-auto-columns: 100%;
                 grid-auto-flow: column;
                 gap: 35px;
 
+                padding: 10px;
+                box-sizing: border-box;
+
                 .handInfo {
 
-                    height: 90%;
+                    height: 100%;
+
+                    box-sizing: border-box;
 
                     scroll-snap-align: center;
 
                     display: grid;
-                    grid-template-rows: 1fr 1.5fr 1fr;
+                    grid-template-rows: 0.3fr 0.5fr 0.3fr;
 
                     overflow: hidden;
 
-                    .titleWrap {
+                    p:not(.titleWrap p) {
 
-                        margin: 0 10px;
+                        color: #A0A9B6;
+
+                    }
+
+                    .titleWrap {
 
                         display: grid;
                         grid-template-columns: 2fr 1fr;
+                        align-items: center;
+
+                        h2 {
+
+                            color: white;
+
+                        }
 
                         .statsHandWrap {
 
                             display: grid;
-                            grid-template-rows: repeat(3, 1fr);
                             user-select: none;
+
+                            gap: 3px;
 
                             .pokerLvl p{
 
@@ -855,11 +890,20 @@ body {
                                 font-size: 1em;
 
                             }
+                            span {
 
+                                color: #A0A9B6;
+
+                            }
                             p {
 
                                 margin: 0;
-                                font-size: 0.7em;
+                                font-size: clamp(0.75rem, 1vw, 1rem);
+
+                            }
+                            .chipsTab, .multTab {
+
+                                padding: 5px 0;
 
                             }
 
@@ -870,12 +914,13 @@ body {
                     .handInfoCards {
 
                         display: grid;
-                        grid-template-columns: repeat(5, 20%);
+                        grid-template-columns: repeat(5, 1fr);
+
+                        place-items: center;
 
                         img {
 
                             width: 100%;
-                            height: auto;
 
                         }
 
@@ -912,14 +957,20 @@ body {
                 width: 100%;
                 height: 100%;
 
+                padding: 0 2rem;
+                box-sizing: border-box;
+
                 .left, .right {
 
                     position: absolute;
-                    transform: translate(0, -50%);
+                    transform: translateY(-50%);
                     top: 50%;
 
-                    margin: 5px;
+                    width: clamp(33px, 5vw, 36px);
+                    height: clamp(31px, 5vw, 34px);
+
                     border-radius: 15px;
+
                     background-color: #DF2525;
                     color: white;
 

@@ -432,8 +432,11 @@ body {
 .left, .right {
 
     position: absolute;
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     top: 50%;
+
+    width: clamp(33px, 5vw, 36px);
+    height: clamp(31px, 5vw, 34px);
 
     margin: 5px;
     border-radius: 15px;

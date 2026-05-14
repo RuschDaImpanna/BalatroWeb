@@ -1,0 +1,88 @@
+[
+
+    {
+        
+        "id":0,
+        "info":["High Card", 5, 1],
+        "planet":["Pluto", 10, 1]
+
+    },
+    {
+        
+        "id":1,
+        "info":["Pair", 10, 2],
+        "planet":["Mercury", 15, 1]
+
+    },
+    {
+        
+        "id":2,
+        "info":["Two Pair", 20, 2],
+        "planet":["Uranus", 20, 1]
+
+    },
+    {
+        
+        "id":3,
+        "info":["Three of a Kind", 30, 3],
+        "planet":["Venus", 20, 2]
+
+    },
+    {
+        
+        "id":4,
+        "info":["Straight", 30, 4],
+        "planet":["Saturn", 30, 3]
+
+    },
+    {
+        
+        "id":5,
+        "info":["Flush", 35, 4],
+        "planet":["Jupiter", 15, 2]
+
+    },
+    {
+        
+        "id":6,
+        "info":["Full House", 40, 4],
+        "planet":["Earth", 25, 2]
+
+    },
+    {
+        
+        "id":7,
+        "info":["Four of a Kind", 60, 7],
+        "planet":["Mars", 30, 3]
+
+    },
+    {
+        
+        "id":8,
+        "info":["Straight Flush", 100, 8],
+        "planet":["Neptune", 40, 4]
+
+    },
+    {
+        
+        "id":9,
+        "info":["Five of a Kind", 120, 12],
+        "planet":["Planet X", 35, 3]
+
+    },
+    {
+        
+        "id":"A",
+        "info":["Flush House", 140, 14],
+        "planet":["Ceres", 40, 4]
+
+    },
+    {
+        
+        "id":"B",
+        "info":["Flush Five", 160, 16],
+        "planet":["Pluto", 50, 3]
+
+    }
+
+]

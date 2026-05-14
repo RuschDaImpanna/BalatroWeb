@@ -1161,6 +1161,7 @@ runBtn.addEventListener('click', () => {
         `),
         showCloseButton: true,
         showConfirmButton: false,
+        background: '#3C565E',
         didOpen: () => {
 
             const modal = Swal.getPopup()
@@ -1212,21 +1213,21 @@ runBtn.addEventListener('click', () => {
             //Scroll buttons functions
             info.addEventListener('scroll', () => {
 
-                handsPos = updateByScroll(info, handsPos)
+                handsPos = updateByScroll(info)
 
                 enableButtons (handsPos, info, handsR, handsL)
 
             })
             handsL.addEventListener('click', () => {
 
-                moveLeft (handsPos, info)
+                handsPos = moveLeft (handsPos, info)
 
                 enableButtons (handsPos, info, handsR, handsL)
 
             })
             handsR.addEventListener('click', () => {
 
-                moveRight (handsPos, info)
+                handsPos = moveRight (handsPos, info)
 
                 enableButtons (handsPos, info, handsR, handsL)
 
@@ -1263,14 +1264,14 @@ runBtn.addEventListener('click', () => {
 
                 if (keyName === 'ArrowLeft' || keyName.toLowerCase() === 'a') {
 
-                    moveLeft (handsPos, info)
+                    handsPos = moveLeft (handsPos, info)
 
                     enableButtons (handsPos, info, handsR, handsL)
 
                 }
                 if (keyName === 'ArrowRight' || keyName.toLowerCase() === 'd') {
 
-                    moveRight (handsPos, info)
+                    handsPos = moveRight (handsPos, info)
 
                     enableButtons (handsPos, info, handsR, handsL)
 
@@ -1278,17 +1279,33 @@ runBtn.addEventListener('click', () => {
             
             })
 
-            function updateByScroll (container, position) {
+            function updateByScroll (container) {
 
-                const itemsWidth = container.children[position].clientWidth * 1.125
+                let closestIndex = 0
+                let closestDistance = Infinity
+                const availableInfo = [...container.children].filter(i => i.style.display != 'none')
 
-                return Math.round(container.scrollLeft / itemsWidth);
+                availableInfo.forEach((child, index) => {
+
+                    const distance = Math.abs(container.scrollLeft - child.offsetLeft)
+
+                    if (distance < closestDistance) {
+
+                        closestDistance = distance
+                        closestIndex = index
+                        
+                    }
+
+                })
+
+                return closestIndex
 
             }
             function enableButtons (position, container, R, L) {
 
+                const availableInfo = [...container.children].filter(i => i.style.display != 'none')
 
-                if (position >= container.children.length -1) {
+                if (position >= availableInfo.length -1) {
 
                     R.disabled = true
                     L.disabled = false
@@ -1309,18 +1326,22 @@ runBtn.addEventListener('click', () => {
 
             function moveRight (position, container) {
 
-                const itemsWidth = container.children[position].clientWidth * 1.125
+                const availableInfo = [...container.children].filter(i => i.style.display != 'none')
 
-                position = Math.min(position + 1, container.children.length - 1)
-                container.scrollTo({ left: position * itemsWidth, behavior: 'smooth' })
+                position = Math.min(position + 1, availableInfo.length - 1)
+                container.scrollTo({ left: availableInfo[position].offsetLeft, behavior: 'smooth' })
+
+                return position
                 
             }
             function moveLeft (position, container) {
 
-                const itemsWidth = container.children[position].clientWidth * 1.125
+                const availableInfo = [...container.children].filter(i => i.style.display != 'none')
 
                 position = Math.max(position - 1, 0)
-                container.scrollTo({ left: position * itemsWidth, behavior: 'smooth' })
+                container.scrollTo({ left: availableInfo[position].offsetLeft, behavior: 'smooth' })
+
+                return position
 
             }
 
@@ -1805,6 +1826,8 @@ function placeHandCardsInfo (container, id) {
 
             container.style.width = '100%'
             container.style.height = '100%'
+            container.style.padding = '50% 0'
+            container.style.boxSizing = 'border-box'
 
             if (!selected[index]) {
 
@@ -1818,16 +1841,11 @@ function placeHandCardsInfo (container, id) {
                 const bgImg = document.createElement('img')
                 bgImg.src = `../cards/playCards/cards__e0.png`
 
-                bgImg.style.position = 'absolute'
-                bgImg.style.left = 0
-                bgImg.style.top = 0
-
                 const valueImg = document.createElement('img')
                 valueImg.src = `../cards/playCards/cards__${card}.png`
 
                 valueImg.style.position = 'absolute'
                 valueImg.style.left = 0
-                valueImg.style.top = 0
 
             container.append(bgImg, valueImg)
 
