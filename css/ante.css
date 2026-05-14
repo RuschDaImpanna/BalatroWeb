@@ -91,11 +91,13 @@
     .blindSelInfo {
 
         display: grid;
-        grid-template-rows: 1fr 1.5fr 3fr 1fr 4fr;
+        grid-template-rows: 1fr 1.5fr 2fr 4fr;
         gap: 2px;
 
         background-color: #3C565E;
         border-radius: 15px;
+
+        place-items: center;
 
         button {
 
@@ -103,6 +105,8 @@
             border-radius: 10px;
 
             background-color: #F3AD16;
+
+            width: 90%;
 
         }
         button:active {
@@ -119,17 +123,13 @@
 
         }
 
-        img {
-
-            margin: 0 25%;
-
-        }
-
         .title {
 
             border-radius: 15px;
 
             padding: 5px;
+
+            width: 90%;
 
         }
     

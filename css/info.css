@@ -1138,12 +1138,16 @@ body {
                 background-color: #3C565E;
                 border-radius: 15px;
 
+                place-items: center;
+
                 button {
 
                     margin-right: 10px;
                     border-radius: 10px;
 
                     background-color: #F3AD16;
+
+                    width: 90%;
 
                 }
                 button:active {
@@ -1160,17 +1164,13 @@ body {
 
                 }
 
-                img {
-
-                    margin: 0 25%;
-
-                }
-
                 .title {
 
                     border-radius: 15px;
 
                     padding: 5px;
+
+                    width: 90%;
 
                 }
             
