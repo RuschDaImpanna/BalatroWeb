@@ -1,0 +1,122 @@
+@font-face {
+
+    font-family: 'Balatro Font'; 
+    src: url('../font/m6x11plus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+body {
+
+    height: 100vh;
+    margin: 0;
+    
+    box-sizing: border-box;
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+
+    font-family: 'Balatro Font', sans-serif;
+
+    button, input, img {
+
+        font-family: 'Balatro Font', sans-serif;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        user-select: none;
+        
+    }
+    
+    button {
+
+        cursor: pointer;
+
+    }
+
+}
+
+.menuBtns {
+
+    width: 75%;
+    height: 75%;
+
+    ul {
+
+        width: 100%;
+        height: 100%;
+
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0;
+
+        background-color: #3C565E;
+        border: 5px solid #90ACB4;
+        border-radius: 15px;
+
+        list-style-type: none;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+
+            box-sizing: border-box;
+            padding: 5px 10px;
+
+            button {
+
+                width: 100%;
+                height: 100%;
+
+                border-radius: 15px;
+                color: white;
+
+                border: none;
+                text-align: center;
+                margin-right: 5px;
+
+                box-shadow: 5px 5px 0 black;
+                margin-right: 10px;
+
+            }
+
+            button:active {
+
+                transform: translate(5px, 5px);
+                box-shadow: 2px 2px 0 black;
+
+            }
+
+            #playBtn {
+
+                background-color: #1199F0;
+
+            }
+
+            #optionBtn {
+
+                background-color: #F3AD16;
+
+            }
+
+            #collectionBtn {
+
+                background-color: #0fa15d;
+
+            }
+
+        }
+
+    }
+
+    ul :nth-child(2){
+
+        padding: 15px 10px;
+
+    }
+
+}

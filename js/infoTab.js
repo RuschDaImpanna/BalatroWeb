@@ -1160,6 +1160,10 @@ runBtn.addEventListener('click', () => {
         showCloseButton: true,
         showConfirmButton: false,
         background: '#3C565E',
+        customClass: {
+            container: 'infoSwalContainer',
+            popup: 'infoSwalPopup'
+        },
         didOpen: () => {
 
             const modal = Swal.getPopup()

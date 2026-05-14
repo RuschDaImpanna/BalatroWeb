@@ -4,6 +4,7 @@ optionBtn.addEventListener('click', () => {
 
     Swal.fire({
 
+        html: ``,
         showCloseButton: true,
         showConfirmButton: false,
         background: '#3C565E',
@@ -15,7 +16,11 @@ optionBtn.addEventListener('click', () => {
 
             })
 
-        }
+        },
+        customClass: {
+            container: 'optionSwalContainer',
+            popup: 'optionSwalPopup'
+        },
 
     })
 
