@@ -22,7 +22,7 @@ body {
 
     font-family: 'Balatro Font', sans-serif;
 
-    button, input, img {
+    button:not(.swal2-close), input, img {
 
         font-family: 'Balatro Font', sans-serif;
         font-size: 1.2em;
@@ -97,7 +97,7 @@ body {
 
             }
 
-            #optionBtn {
+            #settingsBtn {
 
                 background-color: #F3AD16;
 

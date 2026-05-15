@@ -11,6 +11,7 @@
         <title>Balatro Web Port</title>
 
         <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/settings.css">
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -43,7 +44,7 @@
 
                 <li>
 
-                    <button type="button" id="optionBtn">OPTIONS</button>
+                    <button type="button" id="settingsBtn">SETTINGS</button>
 
                 </li>
 
@@ -60,5 +61,23 @@
     </body>
     
     <script src="../js/musicHandler.js" type="module"></script>
+    <script type="module">
+
+        import { settingsSwal, collectionSwal } from '../js/extraSwal.js'
+
+        document.getElementById('settingsBtn').addEventListener('click', () => {
+
+            settingsSwal()
+
+        })
+
+        document.getElementById('collectionBtn').addEventListener('click', () => {
+
+            collectionSwal()
+
+        })
+
+
+    </script>
     
 </html>

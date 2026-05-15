@@ -1,0 +1,93 @@
+@font-face {
+
+    font-family: 'Balatro Font'; 
+    src: url('../font/m6x11plus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+button, img, .swal2-close {
+
+    font-family: 'Balatro Font', sans-serif;
+    letter-spacing: 1px;
+    user-select: none;
+
+}
+
+button:not(:disabled, .swal2-close) {
+
+    cursor: pointer;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 5px 5px 0 black;
+
+}
+button:active:not(:disabled, .swal2-close) {
+
+    transform: translate(5px, 5px);
+    box-shadow: 2px 2px 0 black;
+
+}
+
+.settingsSwalContainer {
+
+    position: absolute;
+    height: 100vh;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+
+    .settingsSwalPopup {
+
+        grid-template-rows: 0.25fr 0.25fr 5fr 0.25fr;
+        height: 100%;
+        border: 5px solid #90ACB4;
+
+        overflow: hidden;
+        
+        #swal2-html-container {
+
+            overflow: hidden;
+
+        }
+
+    }
+
+
+}
+
+.swal2-title {
+
+    color: white;
+
+}
+
+.settingsSwal {
+
+    height: 100%;
+    overflow-y: scroll;
+
+    border: solid 3px #DF2525;
+    border-radius: 15px;
+
+    h2, h4, h5, span {
+
+        color: white;
+
+    }
+
+}
+
+.settingsSwal::-webkit-scrollbar {
+
+    width: 10px;
+    height: 10px;
+
+}
+
+.settingsSwal::-webkit-scrollbar-thumb{
+
+    background-color: #DF2525;
+    border-radius: 5px;
+
+}

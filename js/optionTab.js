@@ -1,6 +1,10 @@
+import { settingsSwal, collectionSwal } from "./extraSwal.js"
+
 const optionBtn = document.getElementById('options')
 
 optionBtn.addEventListener('click', () => {
+
+    let optionSel
 
     Swal.fire({
 
@@ -47,7 +51,17 @@ optionBtn.addEventListener('click', () => {
         background: '#3C565E',
         didOpen: () => {
 
-            const listBtns = document.getElementById('menuList')
+            const listBtns = [...document.getElementById('menuList').children]
+
+            listBtns.forEach((btn, i) => {
+
+                btn.addEventListener('click', () => {
+
+                    optionSel = i
+                    Swal.close()
+                })
+                
+            })
 
             requestAnimationFrame(() => {
 
@@ -59,7 +73,19 @@ optionBtn.addEventListener('click', () => {
         customClass: {
             container: 'optionSwalContainer',
             popup: 'optionSwalPopup'
-        },
+        }
+
+    }).then(r => {
+
+        if (optionSel == 0){
+
+            settingsSwal()
+
+        } else if (optionSel == 3) {
+
+            collectionSwal()
+
+        }
 
     })
 
