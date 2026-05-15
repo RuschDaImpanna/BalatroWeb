@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 icon: "warning",
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                allowEnterKey: false,
+                preConfirm: false,
                 confirmButtonText: 'Continue',
                 didOpen: requestAnimationFrame(() => { document.body.classList.remove('swal2-height-auto') })
                 
