@@ -100,7 +100,7 @@ body {
 
     }
 
-    button, img {
+    button, img, .swal2-close {
 
         font-family: 'Balatro Font', sans-serif;
         letter-spacing: 1px;
@@ -136,6 +136,12 @@ body {
     .swal2-question .swal2-icon-content {
 
         padding-left: 5px;
+
+    }
+
+    a {
+
+        text-decoration: none;
 
     }
 
@@ -588,6 +594,7 @@ body {
 .infoSwalContainer {
 
     grid-template-rows: 0.5fr 5fr 0.5fr;
+    overflow: hidden !important;
 
     .infoSwalPopup  {
 
@@ -610,6 +617,7 @@ body {
     grid-template-rows: 10% 90%;
 
     overflow: hidden;
+    position: relative;
 
     .infoRun {
 
@@ -657,6 +665,26 @@ body {
         background-color: #971010;
         transform: translate(5px, 5px);
         box-shadow: 2px 2px 0 black;
+
+    }
+
+    .content, .pokerContent {
+
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+
+        transition: opacity 0.3s ease;
+
+    }
+
+    .content.appear, .pokerContent.pokerAppear {
+
+        opacity: 1;
+        visibility: visible;
+        position: inherit;
+
+        transition: opacity 0.3s ease;
 
     }
 

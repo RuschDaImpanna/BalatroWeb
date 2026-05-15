@@ -490,9 +490,9 @@ runBtn.addEventListener('click', () => {
                             
                         </div>
 
-                        <div id="poker1Wrap" style="display: none;">
+                        <div class="pokerContent" id="poker1Wrap">
 
-                            <div class="pokerContent" id="poker1">
+                            <div id="poker1">
 
                                 <div class="handInfo" id="hand0">
 
@@ -1142,11 +1142,11 @@ runBtn.addEventListener('click', () => {
 
                 </div>
 
-                <div class="content" id="run1" style="display: none;">
+                <div class="content" id="run1">
 
                 </div>
 
-                <div class="content" id="run2" style="display: none;">
+                <div class="content" id="run2">
 
                 r
 
@@ -1382,10 +1382,7 @@ function openCorrespondingTab (i, tabs, swal, selection) {
     const current = swal.querySelector(`.${selection}`)
 
     current.classList.remove(selection)
-    current.style.display = 'none'
-
-    tabs[i].classList.add(selection)
-    tabs[i].style.display = ''
+    tabs[i].classList.add(selection) 
 
 }
 
