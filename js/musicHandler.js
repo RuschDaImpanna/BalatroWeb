@@ -3,6 +3,9 @@ const player1 = document.getElementById('player1')
 
 window.addEventListener('DOMContentLoaded', async () => {
 
+    //Load inherit sfx
+    buttonSfx('button')
+
     //Default value
     if (!localStorage.getItem('track')) {
 
@@ -37,7 +40,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     //Charge audio
     player0.src = `../assets/sound/music${track}.wav`
-
     player0.load()
 
     //Play audio
@@ -52,22 +54,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
         } catch (err) {
 
-            Swal.fire({
-
-                title: "Page reloaded",
-                text: "We have detected an ilegal realoding page move. Your progress has been saved. Please click here to continue playing",
-                icon: "warning",
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                preConfirm: false,
-                confirmButtonText: 'Continue',
-                didOpen: requestAnimationFrame(() => { document.body.classList.remove('swal2-height-auto') })
-                
-            }).then(async () => {
-
-                await player0.play()
-
-            })
+            errorPlay()
 
         }
 
@@ -81,6 +68,57 @@ window.addEventListener('DOMContentLoaded', async () => {
     })
 
 })
+
+function errorPlay () {
+
+    Swal.fire({
+
+        title: "Page reloaded",
+        text: "We have detected an ilegal realoding page move. Your progress has been saved. Please click here to continue playing",
+        icon: "warning",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        preConfirm: false,
+        confirmButtonText: 'Continue',
+        didOpen: requestAnimationFrame(() => { document.body.classList.remove('swal2-height-auto') })
+        
+    }).then(async () => {
+
+        await player0.play()
+
+    })
+
+}
+
+export function buttonSfx (classTxt) {
+
+    document.querySelectorAll(classTxt).forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+            player1.src = `../assets/sound/button.wav`
+            player1.load()
+
+            player1.addEventListener('canplay', async () => {
+
+                try {
+
+                    await player1.play()
+
+                } catch (err) {
+
+                    errorPlay()
+                    
+                }
+
+            })
+
+        })
+        
+    })
+
+}
+
 
 export function changeVolume () {
 

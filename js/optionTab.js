@@ -1,4 +1,5 @@
 import { settingsSwal, collectionSwal } from "./extraSwal.js"
+import { buttonSfx } from "./musicHandler.js"
 
 const optionBtn = document.getElementById('options')
 
@@ -50,6 +51,9 @@ optionBtn.addEventListener('click', () => {
         cancelButtonColor: '#F3AD16',
         background: '#3C565E',
         didOpen: () => {
+
+            //Load SFX
+            buttonSfx('button')
 
             const listBtns = [...document.getElementById('menuList').children]
 

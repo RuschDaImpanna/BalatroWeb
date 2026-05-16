@@ -1,4 +1,4 @@
-import { changeVolume } from "./musicHandler.js"
+import { changeVolume, buttonSfx } from "./musicHandler.js"
 
 export function settingsSwal () {
 
@@ -12,8 +12,14 @@ export function settingsSwal () {
                 <div class="settingContainer" id="gameSpeedContainer">
 
                     <h4>Game Speed</h4>
-                    <span id="gameSpeedTxt">##GAMESPEED##</span>
-                    <input type="range" min="0" max="4" class="slider" id="gameSpeed">
+
+                    <div class="sliderWrap">
+
+                        <span id="gameSpeedTxt">##GAMESPEED##</span>
+                        <input type="range" min="0" max="4" class="slider" id="gameSpeed">
+
+                    </div>
+                    
 
                 </div>
 
@@ -44,8 +50,13 @@ export function settingsSwal () {
                 <div class="settingContainer" id="screenContainer">
 
                     <h4>Screenshake</h4>
-                    <span id="screenTxt">##SCREENSHAKE##</span>
-                    <input type="range" min="0" max="100" class="slider" id="screen">
+
+                    <div class="sliderWrap">
+
+                        <span id="screenTxt">##SCREENSHAKE##</span>
+                        <input type="range" min="0" max="100" class="slider" id="screen">
+
+                    </div>
 
                 </div>
 
@@ -56,24 +67,37 @@ export function settingsSwal () {
                     <div class="volumeContainer">
 
                         <h5>Master Volume</h5>
-                        <span id="masterTxt">##MASTER##</span>
-                        <input type="range" min="0" max="100" class="slider" id="master">
+
+                        <div class="sliderWrap">
+
+                            <span id="masterTxt">##MASTER##</span>
+                            <input type="range" min="0" max="100" class="slider" id="master">
+
+                        </div>
 
                     </div>
 
                     <div class="volumeContainer">
 
                         <h5>Music Volume</h5>
-                        <span id="musicTxt">##MUSIC##</span>
-                        <input type="range" min="0" max="100" class="slider" id="music">
+                        <div class="sliderWrap">
+
+                            <span id="musicTxt">##MUSIC##</span>
+                            <input type="range" min="0" max="100" class="slider" id="music">
+
+                        </div>
 
                     </div>
 
                     <div class="volumeContainer">
 
                         <h5>SFX Volume</h5>
-                        <span id="sfxTxt">##SFX##</span>
-                        <input type="range" min="0" max="100" class="slider" id="sfx">
+                        <div class="sliderWrap">
+
+                            <span id="sfxTxt">##SFX##</span>
+                            <input type="range" min="0" max="100" class="slider" id="sfx">
+
+                        </div>
 
                     </div>
 
@@ -91,6 +115,9 @@ export function settingsSwal () {
             popup: 'settingsSwalPopup'
         },
         didOpen: () => {
+
+            //Load SFX
+            buttonSfx('button')
 
             const gameSpeedSlider = document.getElementById('gameSpeed')
             const gameSpeedDisplay = document.getElementById('gameSpeedTxt')
@@ -148,16 +175,25 @@ export function settingsSwal () {
             }
 
             //Set radio values
+            buttonSfx('.radioButtonPos')
             buttonsPos.forEach((radioDiv, i) => {
 
                 const input = [...radioDiv.children][0]
 
-                if (i == localStorage.getItem('buttonsPos')) input.checked = true
+                if (i == localStorage.getItem('buttonsPos')) {
+
+                    input.checked = true
+                    radioDiv.classList.add('selected')
+
+                }
 
                 radioDiv.addEventListener('click', () => { 
 
                     input.checked = true
                     localStorage.setItem('buttonsPos', i)
+
+                    buttonsPos.find(d => d != radioDiv).classList.remove('selected')
+                    radioDiv.classList.add('selected')
 
                 })
 
@@ -179,7 +215,7 @@ export function settingsSwal () {
                 localStorage.setItem('volume', JSON.stringify(saveVolume))
 
                 changeVolume()
-                
+
             }
 
             masterSlider.oninput = function() {
@@ -218,6 +254,9 @@ export function collectionSwal () {
         text: "You clicked the button!",
         icon: "success",
         didOpen: () => {
+
+            //Load SFX
+            buttonSfx('button')
 
             requestAnimationFrame(() => {
 

@@ -70,9 +70,154 @@ button:active:not(:disabled, .swal2-close) {
     border: solid 3px #DF2525;
     border-radius: 15px;
 
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5vh;
+
+    box-sizing: border-box;
+    padding: 2.5vh 0;
+
+
     h2, h4, h5, span {
 
+        margin: 0;
         color: white;
+
+    }
+
+    h4 {
+
+        margin: 10px 0;
+
+    }
+
+    .settingContainer {
+
+        display: grid;
+        box-sizing: border-box;
+        padding: 0 20%;
+
+    }
+
+    #buttonsPosContainer {
+
+        grid-template-rows: 1fr 1.5fr;
+
+        #buttonsPos {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            .radioButtonPos {
+
+                background-color: #DF2525;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 15px;
+
+                font-size: 1.2em;
+
+                transform: translate(0, 0);
+
+                cursor: pointer;
+
+                border: none;
+                box-shadow: 5px 5px 0 black;
+
+                user-select: none;
+
+            }
+            .radioButtonPos.selected {
+
+                background-color: #971010;
+                transform: translate(5px, 5px);
+                box-shadow: 2px 2px 0 black;
+
+            }
+
+            input {
+
+                display: none;
+
+            }
+
+        }
+
+    }
+
+    .sliderWrap {
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap: 10px;
+
+        input {
+
+            -webkit-appearance: none;
+            height: 15px;
+            border-radius: 5px;
+
+            border-radius: 50px;
+            overflow: hidden;
+            cursor: grab;
+
+        }
+        input:active {
+
+            cursor: grabbing;
+
+        }
+
+        input::-webkit-slider-runnable-track {
+            background: #141F20;
+        }
+        input::-moz-range-track {
+            background: #141F20;
+            height: 100%;
+        }
+
+        input::-webkit-slider-thumb {
+
+            -webkit-appearance: none;
+            appearance: none;
+
+            width: 25px;
+            height: 25px;
+            border-radius: 50%; 
+
+            background: #DF2525;
+            box-shadow: -100vw 200px 10px 100vw #971010;
+
+        }
+        input::-moz-range-thumb { 
+
+            -moz-appearance: none;
+            appearance: none;
+
+            width: 25px;
+            height: 25px;
+            border-radius: 50%; 
+
+            background: #DF2525;
+            box-shadow: -100vw 200px 10px 100vw #971010;
+
+        }
+
+        
+        span {
+
+            background-color: #141F20;
+            color: white;
+            font-size: 1em;
+
+            border-radius: 10px;
+
+        }
 
     }
 

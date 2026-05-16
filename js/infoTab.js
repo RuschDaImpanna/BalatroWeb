@@ -1,4 +1,5 @@
 import deck from '../json/standardDeck.json' with { type: 'json' }
+import { buttonSfx } from './musicHandler.js'
 import { getHandCondition } from "./playHand.js"
 
 const runBtn = document.getElementById('runInfo')
@@ -1166,6 +1167,9 @@ runBtn.addEventListener('click', () => {
         },
         didOpen: () => {
 
+            //Load SFX
+            buttonSfx('button')
+
             const modal = Swal.getPopup()
 
             //Menu top buttons
@@ -1236,6 +1240,7 @@ runBtn.addEventListener('click', () => {
             })
 
             //If click on the lines, go to description of hand
+            buttonSfx('.pokerHandLine')
             linesPoker.forEach((element, index) => {
 
                 element.addEventListener('click', () => {
