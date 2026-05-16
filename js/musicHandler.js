@@ -18,6 +18,23 @@ window.addEventListener('DOMContentLoaded', async () => {
     const track = localStorage.getItem('track')
     const time = localStorage.getItem('trackTime')
 
+    //Set default volume
+
+    if (!localStorage.getItem('volume')) {
+
+        localStorage.setItem('volume', JSON.stringify([100, 80, 80]))
+
+    }
+
+    const volume = JSON.parse(localStorage.getItem('volume'))
+
+    const master = volume[0] / 100
+    const ch0 = volume[1] / 100
+    const ch1 = volume[2] / 100
+
+    player0.volume = master * ch0
+    player1.volume = master * ch1
+
     //Charge audio
     player0.src = `../assets/sound/music${track}.wav`
 
@@ -64,3 +81,16 @@ window.addEventListener('DOMContentLoaded', async () => {
     })
 
 })
+
+export function changeVolume () {
+
+    const volume = JSON.parse(localStorage.getItem('volume'))
+
+    const master = volume[0] / 100
+    const ch0 = volume[1] / 100
+    const ch1 = volume[2] / 100
+
+    player0.volume = master * ch0
+    player1.volume = master * ch1
+
+}

@@ -1,3 +1,5 @@
+import { changeVolume } from "./musicHandler.js"
+
 export function settingsSwal () {
 
     Swal.fire({
@@ -167,12 +169,17 @@ export function settingsSwal () {
             function saveVolumes() {
 
                 const saveVolume = [
+
                     masterSlider.value,
                     musicSlider.value,
                     sfxSlider.value
+
                 ]
 
                 localStorage.setItem('volume', JSON.stringify(saveVolume))
+
+                changeVolume()
+                
             }
 
             masterSlider.oninput = function() {
