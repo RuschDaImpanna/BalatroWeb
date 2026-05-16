@@ -251,12 +251,78 @@ export function collectionSwal () {
     Swal.fire({
 
         title: "Collection",
-        text: "You clicked the button!",
-        icon: "success",
+        html: (`
+
+            <div class="collectionSet" id="leftSet">
+
+                <div class="miniCollectionSet">
+
+                    <button type="button" id="col0">Jokers</button>
+                    <button type="button" id="col1">Decks</button>
+                    <button type="button" id="col2">Vouchers</button>
+
+                </div>
+
+                <div id="consumableCollectionSet">
+
+                    <h4>CONSUMABLES</h4>
+                    
+                    <br>
+
+                    <div class="miniCollectionSet">
+
+                        <button type="button" id="col3">Tarot Cards</button>
+                        <button type="button" id="col4">Planet Cards</button>
+                        <button type="button" id="col5">Spectral Cards</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="collectionSet" id="rightSet">
+
+                <div id="cardsCollectionSet">
+
+                    <div class="miniCollectionSet">
+
+                        <button type="button" id="col6">Enhanced Cards</button>
+                        <button type="button" id="col7">Seals</button>
+                        <button type="button" id="col8">Editions</button>
+
+                    </div>
+
+                    <br>
+
+                    <h4>CARDS</h4>
+
+                </div>
+
+                <div class="miniCollectionSet">
+
+                    <button type="button" id="col9">Booster Packs</button>
+                    <button type="button" id="colA">Tags</button>
+                    <button type="button" id="colB">Blinds</button>
+
+                </div>
+
+            </div>
+
+        `),
         didOpen: () => {
 
             //Load SFX
             buttonSfx('button')
+
+            const htmlContainer = document.getElementById('swal2-html-container')
+            const buttons = [...htmlContainer.querySelectorAll('*')].filter(b => b.tagName == 'BUTTON' )
+            
+            buttons.forEach((btn, i)=> {
+
+                btn.addEventListener('click', () => collectionTabs(i))
+                
+            });
 
             requestAnimationFrame(() => {
 
@@ -264,8 +330,524 @@ export function collectionSwal () {
 
             })
 
-        }
+        },
+        showCloseButton: true,
+        confirmButtonColor: '#F3AD16',
+        confirmButtonText: 'Close',
+        background: '#3C565E',
+        customClass: {
+            container: 'collectionSwalContainer',
+            popup: 'collectionSwalPopup'
+        },
 
     })
+
+}
+
+function collectionTabs (id) {
+
+    Swal.close()
+    
+    switch (id) {
+
+        case 0:
+            Swal.fire({
+
+                title: "Jokers",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => { 
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon0',
+                    popup: 'collectionTabPopup colTab0'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 1:
+            Swal.fire({
+
+                title: "Decks",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => { 
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon1',
+                    popup: 'collectionTabPopup colTab1'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 2:
+            Swal.fire({
+
+                title: "Voucher",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => { 
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon2',
+                    popup: 'collectionTabPopup colTab2'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 3:
+            Swal.fire({
+
+                title: "Tarot Cards",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => { 
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon3',
+                    popup: 'collectionTabPopup colTab3'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 4:
+            Swal.fire({
+
+                title: "Planet Cards",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => { 
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon4',
+                    popup: 'collectionTabPopup colTab4'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 5:
+            Swal.fire({
+
+                title: "Spectral Cards",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => {
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon5',
+                    popup: 'collectionTabPopup colTab5'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 6:
+            Swal.fire({
+
+                title: "Enhanced Cards",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => {
+                    
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon6',
+                    popup: 'collectionTabPopup colTab6'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 7:
+            Swal.fire({
+
+                title: "Seals",
+                html: (`
+                    
+                    <div class="holder" id="holder7">
+
+                        <div class="cardsRow row4">
+
+                            <div class="cardInfoWrapper">
+
+                                <div class="cardImg">
+
+                                    <img src="../assets/playCards/cards__e0.png">
+                                    <img src="../assets/playCards/cards__sl0.png">
+
+                                </div>
+
+                                <div class="cardInfo">
+
+                                    <h6>Gold Seal</h6>
+                                    <p>Earn <strong style="color: #F3AD16;">$3</strong> when this card is played and scores</p>
+                                    <div class="cardTags">
+
+                                        <span>Gold Seal<span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardInfoWrapper">
+
+                                <div class="cardImg">
+
+                                    <img src="../assets/playCards/cards__e0.png">
+                                    <img src="../assets/playCards/cards__sl1.png">
+
+                                </div>
+
+                                <div class="cardInfo">
+
+                                    <h6>Red Seal</h6>
+                                    <p>Retrigger this card <strong style="color: #F3AD16;">1</strong> time</p>
+                                    <div class="cardTags">
+
+                                        <span>Red Seal<span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardInfoWrapper">
+
+                                <div class="cardImg">
+
+                                    <img src="../assets/playCards/cards__e0.png">
+                                    <img src="../assets/playCards/cards__sl2.png">
+
+                                </div>
+
+                                <div class="cardInfo">
+
+                                    <h6>Blue Seal</h6>
+                                    <p>Creates the <strong style="color: #03A4C7;">Planet</strong> card for final played <strong style="color: #F3AD16;">poker hand</strong> of round if <strong style="color: #F3AD16;">held</strong> in hand <br> <i style="color: #3C565E;">(Must have room)</i></p>
+                                    <div class="cardTags">
+
+                                        <span>Blue Seal<span>
+
+                                    </div>
+
+                                </div>
+                            
+                            </div>
+
+                            <div class="cardInfoWrapper">
+
+                                <div class="cardImg">
+
+                                    <img src="../assets/playCards/cards__e0.png">
+                                    <img src="../assets/playCards/cards__sl3.png">
+
+                                </div>
+
+                                <div class="cardInfo">
+
+                                    <h6>Blue Seal</h6>
+                                    <p>Creates a <strong style="color: #9E74CE;">Tarot</strong> card when <strong style="color: #F3AD16;">discarded</strong> <br> <i style="color: #3C565E;">(Must have room)</i></p>
+                                    <div class="cardTags">
+
+                                        <span>Purple Seal<span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                `),
+                didOpen: () => {
+
+                    //Load SFX
+                    buttonSfx('button') 
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon7',
+                    popup: 'collectionTabPopup colTab7'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 8:
+            Swal.fire({
+
+                title: "Editions",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => {
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon8',
+                    popup: 'collectionTabPopup colTab8'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 9:
+            Swal.fire({
+
+                title: "Booster Packs",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => {
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colCon9',
+                    popup: 'collectionTabPopup colTab9'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 10:
+            Swal.fire({
+
+                title: "Tags",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => {
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colConA',
+                    popup: 'collectionTabPopup colTabA'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+        case 11:
+            Swal.fire({
+
+                title: "Tags",
+                text: "You clicked the button!",
+                icon: "success",
+                didOpen: () => {
+
+                    //Load SFX
+                    buttonSfx('button')
+
+                    requestAnimationFrame(() => {
+
+                        document.body.classList.remove('swal2-height-auto')
+
+                    })
+
+                },
+                showCloseButton: true,
+                confirmButtonColor: '#F3AD16',
+                confirmButtonText: 'Back',
+                background: '#3C565E',
+                customClass: {
+                    container: 'collectionTabsContainer, colConB',
+                    popup: 'collectionTabPopup colTabB'
+                },
+
+            }).then(r => {
+
+                if (r.isConfirmed) collectionSwal()
+
+            })
+            break
+
+    }
 
 }

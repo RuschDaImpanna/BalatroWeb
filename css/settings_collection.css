@@ -13,6 +13,7 @@ button, img, .swal2-close {
     font-family: 'Balatro Font', sans-serif;
     letter-spacing: 1px;
     user-select: none;
+    color: white;
 
 }
 
@@ -53,6 +54,30 @@ button:active:not(:disabled, .swal2-close) {
 
     }
 
+
+}
+
+.collectionSwalContainer {
+
+    position: absolute;
+    height: 100vh;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+
+    .collectionSwalPopup {
+
+        grid-template-rows: 0.25fr 0.25fr 3fr 0.25fr;
+        height: 100%;
+        border: 5px solid #90ACB4;
+        
+        #swal2-html-container {
+
+            height: 100%;
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+
+    }
 
 }
 
@@ -234,5 +259,189 @@ button:active:not(:disabled, .swal2-close) {
 
     background-color: #DF2525;
     border-radius: 5px;
+
+}
+
+.collectionSet {
+
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    
+    gap: 5px;
+
+    .miniCollectionSet, #consumableCollectionSet, #cardsCollectionSet {
+
+        display: grid;
+        height: 100%;
+        box-sizing: border-box;
+        gap: 10px;
+
+        button {
+
+            background-color: #DF2525;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 15px;
+
+            font-size: 1.2em;
+
+            transform: translate(0, 0);
+
+            cursor: pointer;
+
+            border: none;
+            box-shadow: 5px 5px 0 black;
+
+            user-select: none;
+
+        }
+        button:active {
+
+            background-color: #971010;
+            transform: translate(5px, 5px);
+            box-shadow: 2px 2px 0 black;
+
+        }
+
+        #col3 {
+
+            background-color: #9E74CE;
+
+        }
+        #col3:active {
+
+            background-color: #5F3F83;
+
+        }
+
+        #col4 {
+
+            background-color: #03A4C7;
+
+        }
+        #col4:active {
+
+            background-color: #05718a;
+
+        }
+
+        #col5 {
+
+            background-color: #8182F7;
+
+        }
+        #col5:active {
+
+            background-color: #5355c2;
+
+        }
+
+    }
+
+    .miniCollectionSet {
+
+        padding: 10px;
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    #consumableCollectionSet, #cardsCollectionSet {
+
+        position: relative;
+
+        height: 100%;
+
+        padding: 6px;
+        background-color: #141F20;
+        border-radius: 10px;
+
+        h4 {
+
+            position: absolute;
+            margin: 0;
+
+            top: 50%;
+
+
+            white-space: nowrap;
+
+            transform-origin: center;
+
+        }
+
+    }
+
+    #consumableCollectionSet {
+
+        grid-template-columns: 1fr 4fr;
+
+        h4 {
+
+            left: clamp(2vw, 2.5vw, 3vw);
+
+            transform: translate(-50%, -50%) rotate(-90deg);
+
+        }
+
+    }
+
+    #cardsCollectionSet {
+
+        grid-template-columns: 4fr 1fr;
+
+        h4 {
+
+            right: clamp(2vw, 2.5vw, 3vw);
+
+            transform: translate(50%, -50%) rotate(-90deg);
+
+        }
+
+    }
+
+}
+
+.collectionTabPopup .swal2-html-container {
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.holder {
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    height: 100%;
+    width: 100%;
+
+    .cardsRow.row4{
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .cardsRow.row5{
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
 
 }

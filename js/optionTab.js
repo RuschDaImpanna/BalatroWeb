@@ -47,7 +47,7 @@ optionBtn.addEventListener('click', () => {
         showCloseButton: true,
         showConfirmButton: false,
         showCancelButton: true,
-        cancelButtonText: 'Back',
+        cancelButtonText: 'Close',
         cancelButtonColor: '#F3AD16',
         background: '#3C565E',
         didOpen: () => {
