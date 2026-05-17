@@ -1,16 +1,101 @@
+.cardInfoWrapper {
+
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 2 / 3;
+
+}
+
+.cardInfoWrapper:hover:not(.cardInfoWrapper:active) .cardInfo {
+
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    visibility: visible;
+
+    transition-delay: 0.15s;
+
+}
+
 .cardImg {
 
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 50% 0px;
+
     box-sizing: border-box;
+    padding: 6.25% 0;
 
     img {
 
         width: 100%;
         position: absolute;
         left: 0px;
+
+    }
+
+}
+
+.cardInfo {
+
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    transform: translate(-50%, -60%);
+
+    top: 100%;
+    left: 50%;
+
+    text-align: center;
+
+    width: 125px;
+
+    background-color: #141F20;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: 0.5fr 2fr;
+
+    transition: opacity 0.15s ease, transform 0.3s ease;
+
+    z-index: 1;
+
+    h6 {
+
+        margin: 5px 0;
+        color: white;
+        font-size: 0.85em;
+
+    }
+
+    p {
+
+        margin: 7px;
+        padding: 0 2px;
+        padding-top: 2px;
+
+        background-color: white;
+        color: #141F20;
+
+        border-radius: 5px;
+
+        font-size: 0.75em;
+
+    }
+
+    .cardTags {
+
+        padding-bottom: 5px;
+
+        span {
+
+            padding: 0 5px;
+            border-radius: 5px;
+            color: #141F20;
+
+        }
 
     }
 

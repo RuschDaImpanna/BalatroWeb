@@ -409,37 +409,61 @@ button:active:not(:disabled, .swal2-close) {
 .collectionTabPopup .swal2-html-container {
 
     overflow: hidden;
-    box-sizing: border-box;
-
-    width: 100%;
     height: 100%;
+
+    padding-bottom: 25px;
+
+}
+
+.bigContCol {
+
+    position: relative;
+    width: 100%;
+    height: calc(100% + 10vh);
 
 }
 
 .holder {
 
-    overflow-y: hidden;
-    overflow-x: scroll;
+    font-size: 1rem;
 
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    overflow-y: visible;
+    overflow-x: auto;
+
+    display: flex;
+    gap: 10px;
 
     height: 100%;
     width: 100%;
 
-    .cardsRow.row4{
+    align-items: flex-start;
+
+    
+    padding: 0 12px;
+    box-sizing: border-box;
+
+
+    .cardsRow {
+
+        width: 100%;
 
         display: grid;
+        flex: 0 0 auto;
+        column-gap: 10px;
+
+    }
+
+    .cardsRow.row4{
+        
         grid-template-columns: repeat(4, 1fr);
+
 
     }
 
     .cardsRow.row5{
 
-        display: grid;
         grid-template-columns: repeat(5, 1fr);
+
 
     }
 

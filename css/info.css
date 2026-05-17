@@ -68,6 +68,7 @@ body {
 
                 margin: 5px 0;
                 color: white;
+                font-size: 0.85em;
 
             }
 
@@ -89,7 +90,7 @@ body {
 
     }
 
-    .skipWrap:hover .infoWrap {
+    .skipWrap:hover:not(.skipTag:active) .infoWrap {
 
         transform: translate(-50%, -50%);
         opacity: 1;

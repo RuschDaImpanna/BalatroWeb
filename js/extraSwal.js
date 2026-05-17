@@ -586,96 +586,100 @@ function collectionTabs (id) {
 
                 title: "Seals",
                 html: (`
+
+                    <div class="bigContCol">
                     
-                    <div class="holder" id="holder7">
+                        <div class="holder" id="holder7">
 
-                        <div class="cardsRow row4">
+                            <div class="cardsRow row4">
 
-                            <div class="cardInfoWrapper">
+                                <div class="cardInfoWrapper dragCard">
 
-                                <div class="cardImg">
+                                    <div class="cardImg">
 
-                                    <img src="../assets/playCards/cards__e0.png">
-                                    <img src="../assets/playCards/cards__sl0.png">
+                                        <img src="../assets/playCards/cards__e0.png">
+                                        <img src="../assets/playCards/cards__sl0.png">
 
-                                </div>
+                                    </div>
 
-                                <div class="cardInfo">
+                                    <div class="cardInfo">
 
-                                    <h6>Gold Seal</h6>
-                                    <p>Earn <strong style="color: #F3AD16;">$3</strong> when this card is played and scores</p>
-                                    <div class="cardTags">
+                                        <h6>Gold Seal</h6>
+                                        <p>Earn <strong style="color: #F3AD16;">$3</strong> when this card is played and scores</p>
+                                        <div class="cardTags">
 
-                                        <span>Gold Seal<span>
+                                            <span style="background-color: #F3AD16;">Gold Seal</span>
+
+                                        </div>
 
                                     </div>
 
                                 </div>
 
-                            </div>
+                                <div class="cardInfoWrapper dragCard">
 
-                            <div class="cardInfoWrapper">
+                                    <div class="cardImg">
 
-                                <div class="cardImg">
+                                        <img src="../assets/playCards/cards__e0.png">
+                                        <img src="../assets/playCards/cards__sl1.png">
 
-                                    <img src="../assets/playCards/cards__e0.png">
-                                    <img src="../assets/playCards/cards__sl1.png">
+                                    </div>
 
-                                </div>
+                                    <div class="cardInfo">
 
-                                <div class="cardInfo">
+                                        <h6>Red Seal</h6>
+                                        <p>Retrigger this card <strong style="color: #F3AD16;">1</strong> time</p>
+                                        <div class="cardTags">
 
-                                    <h6>Red Seal</h6>
-                                    <p>Retrigger this card <strong style="color: #F3AD16;">1</strong> time</p>
-                                    <div class="cardTags">
+                                            <span style="background-color: #DF2525;">Red Seal</span>
 
-                                        <span>Red Seal<span>
+                                        </div>
 
                                     </div>
 
                                 </div>
 
-                            </div>
+                                <div class="cardInfoWrapper dragCard">
 
-                            <div class="cardInfoWrapper">
+                                    <div class="cardImg">
 
-                                <div class="cardImg">
-
-                                    <img src="../assets/playCards/cards__e0.png">
-                                    <img src="../assets/playCards/cards__sl2.png">
-
-                                </div>
-
-                                <div class="cardInfo">
-
-                                    <h6>Blue Seal</h6>
-                                    <p>Creates the <strong style="color: #03A4C7;">Planet</strong> card for final played <strong style="color: #F3AD16;">poker hand</strong> of round if <strong style="color: #F3AD16;">held</strong> in hand <br> <i style="color: #3C565E;">(Must have room)</i></p>
-                                    <div class="cardTags">
-
-                                        <span>Blue Seal<span>
+                                        <img src="../assets/playCards/cards__e0.png">
+                                        <img src="../assets/playCards/cards__sl2.png">
 
                                     </div>
 
+                                    <div class="cardInfo dragCard">
+
+                                        <h6>Blue Seal</h6>
+                                        <p>Creates the <strong style="color: #03A4C7;">Planet</strong> card for final played <strong style="color: #F3AD16;">poker hand</strong> of round if <strong style="color: #F3AD16;">held</strong> in hand <br> <i style="color: #3C565E;">(Must have room)</i></p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #03A4C7;">Blue Seal</span>
+
+                                        </div>
+
+                                    </div>
+                                
                                 </div>
-                            
-                            </div>
 
-                            <div class="cardInfoWrapper">
+                                <div class="cardInfoWrapper dragCard">
 
-                                <div class="cardImg">
+                                    <div class="cardImg">
 
-                                    <img src="../assets/playCards/cards__e0.png">
-                                    <img src="../assets/playCards/cards__sl3.png">
+                                        <img src="../assets/playCards/cards__e0.png">
+                                        <img src="../assets/playCards/cards__sl3.png">
 
-                                </div>
+                                    </div>
 
-                                <div class="cardInfo">
+                                    <div class="cardInfo">
 
-                                    <h6>Blue Seal</h6>
-                                    <p>Creates a <strong style="color: #9E74CE;">Tarot</strong> card when <strong style="color: #F3AD16;">discarded</strong> <br> <i style="color: #3C565E;">(Must have room)</i></p>
-                                    <div class="cardTags">
+                                        <h6>Blue Seal</h6>
+                                        <p>Creates a <strong style="color: #9E74CE;">Tarot</strong> card when <strong style="color: #F3AD16;">discarded</strong> <br> <i style="color: #3C565E;">(Must have room)</i></p>
+                                        <div class="cardTags">
 
-                                        <span>Purple Seal<span>
+                                            <span style="background-color: #9E74CE;">Purple Seal</span>
+
+                                        </div>
 
                                     </div>
 
