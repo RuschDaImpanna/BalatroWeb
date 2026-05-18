@@ -81,7 +81,7 @@ button:active:not(:disabled, .swal2-close) {
 
 }
 
-.swal2-title {
+.swal2-title, .swal2-footer {
 
     color: white;
 
@@ -326,18 +326,18 @@ button:active:not(:disabled, .swal2-close) {
         }
         #col4:active {
 
-            background-color: #05718a;
+            background-color: #05718A;
 
         }
 
         #col5 {
 
-            background-color: #8182F7;
+            background-color: #2E76FD;
 
         }
         #col5:active {
 
-            background-color: #5355c2;
+            background-color: #2151AC;
 
         }
 
@@ -406,12 +406,18 @@ button:active:not(:disabled, .swal2-close) {
 
 }
 
-.collectionTabPopup .swal2-html-container {
+.collectionTabPopup {
 
-    overflow: hidden;
-    height: 100%;
+    grid-template-rows: 0.25fr 0.25fr 3fr 0.25fr 0.25fr;
 
-    padding-bottom: 25px;
+    .swal2-html-container {
+
+        overflow: hidden;
+        height: 100%;
+        box-sizing: border-box;
+
+    }
+    
 
 }
 
@@ -419,7 +425,7 @@ button:active:not(:disabled, .swal2-close) {
 
     position: relative;
     width: 100%;
-    height: calc(100% + 10vh);
+    height: 100%;
 
 }
 
@@ -427,19 +433,16 @@ button:active:not(:disabled, .swal2-close) {
 
     font-size: 1rem;
 
-    overflow-y: visible;
+    overflow-y: hidden;
     overflow-x: auto;
 
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 12px;
 
     height: 100%;
-    width: 100%;
-
-    align-items: flex-start;
-
-    
-    padding: 0 12px;
+    padding: 0 12px 10vh;
     box-sizing: border-box;
 
 
@@ -447,9 +450,10 @@ button:active:not(:disabled, .swal2-close) {
 
         width: 100%;
 
+        place-items: center;
+
         display: grid;
-        flex: 0 0 auto;
-        column-gap: 10px;
+        column-gap: 7px;
 
     }
 
@@ -464,8 +468,17 @@ button:active:not(:disabled, .swal2-close) {
 
         grid-template-columns: repeat(5, 1fr);
 
+        padding: 0 15px;
+        box-sizing: border-box;
+
 
     }
 
+
+}
+
+#holder6 {
+
+    grid-template-rows: repeat(2, 1fr);
 
 }

@@ -1,22 +1,53 @@
+@property --editionCol {
+
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #2E76FD;
+
+}
+
+@keyframes editionAnimTag {
+
+  0%   { --editionCol: #2E76FD; }
+
+  33%  { --editionCol: #90ACB4; }
+
+  67%  { --editionCol: #DF2525; }
+
+  100% { --editionCol: #2E76FD; }
+
+}
+
 .cardInfoWrapper {
 
     position: relative;
 
     width: 100%;
-    aspect-ratio: 2 / 3;
+    height: min-content;
+    aspect-ratio: 14 / 19;
 
 }
 
-.cardInfoWrapper:hover:not(.cardInfoWrapper:active) .cardInfo {
+.cardInfoWrapper:hover:not(.dragging) {
 
-    transform: translate(-50%, -50%);
-    opacity: 1;
+    z-index: 1;
 
-    visibility: visible;
+    .cardInfo {
 
-    transition-delay: 0.15s;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+
+        visibility: visible;
+
+        transition-delay: 0.1s;
+
+        z-index: 1;
+
+    }
 
 }
+
+
 
 .cardImg {
 
@@ -24,8 +55,15 @@
     width: 100%;
     height: 100%;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
     box-sizing: border-box;
-    padding: 6.25% 0;
+
+    border-radius: 5px;
 
     img {
 
@@ -33,8 +71,175 @@
         position: absolute;
         left: 0px;
 
+        overflow: hidden;
+
     }
 
+}
+
+.cardImg.negative {
+
+    filter: invert(100%) hue-rotate(180deg);
+
+}
+
+.cardImg.polychrome::after {
+
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+
+    width: 200%;
+    height: 200%;
+    
+
+    background:
+    radial-gradient(
+        circle at center,
+        #FF0080A6 0%,
+        #00C8FFA6 30%,
+        #00FF8CA6 55%,
+        #FFE600A6 75%,
+        #FF005AA6 100%
+    );
+
+    mix-blend-mode: hard-light;
+    pointer-events: none;
+
+    animation: rainbowShift 8s linear infinite;
+
+}
+
+.cardImg.holographic::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255, 40, 40, 0.5) 25%,
+        transparent 25%
+    ) 0 0 / 60px 60px,
+
+    linear-gradient(
+        225deg,
+        rgba(255, 106, 20, 0.5) 25%,
+        transparent 25%
+    ) 0 0 / 60px 60px,
+
+    linear-gradient(
+        315deg,
+        rgba(255, 177, 60, 0.5) 25%,
+        transparent 25%
+    ) 0 0 / 60px 60px,
+
+    linear-gradient(
+        45deg,
+        rgba(255, 0, 191, 0.5) 25%,
+        transparent 25%
+    ) 0 0 / 60px 60px;
+
+
+    mix-blend-mode: hard-light;
+    pointer-events: none;
+
+    animation: holoShift 4s linear infinite;
+
+}
+
+
+.cardImg.foil::after {
+
+    content: "";
+    position: absolute;
+    width: 175%;
+    aspect-ratio: 1 / 1;
+
+    background:
+    conic-gradient(from 0deg at 50% 50%,
+    #FFFFFF60 5%, transparent 5%,
+    transparent 15%, #FFFFFF60 15%,
+    #FFFFFF60 16%, transparent 16%,
+    transparent 22%, #FFFFFF60 22%,
+    #FFFFFF60 26%, transparent 26%,
+    transparent 38%, #FFFFFF60 38%,
+    #FFFFFF60 46%, transparent 46%,
+    transparent 47%, #FFFFFF60 47%,
+    #FFFFFF60 48%, transparent 48%,
+    transparent 64%, #FFFFFF60 64%,
+    #FFFFFF60 66%, transparent 66%,
+    transparent 67%, #FFFFFF60 67%,
+    #FFFFFF60 68%, transparent 68%,
+    transparent 69%, #FFFFFF60 69%,
+    #FFFFFF60 78%, transparent 78%,
+    transparent 95%, #FFFFFF60 95%,
+    #FFFFFF60 100%),
+    radial-gradient(
+        circle at center,
+        #3145fa60 0%,
+        #3145fa60 20%,
+        #d2daff60 25%,
+        #3145fa60 30%,
+        #3145fa60 40%,
+        #d2daff60 45%,
+        #3145fa60 55%,
+        #3145fa60 100%
+    );
+
+    mix-blend-mode: multiply;
+    pointer-events: none;
+
+    animation: foilTwist 64s linear infinite;
+
+}
+
+@keyframes rainbowShift {
+    from {
+
+        filter: hue-rotate(0deg);
+
+    }
+    to {
+
+        filter: hue-rotate(360deg);
+        
+    }
+}
+
+@keyframes holoShift {
+    0% {
+
+        filter: hue-rotate(0deg) saturate(25%);
+
+    }
+    33% {
+
+        filter: hue-rotate(15deg) saturate(50%);
+        
+    }
+    67% {
+
+        filter: hue-rotate(-15deg) saturate(70%);
+        
+    }
+    100% {
+
+        filter: hue-rotate(0deg) saturate(25%);
+        
+    }
+}
+
+@keyframes foilTwist {
+    to {
+
+        transform: rotate(360deg);
+        
+    }
 }
 
 .cardInfo {
@@ -58,7 +263,7 @@
     display: grid;
     grid-template-rows: 0.5fr 2fr;
 
-    transition: opacity 0.15s ease, transform 0.3s ease;
+    transition: opacity 0.1s ease, transform 0.2s ease;
 
     z-index: 1;
 
@@ -66,7 +271,7 @@
 
         margin: 5px 0;
         color: white;
-        font-size: 0.85em;
+        font-size: 0.9em;
 
     }
 
@@ -87,6 +292,11 @@
 
     .cardTags {
 
+        padding: 0 25%;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-auto-rows: 1fr;
         padding-bottom: 5px;
 
         span {
@@ -94,9 +304,40 @@
             padding: 0 5px;
             border-radius: 5px;
             color: #141F20;
+            font-size: 0.75em;
+
+        }
+
+        .editionTag {
+
+            background-color: var(--editionCol);
+            animation: editionAnimTag 4s linear infinite;
 
         }
 
     }
+
+}
+
+.dragCard {
+
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+
+    cursor: grab;
+
+    img {
+
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    
+    }
+
+}
+
+.dragCard.dragging{
+
+    cursor: grabbing;
 
 }

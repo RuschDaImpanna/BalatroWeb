@@ -1,3 +1,4 @@
+import { movingCard } from "./movingCards.js"
 import { changeVolume, buttonSfx } from "./musicHandler.js"
 
 export function settingsSwal () {
@@ -552,12 +553,214 @@ function collectionTabs (id) {
             Swal.fire({
 
                 title: "Enhanced Cards",
-                text: "You clicked the button!",
-                icon: "success",
+                html: (`
+
+                    <div class="bigContCol">
+                    
+                        <div class="holder" id="holder6">
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e1.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Bonus card</h6>
+                                        <p><strong style="color: #1199F0;">+30</strong> extra chips</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Bonus Card</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e2.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mult Card</h6>
+                                        <p><strong style="color: #DF2525;">+4</strong> Mult</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Mult Card</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e3.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Wild card</h6>
+                                        <p>Can be used as any suit</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Wild Card</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e4.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Glass Card</h6>
+                                        <p><strong style="background-color: #DF2525; color: white; padding: 1px 2px;">X2</strong> Mult <br> <strong style="color: #4CC192;">1 in 4</strong> chance to destroy card</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Glass Card</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e5.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Steel card</h6>
+                                        <p><strong style="background-color: #DF2525; color: white; padding: 1px 2px;">X1.5</strong> Mult <br> while this card stays in hand</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Steel Card</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e6.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Stone Card</h6>
+                                        <p><strong style="color: #1199F0;">+50</strong> Chips <br> No rank or suit</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Stone Card</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e7.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Gold card</h6>
+                                        <p><strong style="color: #F3AD16;">$3</strong> if this card is held in hand at the end of round</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Gold Card</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/playCards/cards__e8.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Lucky Card</h6>
+                                        <p><strong style="color: #4CC192;">1 in 5</strong> chance for <strong style="color: #DF2525;">+20</strong> Mult <br> <strong style="color: #4CC192;">1 in 5</strong> chance to win <strong style="color: #F3AD16;">$20</strong></p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #6D76D0;">Lucky Card</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                `),
+                footer: 'Playing cards may have one Enhancement, Edition and Seal',
                 didOpen: () => {
                     
                     //Load SFX
                     buttonSfx('button')
+
+                    const row = document.querySelectorAll('.cardsRow')
+
+                    row.forEach(r => {
+
+                        movingCard(r)
+                        
+                    })
 
                     requestAnimationFrame(() => {
 
@@ -648,7 +851,7 @@ function collectionTabs (id) {
 
                                     </div>
 
-                                    <div class="cardInfo dragCard">
+                                    <div class="cardInfo">
 
                                         <h6>Blue Seal</h6>
                                         <p>Creates the <strong style="color: #03A4C7;">Planet</strong> card for final played <strong style="color: #F3AD16;">poker hand</strong> of round if <strong style="color: #F3AD16;">held</strong> in hand <br> <i style="color: #3C565E;">(Must have room)</i></p>
@@ -692,10 +895,13 @@ function collectionTabs (id) {
                     </div>
                     
                 `),
+                footer:'Playing cards may have one Enhancement, Edition and Seal',
                 didOpen: () => {
 
                     //Load SFX
-                    buttonSfx('button') 
+                    buttonSfx('button')
+
+                    movingCard(document.querySelector('.cardsRow'))
 
                     requestAnimationFrame(() => {
 
@@ -723,12 +929,141 @@ function collectionTabs (id) {
             Swal.fire({
 
                 title: "Editions",
-                text: "You clicked the button!",
-                icon: "success",
+                html: (`
+
+                    <div class="bigContCol">
+                    
+                        <div class="holder" id="holder7">
+
+                            <div class="cardsRow row5">
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/jokers/joker_00.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Base</h6>
+                                        <p>No effect</p>
+                                        <div class="cardTags">
+
+                                            <span class="editionTag">Edition</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg foil">
+
+                                        <img src="../assets/jokers/joker_00.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Foil</h6>
+                                        <p><strong style="color: #1199F0;">+50</strong> chips</p>
+                                        <div class="cardTags">
+
+                                            <span class="editionTag">Edition</span>
+                                            <span class="editionTag">Foil</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg holographic">
+
+                                        <img src="../assets/jokers/joker_00.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Holographic</h6>
+                                        <p><strong style="color: #DF2525;">+10</strong> Mult</p>
+                                        <div class="cardTags">
+
+                                            <span class="editionTag">Edition</span>
+                                            <span class="editionTag">Holographic</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg polychrome">
+
+                                        <img src="../assets/jokers/joker_00.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Polychrome</h6>
+                                        <p><strong style="background-color: #DF2525; color: white; padding: 1px 2px;">X1.5</strong> Mult</p>
+                                        <div class="cardTags">
+
+                                            <span class="editionTag">Edition</span>
+                                            <span class="editionTag">Polychrome</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard">
+
+                                    <div class="cardImg negative">
+
+                                        <img src="../assets/jokers/joker_00.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Negative</h6>
+                                        <p><strong style="color: #9E74CE;">+1</strong> Joker Slot</p>
+                                        <div class="cardTags">
+
+                                            <span class="editionTag">Edition</span>
+                                            <span class="editionTag">Polychrome</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                `),
                 didOpen: () => {
 
                     //Load SFX
                     buttonSfx('button')
+
+                    movingCard(document.querySelector('.cardsRow'))
 
                     requestAnimationFrame(() => {
 
