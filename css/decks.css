@@ -190,9 +190,28 @@ body {
 
         }
 
-        .deckImg {
+        .dragSlot, .deckImg {
 
             height: 100%;
+
+        }
+
+        .deckImg {
+
+            transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+            will-change: transform;
+
+            cursor: grab;
+
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+
+        }
+
+        .deckImg.dragging{
+
+            cursor: grabbing;
 
         }
     

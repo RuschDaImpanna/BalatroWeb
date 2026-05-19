@@ -28,6 +28,13 @@
 
 }
 
+.editionText {
+
+    color: var(--editionCol);
+    animation: editionAnimTag 4s linear infinite;
+
+}
+
 .cardInfoWrapper:hover:not(.dragging) {
 
     z-index: 1;

@@ -388,8 +388,9 @@ function collectionTabs (id) {
             Swal.fire({
 
                 title: "Decks",
-                text: "You clicked the button!",
-                icon: "success",
+                html:(`
+                    
+                `),
                 didOpen: () => { 
 
                     //Load SFX
@@ -1132,18 +1133,313 @@ function collectionTabs (id) {
 
                             <div class="tagWrap">
 
-                                    <div class="cardImg polychrome">
+                                <img src="../assets/tags_vouchers/tag_00.png">
 
-                                        <img src="../assets/tags_vouchers/tag_00.png">
+                                <div class="tagInfo">
 
-                                    </div>
+                                    <h6>Uncommon Tag</h6>
+                                    <p>Shop has a free <strong style="color: #4CC192;">Uncommon Joker</strong></p>
 
-                                    <div class="cardInfo">
+                                </div>
 
-                                        <h6>Polychrome</h6>
-                                        <p><strong style="background-color: #DF2525; color: white; padding: 1px 2px;">X1.5</strong> Mult</p>
+                            </div>
 
-                                    </div>
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_01.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Rare Tag</h6>
+                                    <p>Shop has a free <strong style="color: #DF2525;">Rare Joker</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_02.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Negative Tag</h6>
+                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Negative</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_03.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Foil Tag</h6>
+                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Foil</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_04.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Holographic Tag</h6>
+                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Holographic</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_05.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Polychrome Tag</h6>
+                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Polychrome</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_06.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Investment Tag</h6>
+                                    <p>After defeating the Boss Blind, gain <strong style="color: #F3AD16">$25</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_07.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Voucher Tag</h6>
+                                    <p>Adds one Voucher to the next shop</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_08.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Boss Tag</h6>
+                                    <p>Rerolls the <strong style="color: #F3AD16">Boss Blind</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_09.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Standard Tag</h6>
+                                    <p>Gives a free <strong style="color: #F3AD16">Mega Standard Pack</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_0A.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Charm Tag</h6>
+                                    <p>Gives a free <strong style="color: #9E74CE">Mega Arcana Pack</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_0B.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Meteor Tag</h6>
+                                    <p>Gives a free <strong style="color: #03A4C7">Mega Celestial Pack</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_0C.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Buffoon Tag</h6>
+                                    <p>Gives a free <strong style="color: #F3AD16">Mega Buffoon Pack</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_0D.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Handy Tag</h6>
+                                    <p>Gives <strong style="color: #F3AD16">$1</strong> per played <strong style="color: #1199F0">hand</strong> this run <br> <i style="color: #3C565E;">(Will give <strong style="color: #F3AD16">$[hands]</strong>)</i></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_0E.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Garbage Tag</h6>
+                                    <p>Gives <strong style="color: #F3AD16">$1</strong> per unused <strong style="color: #DF2525">discard</strong> this run <br> <i style="color: #3C565E;">(Will give <strong style="color: #F3AD16">$[discards]</strong>)</i></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_0F.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Ethereal Tag</h6>
+                                    <p>Gives a free <strong style="color: #2E76FD">Spectral Pack</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_10.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Coupon Tag</h6>
+                                    <p>Initial cards and booster packs in the next shop are free</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_11.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Double Tag</h6>
+                                    <p>Gives a copy of the next selected <strong style="color: #F3AD16">Tag</strong> <br> <i style="color: #3C565E;"><strong style="color: #F3AD16">Double tag</strong> excluded</i></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_12.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Juggle Tag</h6>
+                                    <p><strong style="color: #F3AD16">+3</strong> hand size next round</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_13.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>D6 Tag</h6>
+                                    <p>Rerolls in the next shop start at <strong style="color: #F3AD16">$0</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_14.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Top-up Tag</h6>
+                                    <p>Create up to <strong style="color: #F3AD16">2</strong> <strong style="color: #1199F0">Common</strong> Jokers <br> <i style="color: #3C565E;">(Must have room)</i></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_15.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Speed Tag</h6>
+                                    <p>Gives <strong style="color: #F3AD16">$5</strong> per skipped Blind this run <br> <i style="color: #3C565E;">(Will give <strong style="color: #F3AD16">$[skips]</strong>)</i></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_16.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Orbital Tag</h6>
+                                    <p>Upgrade <strong style="color: #F3AD16">[randomPokerHand]</strong> by <strong style="color: #F3AD16">3 levels</strong></p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tagWrap">
+
+                                <img src="../assets/tags_vouchers/tag_17.png">
+
+                                <div class="tagInfo">
+
+                                    <h6>Economy Tag</h6>
+                                    <p>Doubles your money <br> <i style="color: #3C565E;">(Max of <strong style="color: #F3AD16">$40</strong>)</i></p>
+
+                                </div>
 
                             </div>
 

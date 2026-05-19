@@ -1,4 +1,5 @@
 import template from '../json/continueTemplate.json' with { type: 'json' }
+import { movingCard } from './movingCards.js'
 
 const decks = document.querySelector('.decks')
 const deckL = document.getElementById('deckL')
@@ -50,6 +51,18 @@ const stakeList = {
     7:'Gold'
 
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    const decksContImg = document.querySelectorAll('.dragSlot')
+
+    decksContImg.forEach(container => {
+
+        movingCard(container)
+        
+    })
+
+})
 
 
 decks.addEventListener('scroll', () => {
