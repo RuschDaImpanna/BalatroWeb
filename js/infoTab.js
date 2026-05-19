@@ -1843,10 +1843,10 @@ function placeHandCardsInfo (container, id) {
             }
 
                 const bgImg = document.createElement('img')
-                bgImg.src = `../assets/playCards/cards__e0.png`
+                bgImg.src = `../assets/playCards/cards_e0.png`
 
                 const valueImg = document.createElement('img')
-                valueImg.src = `../assets/playCards/cards__${card}.png`
+                valueImg.src = `../assets/playCards/cards_${card}.png`
 
                 valueImg.style.position = 'absolute'
                 valueImg.style.left = 0

@@ -565,7 +565,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e1.png">
+                                        <img src="../assets/playCards/cards_e1.png">
 
                                     </div>
 
@@ -587,7 +587,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e2.png">
+                                        <img src="../assets/playCards/cards_e2.png">
 
                                     </div>
 
@@ -609,7 +609,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e3.png">
+                                        <img src="../assets/playCards/cards_e3.png">
 
                                     </div>
 
@@ -631,7 +631,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e4.png">
+                                        <img src="../assets/playCards/cards_e4.png">
 
                                     </div>
 
@@ -657,7 +657,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e5.png">
+                                        <img src="../assets/playCards/cards_e5.png">
 
                                     </div>
 
@@ -679,7 +679,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e6.png">
+                                        <img src="../assets/playCards/cards_e6.png">
 
                                     </div>
 
@@ -701,7 +701,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e7.png">
+                                        <img src="../assets/playCards/cards_e7.png">
 
                                     </div>
 
@@ -723,7 +723,7 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e8.png">
+                                        <img src="../assets/playCards/cards_e8.png">
 
                                     </div>
 
@@ -800,8 +800,8 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e0.png">
-                                        <img src="../assets/playCards/cards__sl0.png">
+                                        <img src="../assets/playCards/cards_e0.png">
+                                        <img src="../assets/playCards/cards_sl0.png">
 
                                     </div>
 
@@ -823,8 +823,8 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e0.png">
-                                        <img src="../assets/playCards/cards__sl1.png">
+                                        <img src="../assets/playCards/cards_e0.png">
+                                        <img src="../assets/playCards/cards_sl1.png">
 
                                     </div>
 
@@ -846,8 +846,8 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e0.png">
-                                        <img src="../assets/playCards/cards__sl2.png">
+                                        <img src="../assets/playCards/cards_e0.png">
+                                        <img src="../assets/playCards/cards_sl2.png">
 
                                     </div>
 
@@ -869,8 +869,8 @@ function collectionTabs (id) {
 
                                     <div class="cardImg">
 
-                                        <img src="../assets/playCards/cards__e0.png">
-                                        <img src="../assets/playCards/cards__sl3.png">
+                                        <img src="../assets/playCards/cards_e0.png">
+                                        <img src="../assets/playCards/cards_sl3.png">
 
                                     </div>
 
@@ -1124,8 +1124,34 @@ function collectionTabs (id) {
             Swal.fire({
 
                 title: "Tags",
-                text: "You clicked the button!",
-                icon: "success",
+                html: (`
+
+                    <div class="bigContCol">
+
+                        <div class="tagsHolder">
+
+                            <div class="tagWrap">
+
+                                    <div class="cardImg polychrome">
+
+                                        <img src="../assets/tags_vouchers/tag_00.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Polychrome</h6>
+                                        <p><strong style="background-color: #DF2525; color: white; padding: 1px 2px;">X1.5</strong> Mult</p>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                `),
                 didOpen: () => {
 
                     //Load SFX
@@ -1156,7 +1182,7 @@ function collectionTabs (id) {
         case 11:
             Swal.fire({
 
-                title: "Tags",
+                title: "Blinds",
                 text: "You clicked the button!",
                 icon: "success",
                 didOpen: () => {
