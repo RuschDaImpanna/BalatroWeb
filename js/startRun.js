@@ -1,5 +1,6 @@
 import template from '../json/continueTemplate.json' with { type: 'json' }
 import { movingCard } from './movingCards.js'
+import { tagSfx } from './musicHandler.js'
 
 const decks = document.querySelector('.decks')
 const deckL = document.getElementById('deckL')
@@ -58,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     decksContImg.forEach(container => {
 
-        movingCard(container)
+        movingCard(container, true)
         
     })
 
@@ -164,12 +165,18 @@ document.addEventListener('keydown', (event) => {
 
         if (keyName === 'ArrowLeft' || keyName.toLowerCase() === 'a') {
 
+            if (!(deckPos <= 0)) btnSfxByKeyboard()
+                else cancelSfxByKeyboard()
+
             deckPos = moveLeft (deckPos, decks)
 
             enableButtons (deckPos, decks, deckR, deckL)
 
         }
         if (keyName === 'ArrowRight' || keyName.toLowerCase() === 'd') {
+
+            if (!(deckPos >= decks.children.length - 1)) btnSfxByKeyboard()
+                else cancelSfxByKeyboard()
 
             deckPos = moveRight (deckPos, decks)
 
@@ -178,12 +185,18 @@ document.addEventListener('keydown', (event) => {
         }
         if (keyName === 'ArrowUp' || keyName.toLowerCase() === 'w') {
 
+            if (!(stakePos >= stakes.children.length - 1)) btnSfxByKeyboard()
+                else cancelSfxByKeyboard()
+
             stakePos = moveRight (stakePos, stakes)
 
             enableButtons (stakePos, stakes, stakeR, stakeL)
 
         }
         if (keyName === 'ArrowDown' || keyName.toLowerCase() === 's') {
+
+            if (!(stakePos <= 0)) btnSfxByKeyboard()
+                else cancelSfxByKeyboard()
 
             stakePos = moveLeft (stakePos, stakes)
 
@@ -484,6 +497,8 @@ function displayContinueRun (continueInfo) {
 
 hasSeed.addEventListener('click', () => {
 
+    tagSfx()
+
     document.getElementById('seed').disabled = !hasSeed.checked
 
     if (!hasSeed.checked) document.getElementById('seed').value = ''
@@ -500,3 +515,49 @@ seed.addEventListener('blur', () => {
     isTyping = false
 
 })
+
+function btnSfxByKeyboard () {
+
+    const player1 = document.getElementById('player1')
+
+    player1.src = `../assets/sound/button.wav`
+    player1.load()
+
+    player1.addEventListener('canplay', async () => {
+
+        try {
+
+            await player1.play()
+
+        } catch (err) {
+
+            errorPlay()
+            
+        }
+
+    })
+
+}
+
+function cancelSfxByKeyboard () {
+
+    const player1 = document.getElementById('player1')
+
+    player1.src = `../assets/sound/cancel.wav`
+    player1.load()
+
+    player1.addEventListener('canplay', async () => {
+
+        try {
+
+            await player1.play()
+
+        } catch (err) {
+
+            errorPlay()
+            
+        }
+
+    })
+
+}

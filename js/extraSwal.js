@@ -759,7 +759,7 @@ function collectionTabs (id) {
 
                     row.forEach(r => {
 
-                        movingCard(r)
+                        movingCard(r, false)
                         
                     })
 
@@ -902,7 +902,7 @@ function collectionTabs (id) {
                     //Load SFX
                     buttonSfx('button')
 
-                    movingCard(document.querySelector('.cardsRow'))
+                    movingCard(document.querySelector('.cardsRow'), false)
 
                     requestAnimationFrame(() => {
 
@@ -1064,7 +1064,7 @@ function collectionTabs (id) {
                     //Load SFX
                     buttonSfx('button')
 
-                    movingCard(document.querySelector('.cardsRow'))
+                    movingCard(document.querySelector('.cardsRow'), false)
 
                     requestAnimationFrame(() => {
 

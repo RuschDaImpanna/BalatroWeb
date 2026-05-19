@@ -1,16 +1,16 @@
-export function movingCard (container) {
+export function movingCard (container, showGhost) {
 
-    const cards = [...container.children]
+    const cards = [...container.querySelectorAll('.dragCard')]
 
     cards.forEach(card => {
 
-        makeDraggable(card, container)
+        makeDraggable(card, container, showGhost)
         
     });
 
 }
 
-function makeDraggable (card, container) {
+function makeDraggable (card, container, showGhost) {
 
     let isDragging = false
     let isReturning = false
@@ -23,7 +23,10 @@ function makeDraggable (card, container) {
     //Mousedown
     card.addEventListener("mousedown", (e) => {
 
+        if (!card.classList.contains("dragCard")) return
         if (isDragging || isReturning) return
+
+        e.preventDefault()
 
         isDragging = true
 
@@ -36,9 +39,12 @@ function makeDraggable (card, container) {
         offsetX = e.clientX - rect.left
         offsetY = e.clientY - rect.top
 
+        console.log(rect.width, rect.height)
+
         //Style stuff
         card.style.position = "fixed"
         card.style.width = rect.width + "px"
+        card.style.height = rect.height + "px"
         card.style.zIndex = "9999"
 
         //Create ghost card
@@ -46,6 +52,13 @@ function makeDraggable (card, container) {
         ghost.classList.add("ghost")
         ghost.style.width = rect.width + "px"
         ghost.style.height = rect.height + "px"
+        ghost.style.opacity = 0.3
+        if (showGhost) {
+
+            ghost.innerHTML = card.innerHTML
+            ghost.querySelector('img').style.width = '100%'
+
+        }
 
         container.replaceChild(ghost, card)
         document.body.appendChild(card)
@@ -57,11 +70,13 @@ function makeDraggable (card, container) {
     //Mousemove
     document.addEventListener("mousemove", (e) => {
 
-        if (!isDragging ) return
+        if (!isDragging) return
 
         moveAt(e.clientX, e.clientY)
 
         const afterElement = getClosestCard(container, e.clientX)
+
+        if (!(container.querySelectorAll('.dragCard').length > 1)) return
 
         animateMove(container, () => {
 
@@ -106,6 +121,7 @@ function makeDraggable (card, container) {
             card.style.left = ''
             card.style.top = ''
             card.style.width = ''
+            card.style.height = ''
             card.style.zIndex = ''
             card.style.pointerEvents = ''
             card.style.transform = ''

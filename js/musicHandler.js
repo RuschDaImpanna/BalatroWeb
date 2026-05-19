@@ -119,6 +119,27 @@ export function buttonSfx (classTxt) {
 
 }
 
+export function tagSfx () {
+
+    player1.src = `../assets/sound/tag.wav`
+    player1.load()
+
+    player1.addEventListener('canplay', async () => {
+
+        try {
+
+            await player1.play()
+
+        } catch (err) {
+
+            errorPlay()
+            
+        }
+
+    })
+
+}
+
 
 export function changeVolume () {
 
