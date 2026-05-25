@@ -138,18 +138,29 @@ export function settingsSwal () {
             let volume = [100, 80, 80]
 
             //Set default values
-            gameSpeedSlider.value = localStorage.getItem('gameSpeed')
-            gameSpeedDisplay.innerHTML = localStorage.getItem('gameSpeed')
+            let gameSpeedValue = localStorage.getItem('gameSpeed')
+            if (!gameSpeedValue) {
 
-            screenSlider.value = localStorage.getItem('screen')
-            screenDisplay.innerHTML = localStorage.getItem('screen')
+                gameSpeedValue = gameSpeedSlider.value
+                localStorage.setItem('gameSpeed', gameSpeedValue)
 
-            const savedVolume = localStorage.getItem('volume')
-            if (savedVolume) {
-
-                volume = JSON.parse(savedVolume)
-                
             }
+            let screenValue = localStorage.getItem('screen')
+            if (!screenValue) {
+
+                screenValue = screenSlider.value
+                localStorage.setItem('screen', screenValue)
+
+            }
+            const savedVolume = localStorage.getItem('volume')
+            if (savedVolume) volume = JSON.parse(savedVolume)
+                 else localStorage.setItem('volume', JSON.stringify(volume))
+
+            gameSpeedSlider.value = gameSpeedValue
+            gameSpeedDisplay.innerHTML = gameSpeedValue
+
+            screenSlider.value = screenValue
+            screenDisplay.innerHTML = screenValue
 
             masterSlider.value = volume[0]
             masterDisplay.innerHTML = volume[0]
@@ -490,7 +501,969 @@ function collectionTabs (id) {
                 title: "Voucher",
                 html:(`
 
+                    <div class="bigContCol">
                     
+                        <div class="holder" id="holder2">
+
+                            <div class="cardsRow row4">
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_0-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Overstock</h6>
+                                            <p><strong style="color: #F3AD16;">+1</strong> card slot available in shop</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_0-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Overstock Plus</h6>
+                                            <p><strong style="color: #F3AD16;">+1</strong> card slot available in shop</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_1-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Clearance Sale</h6>
+                                            <p>All cards and packs in shop are <strong style="color: #F3AD16;">25%</strong> off</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_1-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Clearance Sale</h6>
+                                            <p>All cards and packs in shop are <strong style="color: #F3AD16;">50%</strong> off</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_2-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Hone</h6>
+                                            <p><strong class="editionText">Foil, Holographic</strong> or <strong class="editionText">Polychrome</strong> card appear <strong style="color: #F3AD16;">2X</strong> more often</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_2-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Glow Up</h6>
+                                            <p><strong class="editionText">Foil, Holographic</strong> or <strong class="editionText">Polychrome</strong> card appear <strong style="color: #F3AD16;">4X</strong> more often</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_3-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Reroll Surplus</h6>
+                                            <p>Reroll cost <strong style="color: #F3AD16;">$2</strong> less</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_3-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Reroll Glut</h6>
+                                            <p>Reroll cost <strong style="color: #F3AD16;">$2</strong> less</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_4-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Omen Globe</h6>
+                                            <p><strong style="color: #F3AD16;">+1</strong> consumable slot</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_4-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Overstock Plus</h6>
+                                            <p><strong style="color: #2E76FD;">Spectral</strong> cards may appear in any of the <strong style="color: #F3AD16;">Arcana Packs</strong></p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_1-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Clearance Sale</h6>
+                                            <p>All cards and packs in shop are <strong style="color: #F3AD16;">25%</strong> off</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_1-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Clearance Sale</h6>
+                                            <p>All cards and packs in shop are <strong style="color: #F3AD16;">50%</strong> off</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_2-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Hone</h6>
+                                            <p><strong class="editionText">Foil, Holographic</strong> or <strong class="editionText">Polychrome</strong> card appear <strong style="color: #F3AD16;">2X</strong> more often</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_2-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Glow Up</h6>
+                                            <p><strong class="editionText">Foil, Holographic</strong> or <strong class="editionText">Polychrome</strong> card appear <strong style="color: #F3AD16;">4X</strong> more often</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="voucherHolder">
+                                
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_3-0.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Reroll Surplus</h6>
+                                            <p>Reroll cost <strong style="color: #F3AD16;">$2</strong> less</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="consumableInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                        <div class="cardImg">
+
+                                            <img src="../assets/tags_vouchers/voucher_3-1.png">
+
+                                        </div>
+
+                                        <div class="cardInfo">
+
+                                            <h6>Reroll Glut</h6>
+                                            <p>Reroll cost <strong style="color: #F3AD16;">$2</strong> less</p>
+                                            <div class="cardTags">
+
+                                                <span style="background-color: #F94E0E;">Voucher</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_0.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_1.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_2.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_3.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_4.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Jumbo Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_5.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Jumbo Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_6.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mega Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">2</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/p_7.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mega Celestal Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">2</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #03A4C7;">Planet</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_0.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Standard Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_1.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Standard Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_2.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_3.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Celestial Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">3</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_4.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Jumbo Standard Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_5.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Jumbo Standard Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_6.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mega Standard Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">2</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/c_7.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mega Standard Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">2</strong> of up to <strong style="color: #F3AD16;">5</strong> <strong style="color: #F3AD16;">Playing</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/b_0.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Buffon Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">2</strong> Joker cards</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/b_1.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Buffon Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">2</strong> Joker cards</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/b_2.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Jumbo Buffoon Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">4</strong> Joker cards</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/b_3.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mega Buffoon Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">2</strong> of up to <strong style="color: #F3AD16;">4</strong> Joker cards</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardsRow row4">
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/s_0.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Spectral Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">2</strong> <strong style="color: #2E76FD;">Spectral</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/s_1.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Spectral Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">2</strong> <strong style="color: #2E76FD;">Spectral</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/s_2.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Jumbo Spectral Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">1</strong> of up to <strong style="color: #F3AD16;">4</strong> <strong style="color: #2E76FD;">Spectral</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+                                
+                                </div>
+
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
+
+                                    <div class="cardImg">
+
+                                        <img src="../assets/booster/s_3.png">
+
+                                    </div>
+
+                                    <div class="cardInfo">
+
+                                        <h6>Mega Spectral Pack</h6>
+                                        <p>Choose <strong style="color: #F3AD16;">2</strong> of up to <strong style="color: #F3AD16;">4</strong> <strong style="color: #2E76FD;">Spectral</strong> cards to be used inmediately</p>
+                                        <div class="cardTags">
+
+                                            <span style="background-color: #4D56A3;">Booster</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button class="left" id="boosterL" style="z-index: 999;" disabled>
+
+                            <span class="material-symbols-outlined">chevron_left</span>
+
+                        </button>
+
+                        <button class="right" id="boosterR" style="z-index: 999;">
+
+                            <span class="material-symbols-outlined">chevron_right</span>
+
+                        </button>
+                    
+                    </div>
 
                 `),
                 didOpen: () => { 
@@ -2453,7 +3426,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2475,7 +3448,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2497,7 +3470,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2519,7 +3492,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2545,7 +3518,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2567,7 +3540,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2589,7 +3562,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2611,7 +3584,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2637,7 +3610,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2659,7 +3632,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2681,7 +3654,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2703,7 +3676,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2729,7 +3702,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2751,7 +3724,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2773,7 +3746,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2795,7 +3768,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2821,7 +3794,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2843,7 +3816,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2865,7 +3838,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2887,7 +3860,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2913,7 +3886,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2935,7 +3908,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2957,7 +3930,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -2979,7 +3952,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3005,7 +3978,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3027,7 +4000,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3049,7 +4022,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3071,7 +4044,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3097,7 +4070,7 @@ function collectionTabs (id) {
 
                             <div class="cardsRow row4">
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3119,7 +4092,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3141,7 +4114,7 @@ function collectionTabs (id) {
 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 
@@ -3163,7 +4136,7 @@ function collectionTabs (id) {
                                 
                                 </div>
 
-                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 14 / 22;">
+                                <div class="cardInfoWrapper dragCard" style="aspect-ratio: 7 / 11;">
 
                                     <div class="cardImg">
 

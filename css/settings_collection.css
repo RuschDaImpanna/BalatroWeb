@@ -615,6 +615,32 @@ button:active:not(:disabled, .swal2-close) {
 
 }
 
+.voucherHolder {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.voucherHolder:has(> :nth-child(2):last-child) {
+
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.voucherHolder:has(> :nth-child(2):last-child) .consumableInfoWrapper:nth-child(odd) {
+
+    transform: rotate(-5deg);
+
+}
+
+.voucherHolder:has(> :nth-child(2):last-child) .consumableInfoWrapper:nth-child(even) {
+
+    transform: rotate(5deg);
+
+}
+
 #holder1 {
 
     display: grid;
@@ -780,7 +806,7 @@ button:active:not(:disabled, .swal2-close) {
 
 }
 
-#holder3, #holder5, #holder6, #holder9 {
+#holder2, #holder3, #holder5, #holder6, #holder9 {
 
     grid-template-rows: repeat(2, 1fr);
 
