@@ -6,6 +6,9 @@
 ### Página oficial
 [Sitio oficial de Balatro](https://www.playbalatro.com/)
 
+### Página del repo (GitHub Pages)
+[Juega Balatro en web](https://ruschdaimpanna.github.io/BalatroWeb/html/main.html)
+
 # ⚠️ Disclaimer ⚠️
 
 Este proyecto es una recreación fanmade sin fines de lucro desarrollada únicamente con propósitos educativos y de aprendizaje.
