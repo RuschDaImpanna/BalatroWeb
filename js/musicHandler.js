@@ -119,6 +119,37 @@ export function buttonSfx (classTxt) {
 
 }
 
+export function hoverCardSfx (classTxt) {
+
+    document.querySelectorAll(classTxt).forEach(card => {
+
+        card.addEventListener('mouseenter', () => {
+
+            if (card.classList.contains('dragging')) return
+
+            player1.src = `../assets/sound/hoverCard.wav`
+            player1.load()
+
+            player1.addEventListener('canplay', async () => {
+
+                try {
+
+                    await player1.play()
+
+                } catch (err) {
+
+                    errorPlay()
+                    
+                }
+
+            })
+
+        })
+        
+    })
+
+}
+
 export function tagSfx () {
 
     player1.src = `../assets/sound/tag.wav`

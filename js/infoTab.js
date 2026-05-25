@@ -1,5 +1,5 @@
 import deck from '../json/standardDeck.json' with { type: 'json' }
-import { buttonSfx } from './musicHandler.js'
+import { buttonSfx, hoverCardSfx } from './musicHandler.js'
 import { getHandCondition } from "./playHand.js"
 
 const runBtn = document.getElementById('runInfo')
@@ -51,7 +51,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvlC">Lvl. XXX</p>
+                                    <p class="lvlC">Lvl. XXX</p>
 
                                 </div>
 
@@ -85,7 +85,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvlB">Lvl. XXX</p>
+                                    <p class="lvlB">Lvl. XXX</p>
 
                                 </div>
 
@@ -119,7 +119,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvlA">Lvl. XXX</p>
+                                    <p class="lvlA">Lvl. XXX</p>
 
                                 </div>
 
@@ -153,7 +153,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl9">Lvl. XXX</p>
+                                    <p class="lvl9">Lvl. XXX</p>
 
                                 </div>
 
@@ -187,7 +187,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl8">Lvl. XXX</p>
+                                    <p class="lvl8">Lvl. XXX</p>
 
                                 </div>
 
@@ -221,7 +221,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl7">Lvl. XXX</p>
+                                    <p class="lvl7">Lvl. XXX</p>
 
                                 </div>
 
@@ -255,7 +255,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl6">Lvl. XXX</p>
+                                    <p class="lvl6">Lvl. XXX</p>
 
                                 </div>
 
@@ -289,7 +289,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl5">Lvl. XXX</p>
+                                    <p class="lvl5">Lvl. XXX</p>
 
                                 </div>
 
@@ -323,7 +323,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl4">Lvl. XXX</p>
+                                    <p class="lvl4">Lvl. XXX</p>
 
                                 </div>
 
@@ -357,7 +357,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl3">Lvl. XXX</p>
+                                    <p class="lvl3">Lvl. XXX</p>
 
                                 </div>
 
@@ -391,7 +391,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl2">Lvl. XXX</p>
+                                    <p class="lvl2">Lvl. XXX</p>
 
                                 </div>
 
@@ -425,7 +425,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl1">Lvl. XXX</p>
+                                    <p class="lvl1">Lvl. XXX</p>
 
                                 </div>
 
@@ -459,7 +459,7 @@ runBtn.addEventListener('click', () => {
 
                                 <div class="pokerLvl">
 
-                                    <p id="lvl0">Lvl. XXX</p>
+                                    <p class="lvl0">Lvl. XXX</p>
 
                                 </div>
 
@@ -505,7 +505,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl0">Lvl. XXX</p>
+                                                <p class="lvl0">Lvl. XXX</p>
 
                                             </div>
 
@@ -553,7 +553,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl1">Lvl. XXX</p>
+                                                <p class="lvl1">Lvl. XXX</p>
 
                                             </div>
 
@@ -601,7 +601,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl2">Lvl. XXX</p>
+                                                <p class="lvl2">Lvl. XXX</p>
 
                                             </div>
 
@@ -649,7 +649,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl3">Lvl. XXX</p>
+                                                <p class="lvl3">Lvl. XXX</p>
 
                                             </div>
 
@@ -697,7 +697,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl4">Lvl. XXX</p>
+                                                <p class="lvl4">Lvl. XXX</p>
 
                                             </div>
 
@@ -745,7 +745,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl5">Lvl. XXX</p>
+                                                <p class="lvl5">Lvl. XXX</p>
 
                                             </div>
 
@@ -793,7 +793,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl6">Lvl. XXX</p>
+                                                <p class="lvl6">Lvl. XXX</p>
 
                                             </div>
 
@@ -841,7 +841,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl7">Lvl. XXX</p>
+                                                <p class="lvl7">Lvl. XXX</p>
 
                                             </div>
 
@@ -889,7 +889,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl8">Lvl. XXX</p>
+                                                <p class="lvl8">Lvl. XXX</p>
 
                                             </div>
 
@@ -937,7 +937,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvl9">Lvl. XXX</p>
+                                                <p class="lvl9">Lvl. XXX</p>
 
                                             </div>
 
@@ -989,7 +989,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvlA">Lvl. XXX</p>
+                                                <p class="lvlA">Lvl. XXX</p>
 
                                             </div>
 
@@ -1037,7 +1037,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvlB">Lvl. XXX</p>
+                                                <p class="lvlB">Lvl. XXX</p>
 
                                             </div>
 
@@ -1085,7 +1085,7 @@ runBtn.addEventListener('click', () => {
 
                                             <div class="pokerLvl">
 
-                                                <p id="lvlC">Lvl. XXX</p>
+                                                <p class="lvlC">Lvl. XXX</p>
 
                                             </div>
 
@@ -1169,7 +1169,7 @@ runBtn.addEventListener('click', () => {
 
             //Load SFX
             buttonSfx('button')
-
+            
             const modal = Swal.getPopup()
 
             //Menu top buttons
@@ -1367,6 +1367,8 @@ runBtn.addEventListener('click', () => {
 
             })
 
+            hoverCardSfx('.imgCardInfo')
+
         }
 
 
@@ -1396,7 +1398,7 @@ function takeIframe () {
 
     const iFrameBlind = document.createElement('iframe')
     iFrameBlind.src = "../html/ante.html"
-    iFrameBlind.style.pointerEvents = 'none '
+    iFrameBlind.style.pointerEvents = 'none'
     iFrameBlind.style.position = 'absolute'
     iFrameBlind.style.opacity = 0
 
@@ -1825,6 +1827,7 @@ function placeHandCardsInfo (container, id) {
         onCharge.forEach((card, index) => {
 
             const container = document.createElement('div')
+            container.classList.add('cardInfoCont')
 
             container.style.position = 'relative'
 
@@ -1843,9 +1846,11 @@ function placeHandCardsInfo (container, id) {
             }
 
                 const bgImg = document.createElement('img')
+                bgImg.classList.add('imgCardInfo')
                 bgImg.src = `../assets/playCards/cards_e0.png`
 
                 const valueImg = document.createElement('img')
+                valueImg.classList.add('imgCardInfo')
                 valueImg.src = `../assets/playCards/cards_${card}.png`
 
                 valueImg.style.position = 'absolute'

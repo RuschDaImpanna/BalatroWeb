@@ -18,13 +18,26 @@
 
 }
 
-.cardInfoWrapper {
+.cardInfoWrapper, .consumableInfoWrapper {
 
     position: relative;
 
     width: 100%;
     height: min-content;
+
+}
+
+.cardInfoWrapper {
+
+
     aspect-ratio: 14 / 19;
+
+}
+
+.consumableInfoWrapper {
+
+
+    aspect-ratio: 7 / 10;
 
 }
 
@@ -35,7 +48,7 @@
 
 }
 
-.cardInfoWrapper:hover:not(.dragging) {
+.cardInfoWrapper:hover:not(.dragging), .consumableInfoWrapper:hover:not(.dragging) {
 
     z-index: 1;
 
@@ -82,6 +95,83 @@
 
     }
 
+}
+
+.legendaryMove {
+
+    animation: legendaryMove 10s linear infinite;
+
+}
+
+.soulCrystal {
+
+    animation: legendaryMove 10s linear infinite, heartBeat 1.2s ease-in-out infinite;
+    transform-origin: center;
+
+}
+
+@keyframes legendaryMove {
+    0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  12.5% {
+    transform: translate(3px, -2px) rotate(2.5deg);
+  }
+
+  25% {
+    transform: translate(5px, 0px) rotate(3.8deg);
+  }
+
+  37.5% {
+    transform: translate(3px, 2px) rotate(1.5deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  62.5% {
+    transform: translate(-3px, -2px) rotate(-3.8deg);
+  }
+
+  75% {
+    transform: translate(-5px, 0px) rotate(-2.5deg);
+  }
+
+  87.5% {
+    transform: translate(-3px, 2px) rotate(-1.5deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes heartBeat {
+    0% {
+        scale: 1;
+    }
+
+    10% {
+        scale: 1.08;
+    }
+
+    20% {
+        scale: 1;
+    }
+
+    30% {
+        scale: 1.12;
+    }
+
+    40% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1;
+    }
 }
 
 .cardImg.negative {
@@ -328,7 +418,7 @@
 
 .dragCard {
 
-    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     will-change: transform;
 
     cursor: grab;

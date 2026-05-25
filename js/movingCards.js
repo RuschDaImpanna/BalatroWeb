@@ -30,28 +30,28 @@ function makeDraggable (card, container, showGhost) {
 
         isDragging = true
 
-        card.classList.add('dragging')
-
-
         //Get measures and positon
         const rect = card.getBoundingClientRect()
+
+        const copyWidth = rect.width
+        const copyHeight = rect.height
+
+        card.classList.add('dragging')
 
         offsetX = e.clientX - rect.left
         offsetY = e.clientY - rect.top
 
-        console.log(rect.width, rect.height)
-
         //Style stuff
         card.style.position = "fixed"
-        card.style.width = rect.width + "px"
-        card.style.height = rect.height + "px"
+        card.style.width = copyWidth + "px"
+        card.style.transform = `scale(1.15)`
         card.style.zIndex = "9999"
 
         //Create ghost card
         ghost = document.createElement("div")
         ghost.classList.add("ghost")
-        ghost.style.width = rect.width + "px"
-        ghost.style.height = rect.height + "px"
+        ghost.style.width = copyWidth + "px"
+        ghost.style.height = copyHeight + "px"
         ghost.style.opacity = 0.3
         if (showGhost) {
 
@@ -121,7 +121,7 @@ function makeDraggable (card, container, showGhost) {
             card.style.left = ''
             card.style.top = ''
             card.style.width = ''
-            card.style.height = ''
+            card.style.transform = ''
             card.style.zIndex = ''
             card.style.pointerEvents = ''
             card.style.transform = ''
@@ -224,6 +224,8 @@ function animateMove (container, moveFunc) {
 }
 
 function animateFly (card, target, moveFunc) {
+
+    card.style.transform = "none"
 
     const targetRect = target.getBoundingClientRect()
     const cardRect = card.getBoundingClientRect()

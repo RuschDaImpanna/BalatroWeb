@@ -514,7 +514,7 @@ body {
 
 .dragCard {
 
-    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     will-change: transform;
 
     cursor: grab;
@@ -531,6 +531,7 @@ body {
 
 .dragCard.dragging{
 
+    max-width: none !important;
     cursor: grabbing;
 
 }
