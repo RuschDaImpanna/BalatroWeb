@@ -203,7 +203,7 @@
         #FF005AA6 100%
     );
 
-    mix-blend-mode: hard-light;
+    mix-blend-mode: overlay;
     pointer-events: none;
 
     animation: rainbowShift 8s linear infinite;
@@ -298,12 +298,12 @@
 @keyframes rainbowShift {
     from {
 
-        filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg) contrast(10);
 
     }
     to {
 
-        filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg) contrast(10);
         
     }
 }

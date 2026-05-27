@@ -449,7 +449,7 @@ button:active:not(:disabled, .swal2-close) {
     gap: 12px;
 
     height: 100%;
-    padding: 0 12px 10vh;
+    padding: 0 12px 12%;
     box-sizing: border-box;
 
 
@@ -801,6 +801,19 @@ button:active:not(:disabled, .swal2-close) {
 
         background-color: #3C565E;
         border-radius: 10px;
+
+    }
+
+}
+
+#holder2 .row4 {
+
+    padding: 7px;
+    box-sizing: border-box;
+
+    .cardInfo {
+
+        width: 90px;
 
     }
 
