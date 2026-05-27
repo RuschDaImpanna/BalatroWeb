@@ -1,7 +1,19 @@
 const player0 = document.getElementById('player0')
 const player1 = document.getElementById('player1')
 
+const lastAlive = Number(localStorage.getItem("lastAlive"))
+
 window.addEventListener('DOMContentLoaded', async () => {
+
+    const getNewDate = new Date
+
+    console.log(getNewDate.getTime() - lastAlive)
+
+    if (getNewDate.getTime() - lastAlive > 1250) {
+
+        localStorage.setItem("trackTime", 0);
+
+    }
 
     //Load inherit sfx
     buttonSfx('button')
@@ -184,3 +196,11 @@ export function changeVolume () {
     player1.volume = master * ch1
 
 }
+
+setInterval(() => {
+
+    const getDate = new Date
+
+    localStorage.setItem("lastAlive", getDate.getTime())
+
+}, 1000)
