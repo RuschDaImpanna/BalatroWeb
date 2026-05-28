@@ -3,12 +3,13 @@
     {
         
         "id": 0,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Overstock",
-                "description": "+1 card slot available in shop",
+                "description": "<strong style=\"color: #F3AD16;\">+1</strong> card slot available in shop",
+                "image": "../assets/tags_vouchers/voucher_0-0.png",
                 "property": "shopSize",
                 "value": 1
 
@@ -16,25 +17,26 @@
             { 
                 
                 "name": "Overstock Plus",
-                "description": "+1 card slot available in shop",
+                "description": "<strong style=\"color: #F3AD16;\">+1</strong> card slot available in shop",
+                "image": "../assets/tags_vouchers/voucher_0-1.png",
                 "property": "shopSize",
                 "value": 2
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 1,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Clearance Sale",
-                "description": "All cards and packs in shop are 25% off",
+                "description": "All cards and packs in shop are <strong style=\"color: #F3AD16;\">25%</strong> off",
+                "image": "../assets/tags_vouchers/voucher_1-0.png",
                 "property": "cardPrice",
                 "value": 0.75
 
@@ -42,25 +44,26 @@
             { 
                 
                 "name": "Liquidation",
-                "description": "All cards and packs in shop are 50% off",
+                "description": "All cards and packs in shop are <strong style=\"color: #F3AD16;\">50%</strong> off",
+                "image": "../assets/tags_vouchers/voucher_1-1.png",
                 "property": "cardPrice",
                 "value": 0.5
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 2,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Hone",
-                "description": "Foil, Holographic, and Polychrome cards appear 2× more often",
+                "description": "<strong class=\"editionText\">Foil, Holographic</strong> or <strong class=\"editionText\">Polychrome</strong> card appear <strong style=\"color: #F3AD16;\">2X</strong> more often",
+                "image": "../assets/tags_vouchers/voucher_2-0.png",
                 "property": "editionWeight",
                 "value": 3
 
@@ -68,25 +71,26 @@
             { 
                 
                 "name": "Glow Up",
-                "description": "Foil, Holographic, and Polychrome cards appear 4× more often",
+                "description": "<strong class=\"editionText\">Foil, Holographic</strong> or <strong class=\"editionText\">Polychrome</strong> card appear <strong style=\"color: #F3AD16;\">4X</strong> more often",
+                "image": "../assets/tags_vouchers/voucher_2-1.png",
                 "property": "editionWeight",
                 "value": 7
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 3,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Reroll Surplus",
-                "description": "Rerolls cost $2 less",
+                "description": "Reroll cost <strong style=\"color: #F3AD16;\">$2</strong> less",
+                "image": "../assets/tags_vouchers/voucher_3-0.png",
                 "property": "rerollPrice",
                 "value": -2
 
@@ -94,25 +98,26 @@
             { 
                 
                 "name": "Reroll Glut",
-                "description": "Rerolls cost $2 less",
+                "description": "Reroll cost <strong style=\"color: #F3AD16;\">$2</strong> less",
+                "image": "../assets/tags_vouchers/voucher_3-1.png",
                 "property": "rerollPrice",
                 "value": -4
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 4,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Crystal Ball",
-                "description": "+1 Consumable Slot",
+                "description": "<strong style=\"color: #F3AD16;\">+1</strong> consumable slot",
+                "image": "../assets/tags_vouchers/voucher_4-0.png",
                 "property": "consumableSize",
                 "value": 1
 
@@ -120,25 +125,26 @@
             { 
                 
                 "name": "Omen Globe",
-                "description": "Rerolls cost $2 less",
+                "description": "<strong style=\"color: #2E76FD;\">Spectral</strong> cards may appear in any of the <strong style=\"color: #F3AD16;\">Arcana Packs</strong>",
+                "image": "../assets/tags_vouchers/voucher_4-1.png",
                 "property": ["consumableSize", "spectralArcanaChance"],
                 "value": [1, 0.2]
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 5,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Telescope",
-                "description": "Celestial Packs always contain the Planet card for your most played poker hand",
+                "description": "<strong style=\"color: #F3AD16;\">Celestial Packs</strong> always contain the <strong style=\"color: #03A4C7\";>Planet</strong> card for your most player <strong style=\"color: #F3AD16;\">poker hand</strong>",
+                "image": "../assets/tags_vouchers/voucher_5-0.png",
                 "property": "favPlanet",
                 "value": true
 
@@ -146,25 +152,26 @@
             { 
                 
                 "name": "Observatory",
-                "description": "Planet cards in your consumable area give ×1.5 Mult for their specified poker hand",
+                "description": "<strong style=\"color: #03A4C7;\">Planet</strong> cards in your <strong style=\"color: #F3AD16;\">consumable</strong> area give <strong style=\"background-color: #DF2525; color: white; padding: 1px 2px;\">X1.5</strong> Mult for their specified <strong style=\"color: #F3AD16;\">poker hand</strong>",
+                "image": "../assets/tags_vouchers/voucher_5-1.png",
                 "property": ["favPlanet", "heldPlanetMult"],
                 "value": [true, true]
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 6,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Grabber",
-                "description": "Permanently gain +1 hand per round",
+                "description": "Permanetly gain <strong style=\"color: #03A4C7;\">+1</strong> hand per round",
+                "image": "../assets/tags_vouchers/voucher_6-0.png",
                 "property": "handCount",
                 "value": 1
 
@@ -172,25 +179,26 @@
             { 
                 
                 "name": "Nacho Tong",
-                "description": "Permanently gain +1 hand per round",
+                "description": "Permanetly gain <strong style=\"color: #03A4C7;\">+1</strong> hand per round",
+                "image": "../assets/tags_vouchers/voucher_6-1.png",
                 "property": "handCount",
                 "value": 2
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 7,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Wasteful",
-                "description": "Permanently gain +1 discard each round",
+                "description": "Permanetly gain <strong style=\"color: #DF2525;\">+1</strong> discard per round",
+                "image": "../assets/tags_vouchers/voucher_7-0.png",
                 "property": "discardCount",
                 "value": 1
 
@@ -198,25 +206,26 @@
             { 
                 
                 "name": "Recyclomancy",
-                "description": "Permanently gain +1 discard each round",
+                "description": "Permanetly gain <strong style=\"color: #DF2525;\">+1</strong> discard per round",
+                "image": "../assets/tags_vouchers/voucher_7-1.png",
                 "property": "discardCount",
                 "value": 2
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 8,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Tarot Merchant",
-                "description": "Tarot cards appear 2× more frequently in the shop",
+                "description": "<strong style=\"color: #9E74CE;\">Tarot</strong> cards appear <strong style=\"color: #F3AD16;\">2X</strong> more frequent in the shop",
+                "image": "../assets/tags_vouchers/voucher_8-0.png",
                 "property": "tarotWeight",
                 "value": 8
 
@@ -224,25 +233,26 @@
             { 
                 
                 "name": "Tarot Tycoon",
-                "description": "Tarot cards appear 4× more frequently in the shop",
+                "description": "<strong style=\"color: #9E74CE;\">Tarot</strong> cards appear <strong style=\"color: #F3AD16;\">4X</strong> more frequent in the shop",
+                "image": "../assets/tags_vouchers/voucher_8-1.png",
                 "property": "tarotWeight",
                 "value": 32
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 9,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Planet Merchant",
-                "description": "Planet cards appear 2× more frequently in the shop",
+                "description": "<strong style=\"color: #03A4C7;\">Planet</strong> cards appear <strong style=\"color: #F3AD16;\">2X</strong> more frequent in the shop",
+                "image": "../assets/tags_vouchers/voucher_9-0.png",
                 "property": "planetWeight",
                 "value": 8
 
@@ -250,25 +260,26 @@
             { 
                 
                 "name": "Planet Tycoon",
-                "description": "Planet cards appear 4× more frequently in the shop",
+                "description": "<strong style=\"color: #03A4C7;\">Planet</strong> cards appear <strong style=\"color: #F3AD16;\">4X</strong> more frequent in the shop",
+                "image": "../assets/tags_vouchers/voucher_9-1.png",
                 "property": "planetWeight",
                 "value": 32
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 10,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Seed Money",
-                "description": "Raise the cap on interest earned in each round to $10",
+                "description": "Raise the cap interest earned in each round to <strong style=\"color: #F3AD16;\">$10</strong>",
+                "image": "../assets/tags_vouchers/voucher_A-0.png",
                 "property": "interestCap",
                 "value": 10
 
@@ -276,25 +287,26 @@
             { 
                 
                 "name": "Money Tree",
-                "description": "Raise the cap on interest earned in each round to $20",
+                "description": "Raise the cap interest earned in each round to <strong style=\"color: #F3AD16;\">$20</strong>",
+                "image": "../assets/tags_vouchers/voucher_A-1.png",
                 "property": "interestCap",
                 "value": 20
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 11,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Blank",
-                "description": "Does Nothing?",
+                "description": "<i style=\"color: #3C565E;\">Does nothing?</i>",
+                "image": "../assets/tags_vouchers/voucher_B-0.png",
                 "property": "jokerSize",
                 "value": 0
 
@@ -302,25 +314,27 @@
             { 
                 
                 "name": "Antimatter",
-                "description": "+1 Joker slot",
+                "description": "<strong class=\"editionText\">+1</strong> Joker Slot",
+                "image": "../assets/tags_vouchers/voucher_B-1.png",
+                "edition": "negative",
                 "property": "jokerSize",
                 "value": 1
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 12,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Magic Trick",
-                "description": "Playing cards can be purchased from the shop",
+                "description": "<strong style=\"color: #F3AD16;\">Playing cards</strong> can be purchased from the <strong style=\"color: #F3AD16;\">shop</strong>",
+                "image": "../assets/tags_vouchers/voucher_C-0.png",
                 "property": "cardsWeight",
                 "value": 4
 
@@ -328,25 +342,26 @@
             { 
                 
                 "name": "Illusion",
-                "description": "Playing cards in shop may have an Enhancement, Edition, and/or a Seal",
+                "description": "<strong style=\"color: #F3AD16;\">Playing cards</strong> in shop may have <strong class=\"editionText\">Enhancement, Edition</strong> and/or <strong style=\"color: #F3AD16;\">Seal</strong>",
+                "image": "../assets/tags_vouchers/voucher_C-1.png",
                 "property": ["cardsWeight", "cardsPowered"],
                 "value": [4, true]
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 13,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Hieroglyph",
-                "description": "-1 Ante, -1 hand each round",
+                "description": "<strong style=\"color: #F3AD16;\">-1</strong> Ante <br> <strong style=\"color: #03A4C7;\">-1</strong> hand each round",
+                "image": "../assets/tags_vouchers/voucher_D-0.png",
                 "property": ["ante", "handCount"],
                 "value": [-1, -1]
 
@@ -354,25 +369,26 @@
             { 
                 
                 "name": "Petroglyph",
-                "description": "-1 Ante again, -1 discard each round",
+                "description": "<strong style=\"color: #F3AD16;\">-1</strong> Ante <br> <strong style=\"color: #DF2525;\">-1</strong> discard each round",
+                "image": "../assets/tags_vouchers/voucher_D-1.png",
                 "property": ["ante", "handCount", "discardCount"],
                 "value": [-2, -1, -1]
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 14,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Director's Cut",
-                "description": "Reroll Boss Blind 1 time per Ante, $10 per roll",
+                "description": "Reroll Boss Blind <strong style=\"color: #F94E0E;\">1</strong> time per Ante. <br> <strong style=\"color: #F3AD16;\">$10</strong> per roll",
+                "image": "../assets/tags_vouchers/voucher_E-0.png",
                 "property": ["canReroll", "isInfiniteReroll"],
                 "value": [true, false]
 
@@ -380,25 +396,26 @@
             { 
                 
                 "name": "Retcon",
-                "description": "Reroll Boss Blind unlimited times, $10 per roll",
+                "description": "Reroll Boss Blind <strong style=\"color: #F94E0E;\">unlimited</strong> times. <br> <strong style=\"color: #F3AD16;\">$10</strong> per roll",
+                "image": "../assets/tags_vouchers/voucher_E-1.png",
                 "property": ["canReroll", "isInfiniteReroll"],
                 "value": [true, true]
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     },
     {
         
         "id": 15,
-        "vouchers": [
+        "info": [
 
             { 
 
                 "name": "Paint Brush",
-                "description": "+1 hand size",
+                "description": "<strong style=\"color: #F3AD16;\">+1</strong> hand size",
+                "image": "../assets/tags_vouchers/voucher_F-0.png",
                 "property": "handSize",
                 "value": 1
 
@@ -406,14 +423,14 @@
             { 
                 
                 "name": "Pallete",
-                "description": "+1 hand size",
+                "description": "<strong style=\"color: #F3AD16;\">+1</strong> hand size",
+                "image": "../assets/tags_vouchers/voucher_F-1.png",
                 "property": "handSize",
                 "value": 2
             
             }
 
-        ],
-        "phase": 0
+        ]
 
     }
 

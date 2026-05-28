@@ -1,0 +1,268 @@
+[
+
+    {
+        
+        "id": 0,
+        "info": [{ 
+
+            "name": "The Fool",
+            "description": "Creates the last <strong style=\"color: #9E74CE;\">Tarot</strong> or <strong style=\"color: #1199F0;\">Planet</strong> card used during this run <br> <i style=\"color: #3C565E;\"><strong style=\"color: #9E74CE;\">The Fool</strong> excluded</i> <br> <span class=\"lastConsuFool\" style=\"background-color: #0FA15D; padding: 0 5px; border-radius: 5px; font-size: 0.75em;\">##LAST##</span>",
+            "image": "../assets/consumables/tarot_00.png"
+
+        }]
+
+    },
+    {
+        
+        "id": 1,
+        "info": [{ 
+
+            "name": "The Magician",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">2</strong> selected cards to <strong style=\"color: #F3AD16;\">Lucky Cards</strong>",
+            "image": "../assets/consumables/tarot_01.png"
+
+        }]
+
+    },
+    {
+        
+        "id": 2,
+        "info": [{ 
+
+            "name": "The High Priestess",
+            "description": "Creates up to <strong style=\"color: #F3AD16;\">2</strong> random <strong style=\"color: #1199F0;\">Planet</strong> cards <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+            "image": "../assets/consumables/tarot_02.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 3,
+        "info": [{ 
+
+            "name": "The Empress",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">2</strong> selected cards to <strong style=\"color: #F3AD16;\">Mult Cards</strong>",
+            "image": "../assets/consumables/tarot_03.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 4,
+        "info": [{ 
+
+            "name": "The Emperor",
+            "description": "Creates up to <strong style=\"color: #F3AD16;\">2</strong> random <strong style=\"color: #9E74CE;\">Tarot</strong> cards <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+            "image": "../assets/consumables/tarot_04.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 5,
+        "info": [{ 
+
+            "name": "The Hielophant",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">2</strong> selected cards to <strong style=\"color: #F3AD16;\">Bonus Cards</strong>",
+            "image": "../assets/consumables/tarot_05.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 6,
+        "info": [{ 
+
+            "name": "The Lovers",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">2</strong> selected cards to <strong style=\"color: #F3AD16;\">Wild Cards</strong>",
+            "image": "../assets/consumables/tarot_06.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 7,
+        "info": [{ 
+
+            "name": "The Chariot",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">1</strong> selected card to <strong style=\"color: #F3AD16;\">Steel Cards</strong>",
+            "image": "../assets/consumables/tarot_07.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 8,
+        "info": [{ 
+
+            "name": "Justice",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">1</strong> selected card to <strong style=\"color: #F3AD16;\">Glass Cards</strong>",
+            "image": "../assets/consumables/tarot_08.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 9,
+        "info": [{ 
+
+            "name": "The Hermit",
+            "description": "Doubles money <br> <i style=\"color: #3C565E;\">(Max of <strong style=\"color: #F3AD16;\">$20</strong>)</i>",
+            "image": "../assets/consumables/tarot_09.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 10,
+        "info": [{ 
+
+            "name": "The Wheel of Fortune",
+            "description": "<strong style=\"color: #4CC192;\">1 in 4</strong> chance to add <strong class=\"editionText\">Foil, Holographic</strong> or <strong class=\"editionText\">Polychrome</strong> edition to a random <strong style=\"color: #F3AD16;\">Joker</strong>",
+            "image": "../assets/consumables/tarot_0A.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 11,
+        "info": [{ 
+
+            "name": "Strength",
+            "description": "Increases rank of up to <strong style=\"color: #F3AD16;\">2</strong> selected cards by <strong style=\"color: #F3AD16;\">1</strong>",
+            "image": "../assets/consumables/tarot_0B.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 12,
+        "info": [{ 
+
+            "name": "The Hanged Man",
+            "description": "Destroys up to <strong style=\"color: #F3AD16;\">2</strong> selected cards",
+            "image": "../assets/consumables/tarot_0C.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 13,
+        "info": [{ 
+
+            "name": "Death",
+            "description": "Select <strong style=\"color: #F3AD16;\">2</strong> cards, convert the <strong style=\"color: #F3AD16;\">left</strong> card into the <strong style=\"color: #F3AD16;\">right</strong> card <br> <i style=\"color: #3C565E;\">(Drag to rearrange)</i>",
+            "image": "../assets/consumables/tarot_0D.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 14,
+        "info": [{ 
+
+            "name": "Temperance",
+            "description": "Gives the total sell value of all current Jokers <br> <i style=\"color: #3C565E;\">(Max of <strong style=\"color: #F3AD16;\">$50</strong>)</i> <br> <i style=\"color: #3C565E;\">(Currently <strong class=\"jokerSellSum\" style=\"color: #F3AD16;\">##JOKERSELLSUM##</strong>)</i>",
+            "image": "../assets/consumables/tarot_0E.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 15,
+        "info": [{ 
+
+            "name": "The Devil",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">1</strong> selected card into a <strong style=\"color: #F3AD16;\">Gold Card</strong>",
+            "image": "../assets/consumables/tarot_0F.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 16,
+        "info": [{ 
+
+            "name": "The Tower",
+            "description": "Enhances <strong style=\"color: #F3AD16;\">1</strong> selected card into a <strong style=\"color: #F3AD16;\">Stone Card</strong>",
+            "image": "../assets/consumables/tarot_10.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 17,
+        "info": [{ 
+
+            "name": "The Star",
+            "description": "Converts up to <strong style=\"color: #F3AD16;\">3</strong> selected cards to <strong style=\"color: #F3AD16;\">Diamonds</strong>",
+            "image": "../assets/consumables/tarot_11.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 18,
+        "info": [{ 
+
+            "name": "The Moon",
+            "description": "Converts up to <strong style=\"color: #F3AD16;\">3</strong> selected cards to <strong style=\"color: #F3AD16;\">Clubs</strong>",
+            "image": "../assets/consumables/tarot_12.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 19,
+        "info": [{ 
+
+            "name": "The Sun",
+            "description": "Converts up to <strong style=\"color: #F3AD16;\">3</strong> selected cards to <strong style=\"color: #F3AD16;\">Hearts</strong>",
+            "image": "../assets/consumables/tarot_13.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 20,
+        "info": [{ 
+
+            "name": "Judgement",
+            "description": "Creates a random <strong style=\"color: #F3AD16;\">Joker</strong> card <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+            "image": "../assets/consumables/tarot_14.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 21,
+        "info": [{ 
+
+            "name": "The World",
+            "description": "Converts up to <strong style=\"color: #F3AD16;\">3</strong> selected cards to <strong style=\"color: #F3AD16;\">Spades</strong>",
+            "image": "../assets/consumables/tarot_15.png"
+            
+        }]
+
+    }
+
+]

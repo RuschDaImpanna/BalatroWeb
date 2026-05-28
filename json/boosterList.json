@@ -1,0 +1,388 @@
+[
+
+    {
+        
+        "id": 0,
+        "info": [{ 
+
+            "name": "Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_0.png"
+
+        }]
+
+    },
+    {
+        
+        "id": 1,
+        "info": [{ 
+
+            "name": "Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_1.png"
+
+        }]
+
+    },
+    {
+        
+        "id": 2,
+        "info": [{ 
+
+            "name": "Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_2.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 3,
+        "info": [{ 
+
+            "name": "Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_3.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 4,
+        "info": [{ 
+
+            "name": "Jumbo Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_4.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 5,
+        "info": [{ 
+
+            "name": "Jumbo Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_5.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 6,
+        "info": [{ 
+
+            "name": "Mega Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_6.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 7,
+        "info": [{ 
+
+            "name": "Mega Arcana Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #9E74CE;\">Tarot</strong> cards to be used inmediately",
+            "image": "../assets/booster/t_7.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 8,
+        "info": [{ 
+
+            "name": "Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_0.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 9,
+        "info": [{ 
+
+            "name": "Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_1.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 10,
+        "info": [{ 
+
+            "name": "Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_2.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 11,
+        "info": [{ 
+
+            "name": "Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_3.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 12,
+        "info": [{ 
+
+            "name": "Jumbo Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_4.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 13,
+        "info": [{ 
+
+            "name": "Jumbo Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_5.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 14,
+        "info": [{ 
+
+            "name": "Mega Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_6.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 15,
+        "info": [{ 
+
+            "name": "Mega Celestial Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #03A4C7;\">Planet</strong> cards to be used inmediately",
+            "image": "../assets/booster/p_7.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 16,
+        "info": [{ 
+
+            "name": "Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_0.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 17,
+        "info": [{ 
+
+            "name": "Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_1.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 18,
+        "info": [{ 
+
+            "name": "Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_2.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 19,
+        "info": [{ 
+
+            "name": "Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">3</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_3.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 20,
+        "info": [{ 
+
+            "name": "Jumbo Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_4.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 21,
+        "info": [{ 
+
+            "name": "Jumbo Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_5.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 22,
+        "info": [{ 
+
+            "name": "Mega Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_6.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 23,
+        "info": [{ 
+
+            "name": "Mega Standard Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">5</strong> <strong style=\"color: #F3AD16;\">Playing</strong> cards to be used inmediately",
+            "image": "../assets/booster/c_7.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 24,
+        "info": [{ 
+
+            "name": "Buffoon Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">2</strong> Joker cards",
+            "image": "../assets/booster/b_0.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 25,
+        "info": [{ 
+
+            "name": "Buffoon Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">2</strong> Joker cards",
+            "image": "../assets/booster/b_1.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 26,
+        "info": [{ 
+
+            "name": "Jumbo Buffoon Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">4</strong> Joker cards",
+            "image": "../assets/booster/b_2.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 27,
+        "info": [{ 
+
+            "name": "Mega Buffoon Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">4</strong> Joker cards",
+            "image": "../assets/booster/b_3.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 28,
+        "info": [{ 
+
+            "name": "Spectral Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">2</strong> <strong style=\"color: #2E76FD;\">Spectral</strong> cards to be used inmediately",
+            "image": "../assets/booster/s_0.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 29,
+        "info": [{ 
+
+            "name": "Spectral Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">2</strong> <strong style=\"color: #2E76FD;\">Spectral</strong> cards to be used inmediately",
+            "image": "../assets/booster/s_1.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 30,
+        "info": [{ 
+
+            "name": "Spectral Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">1</strong> of up to <strong style=\"color: #F3AD16;\">4</strong> <strong style=\"color: #2E76FD;\">Spectral</strong> cards to be used inmediately",
+            "image": "../assets/booster/s_2.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 31,
+        "info": [{ 
+
+            "name": "Spectral Pack",
+            "description": "Choose <strong style=\"color: #F3AD16;\">2</strong> of up to <strong style=\"color: #F3AD16;\">4</strong> <strong style=\"color: #2E76FD;\">Spectral</strong> cards to be used inmediately",
+            "image": "../assets/booster/s_3.png"
+            
+        }]
+
+    }
+
+]

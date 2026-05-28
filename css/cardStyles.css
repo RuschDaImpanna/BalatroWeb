@@ -36,8 +36,7 @@
 
 .consumableInfoWrapper {
 
-
-    aspect-ratio: 7 / 10;
+    aspect-ratio: 7 / 11;
 
 }
 
@@ -100,6 +99,8 @@
 .legendaryMove {
 
     animation: legendaryMove 10s linear infinite;
+
+    filter: drop-shadow(-3px 3px 0px rgba(0,0,0,.5));
 
 }
 
@@ -409,6 +410,42 @@
 
             background-color: var(--editionCol);
             animation: editionAnimTag 4s linear infinite;
+
+        }
+
+        .voucher {
+
+            background-color: #F94E0E;
+
+        }
+
+        .tarot {
+
+            background-color: #9E74CE;
+
+        }
+
+        .planet {
+
+            background-color: #1199F0;
+
+        }
+
+        .spectral {
+
+            background-color: #2E76FD;
+
+        }
+
+        .enhance {
+
+            background-color: #6D76D0;
+
+        }
+
+        .booster {
+
+            background-color: #4D56A3;
 
         }
 

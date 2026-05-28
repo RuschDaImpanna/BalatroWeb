@@ -1,0 +1,235 @@
+[
+
+    [
+        {
+            
+            "id": 0,
+            "info": [{ 
+
+                "name": "Bonus Card",
+                "description": "<strong style=\"color: #1199F0;\">+30</strong> extra chips",
+                "image": "../assets/playCards/cards_e1.png",
+                "tags": ["Bonus Card"]
+
+            }]
+
+        },
+        {
+            
+            "id": 1,
+            "info": [{ 
+
+                "name": "Mult Card",
+                "description": "<strong style=\"color: #DF2525;\">+4</strong> Mult",
+                "image": "../assets/playCards/cards_e2.png",
+                "tags": ["Mult Card"]
+
+            }]
+
+        },
+        {
+            
+            "id": 2,
+            "info": [{ 
+
+                "name": "Wild Card",
+                "description": "Can be used as any suit",
+                "image": "../assets/playCards/cards_e3.png",
+                "tags": ["Wild Card"]
+
+            }]
+
+        },
+        {
+            
+            "id": 3,
+            "info": [{ 
+
+                "name": "Glass Card",
+                "description": "<strong style=\"background-color: #DF2525; color: white; padding: 1px 2px;\">X2</strong> Mult <br> <strong style=\"color: #4CC192;\">1 in 4</strong> chance to destroy card",
+                "image": "../assets/playCards/cards_e4.png",
+                "tags": ["Glass Card"]
+                
+            }]
+
+        },
+        {
+            
+            "id": 4,
+            "info": [{ 
+
+                "name": "Steel Card",
+                "description": "<strong style=\"background-color: #DF2525; color: white; padding: 1px 2px;\">X1.5</strong> Mult <br> while this card stays in hand",
+                "image": "../assets/playCards/cards_e5.png",
+                "tags": ["Steel Card"]
+                
+            }]
+
+        },
+        {
+            
+            "id": 5,
+            "info": [{ 
+
+                "name": "Stone Card",
+                "description": "<strong style=\"color: #1199F0;\">+50</strong> Chips <br> No rank or suit",
+                "image": "../assets/playCards/cards_e6.png",
+                "tags": ["Stone Card"]
+                
+            }]
+
+        },
+        {
+            
+            "id": 6,
+            "info": [{ 
+
+                "name": "Gold Card",
+                "description": "<strong style=\"color: #F3AD16;\">$3</strong> if this card is held in hand at the end of round",
+                "image": "../assets/playCards/cards_e7.png",
+                "tags": ["Gold Card"]
+                
+            }]
+
+        },
+        {
+            
+            "id": 7,
+            "info": [{ 
+
+                "name": "Lucky Card",
+                "description": "<strong style=\"color: #4CC192;\">1 in 5</strong> chance for <strong style=\"color: #DF2525;\">+20</strong> Mult <br> <strong style=\"color: #4CC192;\">1 in 5</strong> chance to win <strong style=\"color: #F3AD16;\">$20</strong>",
+                "image": "../assets/playCards/cards_e8.png",
+                "tags": ["Lucky Card"]
+                
+            }]
+
+        }
+
+    ],
+
+    [
+
+        {
+            
+            "id": 0,
+            "info": [{ 
+
+                "name": "Gold Seal",
+                "description": "Earn <strong style=\"color: #F3AD16;\">$3</strong> when this card is played and scores",
+                "image": "../assets/playCards/cards_sl0.png",
+                "tags": ["Gold Seal"]
+
+            }]
+
+        },
+        {
+            
+            "id": 1,
+            "info": [{ 
+
+                "name": "Red Seal",
+                "description": "Retrigger this card <strong style=\"color: #F3AD16;\">1</strong> time",
+                "image": "../assets/playCards/cards_sl1.png",
+                "tags": ["Red Seal"]
+
+            }]
+
+        },
+        {
+            
+            "id": 2,
+            "info": [{ 
+
+                "name": "Blue Seal",
+                "description": "Creates the <strong style=\"color: #03A4C7;\">Planet</strong> card for final played <strong style=\"color: #F3AD16;\">poker hand</strong> of round if <strong style=\"color: #F3AD16;\">held</strong> in hand <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+                "image": "../assets/playCards/cards_sl2.png",
+                "tags": ["Blue Seal"]
+
+            }]
+
+        },
+        {
+            
+            "id": 3,
+            "info": [{ 
+
+                "name": "Purple Seal",
+                "description": "Creates a <strong style=\"color: #9E74CE;\">Tarot</strong> card when <strong style=\"color: #F3AD16;\">discarded</strong> <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+                "image": "../assets/playCards/cards_sl3.png",
+                "tags": ["Purple Seal"]
+                
+            }]
+
+        }
+
+    ],
+    [
+
+        {
+            
+            "id": 0,
+            "info": [{ 
+
+                "name": "Base",
+                "description": "Earn <strong style=\"color: #F3AD16;\">$3</strong> when this card is played and scores"
+
+            }]
+
+        },
+        {
+            
+            "id": 1,
+            "info": [{ 
+
+                "name": "Foil",
+                "description": "<strong style=\"color: #1199F0;\">+50</strong> chips",
+                "edition": "foil",
+                "tags": ["Foil"]
+
+            }]
+
+        },
+        {
+            
+            "id": 2,
+            "info": [{ 
+
+                "name": "Holographic",
+                "description": "<strong style=\"color: #DF2525;\">+10</strong> Mult",
+                "edition": "holographic",
+                "tags": ["Holographic"]
+
+            }]
+
+        },
+        {
+            
+            "id": 3,
+            "info": [{ 
+
+                "name": "Polychrome",
+                "description": "<strong style=\"background-color: #DF2525; color: white; padding: 1px 2px;\">X1.5</strong> Mult",
+                "edition": "polychrome",
+                "tags": ["Polychrome"]
+                
+            }]
+
+        },
+        {
+            
+            "id": 4,
+            "info": [{ 
+
+                "name": "Negative",
+                "description": "<strong style=\"color: #9E74CE;\">+1</strong> Joker Slot</i>",
+                "edition": "negative",
+                "tags": ["Negative"]
+                
+            }]
+
+        }
+
+    ]
+
+]

@@ -2,86 +2,182 @@
 
     {
         
-        "id":0,
-        "info":["High Card", 5, 1],
-        "planet":["Pluto", 10, 1]
+        "id": 0,
+        "info":[{
+
+            "name": "Pluto",
+            "description": "<strong class=\"lvl1\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Pair</strong> <br> <strong style=\"color: #DF2525;\">+1</strong> Mult <br> <strong style=\"color: #1199F0;\">+15</strong> chips",
+            "image": "../assets/consumables/planet_0.png",
+            "pokerHand": "High Card",
+            "initValues": [5, 1],
+            "addingLvl": [15, 1]
+
+        }]
 
     },
     {
         
-        "id":1,
-        "info":["Pair", 10, 2],
-        "planet":["Mercury", 15, 1]
+        "id": 1,
+        "info":[{
+
+            "name": "Mercury",
+            "description": "<strong class=\"lvl1\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Pair</strong> <br> <strong style=\"color: #DF2525;\">+1</strong> Mult <br> <strong style=\"color: #1199F0;\">+15</strong> chips",
+            "image": "../assets/consumables/planet_1.png",
+            "pokerHand": "Pair",
+            "initValues": [10, 2],
+            "addingLvl": [15, 1]
+
+        }]
 
     },
     {
         
-        "id":2,
-        "info":["Two Pair", 20, 2],
-        "planet":["Uranus", 20, 1]
+        "id": 2,
+        "info":[{
+
+            "name": "Uranus",
+            "description": "<strong class=\"lvl2\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Two Pair</strong> <br> <strong style=\"color: #DF2525;\">+1</strong> Mult <br> <strong style=\"color: #1199F0;\">+20</strong> chips",
+            "image": "../assets/consumables/planet_2.png",
+            "pokerHand": "Two Pair",
+            "initValues": [20, 2],
+            "addingLvl": [20, 1]
+
+        }]
 
     },
     {
         
-        "id":3,
-        "info":["Three of a Kind", 30, 3],
-        "planet":["Venus", 20, 2]
+        "id": 3,
+        "info":[{
+
+            "name": "Venus",
+            "description": "<strong class=\"lvl3\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Three of a Kind</strong> <br> <strong style=\"color: #DF2525;\">+2</strong> Mult <br> <strong style=\"color: #1199F0;\">+20</strong> chips",
+            "image": "../assets/consumables/planet_3.png",
+            "pokerHand": "Three of a Kind",
+            "initValues": [30, 3],
+            "addingLvl": [20, 2]
+
+        }]
 
     },
     {
         
-        "id":4,
-        "info":["Straight", 30, 4],
-        "planet":["Saturn", 30, 3]
+        "id": 4,
+        "info":[{
+
+            "name": "Saturn",
+            "description": "<strong class=\"lvl4\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Straight</strong> <br> <strong style=\"color: #DF2525;\">+3</strong> Mult <br> <strong style=\"color: #1199F0;\">+30</strong> chips",
+            "image": "../assets/consumables/planet_4.png",
+            "pokerHand": "Straight",
+            "initValues": [30, 4],
+            "addingLvl": [30, 3]
+
+        }]
 
     },
     {
         
-        "id":5,
-        "info":["Flush", 35, 4],
-        "planet":["Jupiter", 15, 2]
+        "id": 5,
+        "info":[{
+
+            "name": "Jupiter",
+            "description": "<strong class=\"lvl5\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Flush</strong> <br> <strong style=\"color: #DF2525;\">+2</strong> Mult <br> <strong style=\"color: #1199F0;\">+15</strong> chips",
+            "image": "../assets/consumables/planet_5.png",
+            "pokerHand": "Flush",
+            "initValues": [35, 4],
+            "addingLvl": [15, 2]
+
+        }]
 
     },
     {
         
-        "id":6,
-        "info":["Full House", 40, 4],
-        "planet":["Earth", 25, 2]
+        "id": 6,
+        "info":[{
+
+            "name": "Earth",
+            "description": "<strong class=\"lvl6\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Full House</strong> <br> <strong style=\"color: #DF2525;\">+2</strong> Mult <br> <strong style=\"color: #1199F0;\">+25</strong> chips",
+            "image": "../assets/consumables/planet_6.png",
+            "pokerHand": "Full House",
+            "initValues": [40, 4],
+            "addingLvl": [25, 2]
+
+        }]
 
     },
     {
         
-        "id":7,
-        "info":["Four of a Kind", 60, 7],
-        "planet":["Mars", 30, 3]
+        "id": 7,
+        "info":[{
+
+            "name": "Mars",
+            "description": "<strong class=\"lvl7\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Four of a Kind</strong> <br> <strong style=\"color: #DF2525;\">+3</strong> Mult <br> <strong style=\"color: #1199F0;\">+30</strong> chips",
+            "pokerHand": "Four of a Kind",
+            "image": "../assets/consumables/planet_7.png",
+            "initValues": [60, 7],
+            "addingLvl": [30, 3]
+
+        }]
 
     },
     {
         
         "id":8,
-        "info":["Straight Flush", 100, 8],
-        "planet":["Neptune", 40, 4]
+        "info":[{
+
+            "name": "Neptune",
+            "description": "<strong class=\"lvl8\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Straight Flush</strong> <br> <strong style=\"color: #DF2525;\">+4</strong> Mult <br> <strong style=\"color: #1199F0;\">+40</strong> chips",
+            "pokerHand": "Four of a Kind",
+            "image": "../assets/consumables/planet_8.png",
+            "initValues": [100, 8],
+            "addingLvl": [40, 4]
+
+        }]
 
     },
     {
         
         "id":9,
-        "info":["Five of a Kind", 120, 12],
-        "planet":["Planet X", 35, 3]
+        "info":[{
+
+            "name": "Planet X",
+            "description": "<strong class=\"lvl9\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Five of a Kind</strong> <br> <strong style=\"color: #DF2525;\">+3</strong> Mult <br> <strong style=\"color: #1199F0;\">+35</strong> chips",
+            "pokerHand": "Five of a Kind",
+            "image": "../assets/consumables/planet_9.png",
+            "initValues": [120, 12],
+            "addingLvl": [35, 3]
+
+        }]
 
     },
     {
         
-        "id":"A",
-        "info":["Flush House", 140, 14],
-        "planet":["Ceres", 40, 4]
+        "id":10,
+        "info":[{
+
+            "name": "Ceres",
+            "description": "<strong class=\"lvlA\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Flush House</strong> <br> <strong style=\"color: #DF2525;\">+4</strong> Mult <br> <strong style=\"color: #1199F0;\">+40</strong> chips",
+            "pokerHand": "Flush House",
+            "image": "../assets/consumables/planet_A.png",
+            "initValues": [140, 14],
+            "addingLvl": [40, 4]
+
+        }]
 
     },
     {
         
-        "id":"B",
-        "info":["Flush Five", 160, 16],
-        "planet":["Pluto", 50, 3]
+        "id":11,
+        "info":[{
+
+            "name": "Eris",
+            "description": "<strong class=\"lvlB\">(##LEVEL##)</strong> Level Up <br> <strong style=\"color: #F3AD16;\">Five Flush</strong> <br> <strong style=\"color: #DF2525;\">+3</strong> Mult <br> <strong style=\"color: #1199F0;\">+50</strong> chips",
+            "pokerHand": "Flush Five",
+            "image": "../assets/consumables/planet_B.png",
+            "initValues": [160, 16],
+            "addingLvl": [50, 3]
+
+        }]
 
     }
 

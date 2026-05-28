@@ -1,0 +1,220 @@
+[
+
+    {
+        
+        "id": 0,
+        "info": [{ 
+
+            "name": "Familiar",
+            "description": "Destroy <strong style=\"color: #F3AD16;\">1</strong> random card in your hand. Add <strong style=\"color: #F3AD16;\">3</strong> random <strong style=\"color: #F3AD16;\">Enhanced face cards</strong> to your hand",
+            "image": "../assets/consumables/spectral_00.png"
+
+        }]
+
+    },
+    {
+        
+        "id": 1,
+        "info": [{ 
+
+            "name": "Grim",
+            "description": "Destroy <strong style=\"color: #F3AD16;\">1</strong> random card in your hand. Add <strong style=\"color: #F3AD16;\">2</strong> random <strong style=\"color: #F3AD16;\">Enhanced Aces</strong> to your hand",
+            "image": "../assets/consumables/spectral_01.png"
+
+        }]
+
+    },
+    {
+        
+        "id": 2,
+        "info": [{ 
+
+            "name": "Incantation",
+            "description": "Destroy <strong style=\"color: #F3AD16;\">1</strong> random card in your hand. Add <strong style=\"color: #F3AD16;\">4</strong> random <strong style=\"color: #F3AD16;\">Enhanced numbered cards</strong> to your hand",
+            "image": "../assets/consumables/spectral_02.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 3,
+        "info": [{ 
+
+            "name": "Talisman",
+            "description": "Add a <strong style=\"color: #F3AD16;\">Gold Seal</strong> to <strong style=\"color: #F3AD16;\">1</strong> selected card in your hand",
+            "image": "../assets/consumables/spectral_03.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 4,
+        "info": [{ 
+
+            "name": "Aura",
+            "description": "Add <strong class=\"editionText\">Foil, Holographic</strong> or <strong class=\"editionText\">Polychrome</strong> effect to <strong style=\"color: #F3AD16;\">1</strong> selected card in your hand",
+            "image": "../assets/consumables/spectral_04.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 5,
+        "info": [{ 
+
+            "name": "Wraith",
+            "description": "Creates a random <strong style=\"color: #DF2525;\">Rare</strong> <strong style=\"color: #F3AD16;\">Joker</strong>. Sets money to <strong style=\"color: #F3AD16;\">$0</strong>",
+            "image": "../assets/consumables/spectral_05.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 6,
+        "info": [{ 
+
+            "name": "Sigil",
+            "description": "Converts all cards in hand to a single random <strong style=\"color: #F3AD16;\">suit</strong>",
+            "image": "../assets/consumables/spectral_06.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 7,
+        "info": [{ 
+
+            "name": "Ouija",
+            "description": "Converts all cards in hand to a single random <strong style=\"color: #F3AD16;\">rank</strong> <br> <strong style=\"color: #DF2525;\">-1</strong> hand size",
+            "image": "../assets/consumables/spectral_07.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 8,
+        "info": [{ 
+
+            "name": "Ectoplasm",
+            "description": "Add <strong class=\"editionText\">Negative</strong> to a random <strong style=\"color: #F3AD16;\">Joker</strong> <br> <strong style=\"color: #DF2525;\">-1</strong> hand size",
+            "image": "../assets/consumables/spectral_08.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 9,
+        "info": [{ 
+
+            "name": "Immolate",
+            "description": "Destroys <strong style=\"color: #F3AD16;\">5</strong> random card in hand. Gain <strong style=\"color: #F3AD16;\">$20</strong>",
+            "image": "../assets/consumables/spectral_09.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 10,
+        "info": [{ 
+
+            "name": "Ankh",
+            "description": "Creates a copy of a random <strong style=\"color: #F3AD16;\">Joker</strong>. Destroys all other <strong style=\"color: #F3AD16;\">Jokers</strong>",
+            "image": "../assets/consumables/spectral_0A.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 11,
+        "info": [{ 
+
+            "name": "Deja Vu",
+            "description": "Add a <strong style=\"color: #DF2525;\">Red Seal</strong> to <strong style=\"color: #F3AD16;\">1</strong> selected card in your hand",
+            "image": "../assets/consumables/spectral_0B.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 12,
+        "info": [{ 
+
+            "name": "Hex",
+            "description": "Add <strong class=\"editionText\">Polychrome</strong> to a random Joker. Destroys all other <strong style=\"color: #F3AD16;\">Jokers</strong>",
+            "image": "../assets/consumables/spectral_0C.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 13,
+        "info": [{ 
+
+            "name": "Trance",
+            "description": "Add a <strong style=\"color: #03A4C7;\">Blue Seal</strong> to <strong style=\"color: #F3AD16;\">1</strong> selected card in your hand",
+            "image": "../assets/consumables/spectral_0D.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 14,
+        "info": [{ 
+
+            "name": "Medium",
+            "description": "Add a <strong style=\"color: #9E74CE;\">Purple Seal</strong> to <strong style=\"color: #F3AD16;\">1</strong> selected card in your hand",
+            "image": "../assets/consumables/spectral_0E.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 15,
+        "info": [{ 
+
+            "name": "Cryptid",
+            "description": "Creates <strong style=\"color: #F3AD16;\">2</strong> copies of <strong style=\"color: #F3AD16;\">1</strong> selected card in your hand",
+            "image": "../assets/consumables/spectral_0F.png"
+            
+        }]
+
+    },
+    {
+        
+        "id": 16,
+        "info": [{ 
+
+            "name": "Soul",
+            "description": "Creates a <strong style=\"color: #9E74CE;\">Legendary</strong> Joker <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+            "image": ["../assets/consumables/spectral_10.png", "../assets/consumables/soulCrystal_legend-soul.png"]
+            
+        }]
+
+    },
+    {
+        
+        "id": 17,
+        "info": [{ 
+
+            "name": "Black Hole",
+            "description": "Upgrade every <strong style=\"color: #4D56A3;\">poker hand</strong> by <strong style=\"color: #F3AD16;\">1</strong> level",
+            "image": "../assets/consumables/spectral_11.png"
+            
+        }]
+
+    }
+
+]
