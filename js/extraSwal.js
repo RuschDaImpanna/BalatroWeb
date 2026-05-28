@@ -1,5 +1,6 @@
-import { noAnimCardsGen } from "./generateCards.js"
+import { createTag, noAnimCardsGen } from "./generateCards.js"
 import { movingCard } from "./movingCards.js"
+import { scaleAnte } from "./getAnte.js"
 import { changeVolume, buttonSfx, hoverCardSfx } from "./musicHandler.js"
 import voucherTemplate from '../json/voucherList.json' with { type: 'json' }
 import tarotTemplate from '../json/tarotList.json' with { type: 'json' }
@@ -7,6 +8,8 @@ import planetTemplate from '../json/pokerLvls.json' with { type: 'json' }
 import spectralTemplate from '../json/spectralList.json' with { type: 'json' }
 import cardsTemplate from '../json/cardList.json' with { type: 'json' }
 import boosterTemplate from '../json/boosterList.json' with { type: 'json' }
+import tagTemplate from '../json/tagList.json' with { type: 'json' }
+import blindTemplate from '../json/blindLists.json' with { type: 'json' }
 
 export function settingsSwal () {
 
@@ -1308,317 +1311,7 @@ function collectionTabs (id) {
 
                         <div class="tagsHolder holderA">
 
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_00.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Uncommon Tag</h6>
-                                    <p>Shop has a free <strong style="color: #4CC192;">Uncommon Joker</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_01.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Rare Tag</h6>
-                                    <p>Shop has a free <strong style="color: #DF2525;">Rare Joker</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_02.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Negative Tag</h6>
-                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Negative</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_03.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Foil Tag</h6>
-                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Foil</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_04.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Holographic Tag</h6>
-                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Holographic</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_05.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Polychrome Tag</h6>
-                                    <p>Next base edition shop Joker is free and becomes <strong class="editionText">Polychrome</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_06.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Investment Tag</h6>
-                                    <p>After defeating the Boss Blind, gain <strong style="color: #F3AD16">$25</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_07.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Voucher Tag</h6>
-                                    <p>Adds one Voucher to the next shop</p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_08.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Boss Tag</h6>
-                                    <p>Rerolls the <strong style="color: #F3AD16">Boss Blind</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_09.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Standard Tag</h6>
-                                    <p>Gives a free <strong style="color: #F3AD16">Mega Standard Pack</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_0A.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Charm Tag</h6>
-                                    <p>Gives a free <strong style="color: #9E74CE">Mega Arcana Pack</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_0B.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Meteor Tag</h6>
-                                    <p>Gives a free <strong style="color: #03A4C7">Mega Celestial Pack</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_0C.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Buffoon Tag</h6>
-                                    <p>Gives a free <strong style="color: #F3AD16">Mega Buffoon Pack</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_0D.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Handy Tag</h6>
-                                    <p>Gives <strong style="color: #F3AD16">$1</strong> per played <strong style="color: #1199F0">hand</strong> this run <br> <i style="color: #3C565E;">(Will give <strong style="color: #F3AD16">$[hands]</strong>)</i></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_0E.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Garbage Tag</h6>
-                                    <p>Gives <strong style="color: #F3AD16">$1</strong> per unused <strong style="color: #DF2525">discard</strong> this run <br> <i style="color: #3C565E;">(Will give <strong style="color: #F3AD16">$[discards]</strong>)</i></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_0F.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Ethereal Tag</h6>
-                                    <p>Gives a free <strong style="color: #2E76FD">Spectral Pack</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_10.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Coupon Tag</h6>
-                                    <p>Initial cards and booster packs in the next shop are free</p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_11.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Double Tag</h6>
-                                    <p>Gives a copy of the next selected <strong style="color: #F3AD16">Tag</strong> <br> <i style="color: #3C565E;"><strong style="color: #F3AD16">Double tag</strong> excluded</i></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_12.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Juggle Tag</h6>
-                                    <p><strong style="color: #F3AD16">+3</strong> hand size next round</p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_13.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>D6 Tag</h6>
-                                    <p>Rerolls in the next shop start at <strong style="color: #F3AD16">$0</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_14.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Top-up Tag</h6>
-                                    <p>Create up to <strong style="color: #F3AD16">2</strong> <strong style="color: #1199F0">Common</strong> Jokers <br> <i style="color: #3C565E;">(Must have room)</i></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_15.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Speed Tag</h6>
-                                    <p>Gives <strong style="color: #F3AD16">$5</strong> per skipped Blind this run <br> <i style="color: #3C565E;">(Will give <strong style="color: #F3AD16">$[skips]</strong>)</i></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_16.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Orbital Tag</h6>
-                                    <p>Upgrade <strong style="color: #F3AD16">[randomPokerHand]</strong> by <strong style="color: #F3AD16">3 levels</strong></p>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tagWrap">
-
-                                <img src="../assets/tags_vouchers/tag_17.png">
-
-                                <div class="tagInfo">
-
-                                    <h6>Economy Tag</h6>
-                                    <p>Doubles your money <br> <i style="color: #3C565E;">(Max of <strong style="color: #F3AD16">$40</strong>)</i></p>
-
-                                </div>
-
-                            </div>
+                            
 
                         </div>
 
@@ -1626,6 +1319,14 @@ function collectionTabs (id) {
                     
                 `),
                 didOpen: () => {
+
+                    const holder = document.querySelector('.tagsHolder')
+
+                    tagTemplate.forEach(tag => {
+
+                        holder.append(createTag(tag.info, false))
+                        
+                    })
 
                     //Load SFX
                     buttonSfx('button')
@@ -1657,12 +1358,171 @@ function collectionTabs (id) {
             Swal.fire({
 
                 title: "Blinds",
-                text: "You clicked the button!",
-                icon: "success",
+                html: (`
+
+                    <div class="holder" id="holderB">
+
+                        <article class="menuBlind">
+
+                            <button type="button" class="selected" id="blind0Btn">Blinds</button>
+                            <button type="button" id="blind1Btn">Ante Scale</button>
+
+                        </article>
+
+                        <article class="infoBlind">
+
+                            <div class="content appear tagsHolder row5" id="blind0">
+
+
+                            </div>
+
+                            <div class="content" id="blind1">
+
+                                <div id="infoScale">
+
+                                    <h3 class="anteCol">Ante</h3>
+                                    <h3 class="baseCol">Base</h3>
+
+                                </div>
+
+                                <div id="buttons">
+
+                                    <button type="button" class="scaleSelected" id="scale0Btn"><img src="../assets/misc/chip_0.png"></button>
+                                    <button type="button" id="scale1Btn"><img src="../assets/misc/chip_2.png"></button>
+                                    <button type="button" id="scale2Btn"><img src="../assets/misc/chip_5.png"></button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+                    
+                    </div>
+                    
+                `),
                 didOpen: () => {
+
+                    const modal = Swal.getPopup()
+
+                    //Menu buttons
+                    const menuBtns = Array.from(modal.querySelector('.menuBlind').children)
+                    const infoTab = modal.querySelector('.infoBlind').children
+
+                    const holder = document.getElementById('blind0')
+                    const infoGrid = document.getElementById('infoScale')
+
+                    //Scale buttons
+                    const scaleBtns = Array.from(modal.querySelector('#buttons').children)
+
+                    //Menu buttons functions
+                    menuBtns.forEach((element, index) => {
+
+                        element.addEventListener('click', () => {
+
+                            openCorrespondingTab(index, infoTab, modal, 'appear')
+
+                            menuBtns.find(e => e.classList.contains('selected')).classList.remove('selected')
+                            element.classList.add('selected')
+
+                        })
+                        
+                    })
+
+                    blindTemplate[0].forEach(blindConfig => {
+
+                        for (const blind of blindConfig) {
+
+                            if (Array.isArray(blind)) {
+
+                                blind.forEach(specBlind => {
+
+                                    holder.append(createTag(specBlind, true))
+                                    
+                                })
+
+                                continue
+
+                            }
+
+                            holder.append(createTag(blind, true))
+                            console.log(blind)
+                            
+                        }
+                        
+                    })
+
+                    function openCorrespondingTab (i, tabs, swal, selection) {
+
+                        const current = swal.querySelector(`.${selection}`)
+
+                        current.classList.remove(selection)
+                        tabs[i].classList.add(selection) 
+
+                    }
+
+                    //Menu buttons functions
+                    scaleBtns.forEach((element, index) => {
+
+                        element.addEventListener('click', () => {
+
+                            document.querySelectorAll('.generated').forEach(e => e.remove())
+
+                            calculeScale(index)
+
+                            scaleBtns.find(e => e.classList.contains('scaleSelected')).classList.remove('scaleSelected')
+                            element.classList.add('scaleSelected')
+
+                        })
+                        
+                    })
+
+                    function calculeScale (index) {
+
+                        const scaleValues = blindTemplate[1][index]
+                        const chipValues = [0, 2, 5]
+
+                        for (let i = 0; i < 40; i++) {
+
+                            const baseValue = i <= 8 ? scaleValues[i] : scaleAnte(i, scaleValues[8])
+
+                            let formatValue = new Intl.NumberFormat('en-US').format(baseValue)
+                            if (Math.abs(baseValue) >= 1e12) {
+
+                                formatValue = baseValue.toExponential(2)
+
+                            }
+                            
+                            const ante = document.createElement('h4')
+                            ante.classList.add('anteCol', 'generated')
+                            ante.innerText = i
+
+                            const baseWrap = document.createElement('div')
+                            baseWrap.classList.add('baseCol', 'generated')
+                            baseWrap.style.display = 'grid'
+                            baseWrap.style.gridTemplateColumns = 'repeat(2, 1fr)'
+                            baseWrap.style.gap = '10px'
+
+                                const chip = document.createElement('img')
+                                chip.src = `../assets/misc/chip_${chipValues[index]}.png`
+                                chip.style.height = '25px'
+                                chip.style.justifySelf = 'end'
+
+                                const base = document.createElement('h4')
+                                base.innerText = formatValue
+
+                                baseWrap.append(chip, base)
+
+                            infoGrid.append(ante, baseWrap)
+                            
+                        }
+
+                    }
+
+                    calculeScale(0)
 
                     //Load SFX
                     buttonSfx('button')
+                    hoverCardSfx('.tagWrap')
 
                     requestAnimationFrame(() => {
 

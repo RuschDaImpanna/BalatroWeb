@@ -1,7 +1,5 @@
 export function noAnimCardsGen (container, data, type, index, tags) {
 
-    console.log(container, data[index].info.length, type, index)
-
     for (let it = 0; it < data[index].info.length; it++) {
 
         container.append(createCard(data[index].info, type, it, tags))
@@ -23,8 +21,6 @@ export function createCard (dataCard, type, it, tags) {
 
             const dataImg = dataCard[it].image
             const images = Array.isArray(dataImg) ? dataImg : [dataImg];
-
-            console.log(dataCard, dataImg)
 
             for (let ci = 0; ci < images.length; ci++) {
 
@@ -93,8 +89,43 @@ export function createCard (dataCard, type, it, tags) {
 
 }
 
-export function createTag (dataTag, type, it, tags) {
+export function createTag (dataTag, isBlind) {
 
+    const wrapper = document.createElement('div')
+    wrapper.classList.add('tagWrap')
 
+        const img = document.createElement('img')
+        img.src = dataTag.image
+
+        const tagInfo = document.createElement('div')
+        tagInfo.classList.add('tagInfo')
+
+            const title = document.createElement('h6')
+            title.innerText = dataTag.name
+
+            const text = document.createElement('p')
+            text.innerHTML = dataTag.description
+
+            tagInfo.append(title, text)
+        
+
+        if (isBlind) {
+
+            const tagsWrap = document.createElement('div')
+            tagsWrap.classList.add('cardTags')
+
+            const spanTag = document.createElement('span')
+            spanTag.classList.add('blind')
+            spanTag.innerText = `${dataTag.scale}X Base`
+
+            tagsWrap.append(spanTag)
+
+            tagInfo.append(tagsWrap)
+
+        }
+
+        wrapper.append(img, tagInfo)
+    
+    return wrapper
 
 }

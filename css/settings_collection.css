@@ -413,6 +413,7 @@ button:active:not(:disabled, .swal2-close) {
 .collectionTabPopup {
 
     grid-template-rows: 0.25fr 0.25fr 3fr 0.25fr 0.25fr;
+    border: 5px solid #90ACB4;
 
     .swal2-html-container {
 
@@ -528,90 +529,6 @@ button:active:not(:disabled, .swal2-close) {
 
     padding: 0 12px 8vh;
     box-sizing: border-box;
-
-    .tagWrap {
-
-        position: relative;
-
-        width: 100%;
-        height: min-content;
-
-        img {
-
-            width: 100%;
-
-        }
-
-        .tagInfo {
-
-        visibility: hidden;
-        opacity: 0;
-
-        position: absolute;
-        transform: translate(-50%, -60%);
-
-        top: 100%;
-        left: 50%;
-
-        text-align: center;
-
-        width: 125px;
-
-        background-color: #141F20;
-        border-radius: 10px;
-
-        display: grid;
-        grid-template-rows: 0.5fr 2fr;
-
-        transition: opacity 0.1s ease, transform 0.2s ease;
-
-        z-index: 1;
-
-        h6 {
-
-            margin: 5px 0;
-            color: white;
-            font-size: 0.9em;
-
-        }
-
-        p {
-
-            margin: 7px;
-            padding: 0 2px;
-            padding-top: 2px;
-
-            background-color: white;
-            color: #141F20;
-
-            border-radius: 5px;
-
-            font-size: 0.75em;
-
-        }
-
-        }
-
-    }
-
-    .tagWrap:hover:not(.dragging) {
-
-        z-index: 1;
-
-        .tagInfo {
-
-            transform: translate(-50%, -50%);
-            opacity: 1;
-
-            visibility: visible;
-
-            transition-delay: 0.1s;
-
-            z-index: 1;
-
-        }
-
-    }
 
 }
 
@@ -824,6 +741,190 @@ button:active:not(:disabled, .swal2-close) {
     grid-template-rows: repeat(2, 1fr);
 
 }
+
+#holderB {
+
+    grid-template-rows: 10% 90%;
+
+    overflow: hidden;
+    position: relative;
+
+    .menuBlind {
+
+        display: grid;
+        gap: 15px;
+
+        margin: 0 30px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    button {
+
+        background-color: #DF2525;
+        box-shadow: 5px 5px 0 black;
+        padding: 0 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 15px;
+
+        font-size: 1em;
+        color: white;
+
+        transform: translate(0, 0);
+        
+    }
+
+    button:active, button.selected, button.scaleSelected {
+
+        background-color: #971010;
+        transform: translate(5px, 5px);
+        box-shadow: 2px 2px 0 black;
+
+    }
+
+    .content {
+
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+
+        transition: opacity 0.3s ease;
+
+    }
+
+    .content.appear {
+
+        opacity: 1;
+        visibility: visible;
+        position: inherit;
+
+        transition: opacity 0.3s ease;
+
+        color: white;
+
+    }
+
+    #blind0 {
+
+        grid-template-rows: repeat(5, 1fr);
+        padding: 10px 10% 6vh;
+
+    }
+
+    #blind0 > :nth-child(12n + 1),
+    #blind0 > :nth-child(12n + 2),
+    #blind0 > :nth-child(12n + 3),
+    #blind0 > :nth-child(12n + 4),
+    #blind0 > :nth-child(12n + 5),
+    #blind0 > :nth-child(12n + 6) {
+
+        transform: translateX(-10px);
+
+    }
+
+    #blind0 > :nth-child(12n + 7),
+    #blind0 > :nth-child(12n + 8),
+    #blind0 > :nth-child(12n + 9),
+    #blind0 > :nth-child(12n + 10),
+    #blind0 > :nth-child(12n + 11),
+    #blind0 > :nth-child(12n + 12) {
+
+        transform: translateX(10px);
+
+    }
+
+    #blind1 {
+
+        display: grid;
+        grid-template-rows: 80% 20%;
+
+        height: 100%;
+
+        gap: 10px;
+        padding-top: 10px;
+
+        #buttons {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            height: 100%;
+
+            button {
+
+                height: 100%;
+                overflow: hidden;
+
+                img {
+
+                    height: 100%;
+                    object-fit: contain;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    #infoScale {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        height: 100%;
+        overflow-y: auto;
+
+        max-height: 215px;
+
+        background-color: #141F20;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 15px;
+
+        h3, h4 {
+
+            margin: 0;
+
+        }
+
+        .anteCol {
+
+            color: #F3AD16;
+
+        }
+
+        .baseCol {
+
+            color: white;
+
+        }
+
+    }
+
+    #infoScale::-webkit-scrollbar {
+
+        background-color: #141F20;
+        border-radius: 0 15px 15px 0;
+
+    }
+
+    #infoScale::-webkit-scrollbar-thumb {
+
+        background-color: #DF2525;
+        border-radius: 15px;
+
+    }
+
+}
+
 
 .left, .right {
 

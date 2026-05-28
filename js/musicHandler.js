@@ -7,8 +7,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     const getNewDate = new Date
 
-    console.log(getNewDate.getTime() - lastAlive)
-
     if (getNewDate.getTime() - lastAlive > 1250) {
 
         localStorage.setItem("trackTime", 0);

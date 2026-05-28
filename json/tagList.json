@@ -1,0 +1,288 @@
+[
+
+    {
+        
+        "id": 0,
+        "info": { 
+
+            "name": "Uncommon Tag",
+            "description": "Shop has a free <strong style=\"color: #4CC192;\">Uncommon Joker</strong>",
+            "image": "../assets/tags_vouchers/tag_00.png"
+
+        }
+
+    },
+    {
+        
+        "id": 1,
+        "info": { 
+
+            "name": "Rare Tag",
+            "description": "Shop has a free <strong style=\"color: #DF2525;\">Rare Joker</strong>",
+            "image": "../assets/tags_vouchers/tag_01.png"
+
+        }
+
+    },
+    {
+        
+        "id": 2,
+        "info": { 
+
+            "name": "Negative Tag",
+            "description": "Next base edition shop Joker is free and becomes <strong class=\"editionText\">Negative</strong>",
+            "image": "../assets/tags_vouchers/tag_02.png"
+
+        }
+
+    },
+    {
+        
+        "id": 3,
+        "info": { 
+
+            "name": "Foil Tag",
+            "description": "Next base edition shop Joker is free and becomes <strong class=\"editionText\">Foil</strong>",
+            "image": "../assets/tags_vouchers/tag_03.png"
+
+        }
+    },
+    {
+        
+        "id": 4,
+        "info": { 
+
+            "name": "Holographic Tag",
+            "description": "Next base edition shop Joker is free and becomes <strong class=\"editionText\">Holographic</strong>",
+            "image": "../assets/tags_vouchers/tag_04.png"
+
+        }
+    },
+    {
+        
+        "id": 5,
+        "info": { 
+
+            "name": "Polychrome Tag",
+            "description": "Next base edition shop Joker is free and becomes <strong class=\"editionText\">Polychrome</strong>",
+            "image": "../assets/tags_vouchers/tag_05.png"
+
+        }
+    },
+    {
+        
+        "id": 6,
+        "info": { 
+
+            "name": "Investment Tag",
+            "description": "After defeating the Boss Blind, gain <strong style=\"color: #F3AD16\">$25</strong>",
+            "image": "../assets/tags_vouchers/tag_06.png"
+
+        }
+
+    },
+    {
+        
+        "id": 7,
+        "info": { 
+
+            "name": "Voucher Tag",
+            "description": "Adds one Voucher to the next shop",
+            "image": "../assets/tags_vouchers/tag_07.png"
+
+        }
+
+    },
+    {
+        
+        "id": 8,
+        "info": { 
+
+            "name": "Boss Tag",
+            "description": "Rerolls the <strong style=\"color: #F3AD16\">Boss Blind</strong>",
+            "image": "../assets/tags_vouchers/tag_08.png"
+
+        }
+
+    },
+    {
+        
+        "id": 9,
+        "info": { 
+
+            "name": "Standard Tag",
+            "description": "Gives a free <strong style=\"color: #F3AD16\">Mega Standard Pack</strong>",
+            "image": "../assets/tags_vouchers/tag_09.png"
+
+        }
+
+    },
+    {
+        
+        "id": 10,
+        "info": { 
+
+            "name": "Charm Tag",
+            "description": "Gives a free <strong style=\"color: #9E74CE\">Mega Arcana Pack</strong>",
+            "image": "../assets/tags_vouchers/tag_0A.png"
+
+        }
+    },
+    {
+        
+        "id": 11,
+        "info": { 
+
+            "name": "Meteor Tag",
+            "description": "Gives a free <strong style=\"color: #03A4C7\">Mega Celestial Pack</strong>",
+            "image": "../assets/tags_vouchers/tag_0B.png"
+
+        }
+
+    },
+    {
+        
+        "id": 12,
+        "info": { 
+
+            "name": "Buffoon Tag",
+            "description": "Gives a free <strong style=\"color: #F3AD16\">Mega Buffoon Pack</strong>",
+            "image": "../assets/tags_vouchers/tag_0C.png"
+
+        }
+
+    },
+    {
+        
+        "id": 13,
+        "info": { 
+
+            "name": "Handy Tag",
+            "description": "Gives <strong style=\"color: #F3AD16\">$1</strong> per played <strong style=\"color: #1199F0\">hand</strong> this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\">$[hands]</strong>)</i>",
+            "image": "../assets/tags_vouchers/tag_0D.png"
+
+        }
+
+    },
+    {
+        
+        "id": 14,
+        "info": { 
+
+            "name": "Garbage Tag",
+            "description": "Gives <strong style=\"color: #F3AD16\">$1</strong> per unused <strong style=\"color: #DF2525\">discard</strong> this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\">$[discards]</strong>)</i>",
+            "image": "../assets/tags_vouchers/tag_0E.png"
+
+        }
+
+    },
+    {
+        
+        "id": 15,
+        "info": { 
+
+            "name": "Ethereal Tag",
+            "description": "Gives a free <strong style=\"color: #2E76FD\">Spectral Pack</strong>",
+            "image": "../assets/tags_vouchers/tag_0F.png"
+
+        }
+
+    },
+    {
+        
+        "id": 16,
+        "info": { 
+
+            "name": "Coupon Tag",
+            "description": "Initial cards and booster packs in the next shop are free",
+            "image": "../assets/tags_vouchers/tag_10.png"
+
+        }
+
+    },
+    {
+        
+        "id": 17,
+        "info": { 
+
+            "name": "Double Tag",
+            "description": "Gives a copy of the next selected <strong style=\"color: #F3AD16\">Tag</strong> <br> <i style=\"color: #3C565E;\"><strong style=\"color: #F3AD16\">Double tag</strong> excluded</i>",
+            "image": "../assets/tags_vouchers/tag_11.png"
+
+        }
+
+    },
+    {
+        
+        "id": 18,
+        "info": { 
+
+            "name": "Juggle Tag",
+            "description": "<strong style=\"color: #F3AD16\">+3</strong> hand size next round",
+            "image": "../assets/tags_vouchers/tag_12.png"
+
+        }
+
+    },
+    {
+        
+        "id": 19,
+        "info": { 
+
+            "name": "D6 Tag",
+            "description": "Rerolls in the next shop start at <strong style=\"color: #F3AD16\">$0</strong>",
+            "image": "../assets/tags_vouchers/tag_13.png"
+
+        }
+
+    },
+    {
+        
+        "id": 20,
+        "info": { 
+
+            "name": "Top-up Tag",
+            "description": "Create up to <strong style=\"color: #F3AD16\">2</strong> <strong style=\"color: #1199F0\">Common</strong> Jokers <br> <i style=\"color: #3C565E;\">(Must have room)</i>",
+            "image": "../assets/tags_vouchers/tag_14.png"
+
+        }
+
+    },
+    {
+        
+        "id": 21,
+        "info": { 
+
+            "name": "Speed Tag",
+            "description": "Gives <strong style=\"color: #F3AD16\">$5</strong> per skipped Blind this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\">$[skips]</strong>)</i>",
+            "image": "../assets/tags_vouchers/tag_15.png"
+
+        }
+
+    },
+    {
+        
+        "id": 22,
+        "info": { 
+
+            "name": "Orbital Tag",
+            "description": "Upgrade <strong style=\"color: #F3AD16\">[randomPokerHand]</strong> by <strong style=\"color: #F3AD16\">3 levels</strong>",
+            "image": "../assets/tags_vouchers/tag_16.png"
+
+        }
+
+    },
+    {
+        
+        "id": 22,
+        "info": { 
+
+            "name": "Economy Tag",
+            "description": "Doubles your money <br> <i style=\"color: #3C565E;\">(Max of <strong style=\"color: #F3AD16\">$40</strong>)</i>",
+            "image": "../assets/tags_vouchers/tag_17.png"
+
+        }
+
+    }
+
+]
