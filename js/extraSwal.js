@@ -166,6 +166,12 @@ export function settingsSwal () {
             if (savedVolume) volume = JSON.parse(savedVolume)
                  else localStorage.setItem('volume', JSON.stringify(volume))
 
+            if (!localStorage.getItem('buttonPos')) {
+
+                localStorage.setItem('buttonsPos', 0)
+
+            }
+
             gameSpeedSlider.value = gameSpeedValue
             gameSpeedDisplay.innerHTML = gameSpeedValue
 

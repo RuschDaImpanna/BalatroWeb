@@ -120,3 +120,28 @@ body {
     }
 
 }
+
+.titleImg {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dragSlot {
+
+        position: absolute;
+
+    }
+
+}
+
+.dragSlot {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

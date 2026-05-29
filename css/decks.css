@@ -481,6 +481,15 @@ body {
 
 }
 
+.cardImgWrapper {
+    
+    position: relative;
+    width: 100%;
+    max-width: 12vw;
+    aspect-ratio: 14 / 19;
+    
+}
+
 .cardImg {
 
     position: relative;

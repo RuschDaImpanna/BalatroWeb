@@ -658,46 +658,6 @@ button:active:not(:disabled, .swal2-close) {
 
             }
 
-            .dragSlot {
-
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-            }
-
-            .cardImg {
-
-                position: relative;
-
-                width: 100%;
-                max-width: 100px;
-                aspect-ratio: 14 / 19;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                overflow: hidden;
-
-                box-sizing: border-box;
-
-                border-radius: 5px;
-
-                img {
-
-                    width: 100%;
-                    position: absolute;
-                    left: 0px;
-
-                    overflow: hidden;
-
-                }
-
-
-            }
-
         }
 
     }
@@ -720,6 +680,50 @@ button:active:not(:disabled, .swal2-close) {
         border-radius: 10px;
 
     }
+
+}
+
+.cardImgWrapper {
+        
+    position: relative;
+    width: 100%;
+    max-width: 12vw;
+    aspect-ratio: 14 / 19;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cardImg {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 14 / 19;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    border-radius: 5px;
+
+    img {
+
+        width: 100%;
+        position: absolute;
+        left: 0px;
+
+        overflow: hidden;
+
+    }
+
 
 }
 
@@ -974,5 +978,16 @@ button:active:not(:disabled, .swal2-close) {
 
     transform: translate(-5px, calc(-50% + 5px));
     box-shadow: -2px 2px 0 black;
+
+}
+
+.ghost {
+
+    position: relative;
+    opacity: 0.3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }

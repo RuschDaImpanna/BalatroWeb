@@ -31,6 +31,21 @@
 
             <img src="../assets/misc/balatro.png" alt="Balatro logo">
 
+            <div class="dragSlot">
+
+                <div class="cardImgWrapper dragCard">
+
+                    <div class="cardImg">
+
+                    <img src="../assets/playCards/cards_e0.png" class="deckImg">
+                    <img src="../assets/playCards/cards_S1.png" class="deckImg">
+
+                </div>
+
+                </div>
+
+            </div>
+
         </div>
 
         <div class="menuBtns">
@@ -65,6 +80,17 @@
     <script type="module">
 
         import { settingsSwal, collectionSwal } from '../js/extraSwal.js'
+        import { movingCard } from '../js/movingCards.js'
+        import { hoverCardSfx } from "../js/musicHandler.js"
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            const decksContImg = document.querySelector('.dragSlot')
+
+            movingCard(decksContImg, true)
+            hoverCardSfx('.cardImgWrapper')
+
+        })
 
         document.getElementById('settingsBtn').addEventListener('click', () => {
 
