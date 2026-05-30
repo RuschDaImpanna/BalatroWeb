@@ -4,32 +4,61 @@
 
         "deck",
         "stake",
+        "base",
         "date",
         "seed",
         "state",
         "ante",
         "round",
-        "money"
+        "money",
+        "handCount",
+        "discardCount",
+        "handSize",
+        "doubleBase"
 
     ],
 
-    "stats": [
+    "stats": {
 
-        "highestScore"
+        "highestScore": [
 
-    ],
+            "bestHand",
+            "bestLvl",
+            "fireState",
+            "chips",
+            "mult",
+            "value"
+
+        ]
+
+    },
 
     "shop": [
 
+        "handInterest",
+        "discardInterest",
+        "interestCap",
         "isBuyingPack",
-        "shopState"
+        "shopState",
+        "shopSize",
+        {"shopWeights":[
+
+            "jokerWeight",
+            "jokerSticker",
+            "editionWeight",
+            "tarotWeight",
+            "planetWeight",
+            "cardsWeight",
+            "spectralWeight"
+
+        ]}
 
     ],
 
     "gameState": [
 
-        "skipTags",
         "blindState",
+        "boss",
         "currentScore",
         "alreadyPlayedCards",
         "handCards",
@@ -40,13 +69,18 @@
 
     "inventory": [
 
-        "pokerLevels",
+
+        "jokerSize",
+        "consumableSize",
+        "lastConsumable",
+        "skipTags",
+        "pokerLvls",
         "jokers",
         "vouchers",
         "consumables"
 
     ],
     
-    "deckState": "deckState"
+    "deckState": ["deckState"]
 
 }

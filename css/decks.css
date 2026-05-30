@@ -485,7 +485,7 @@ body {
     
     position: relative;
     width: 100%;
-    max-width: 12vw;
+    max-width: 100px;
     aspect-ratio: 14 / 19;
     
 }

@@ -1,4 +1,6 @@
 import template from '../json/continueTemplate.json' with { type: 'json' }
+import standardDeck from '../json/standardDeck.json' with { type: 'json' }
+import runInfo from '../json/runSettingLists.json' with { type: 'json' }
 import { movingCard } from './movingCards.js'
 import { tagSfx } from './musicHandler.js'
 
@@ -20,38 +22,8 @@ const newRun = document.getElementById('newRun')
 const goBack = document.getElementById('goBack')
 const continueRun = document.getElementById('continueRun')
 
-const decksList = {
 
-    0:'Red',
-    1:'Blue',
-    2:'Yellow',
-    3:'Green',
-    4:'Black',
-    5:'Magic',
-    6:'Nebula',
-    7:'Ghost',
-    8:'Abandoned',
-    9:'Checkered',
-    10:'Zodiac',
-    11:'Painted',
-    12:'Anaglyph',
-    13:'Plasma',
-    14:'Erratic'
-
-}
-
-const stakeList = {
-
-    0:'White',
-    1:'Red',
-    2:'Green',
-    3:'Black',
-    4:'Blue',
-    5:'Purple',
-    6:'Orange',
-    7:'Gold'
-
-}
+const playBtn = document.getElementById('play')
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -128,7 +100,7 @@ goBack.addEventListener('click', () => {
 })
 continueRun.addEventListener('click', () => {
 
-    const continueRawInfo = localStorage.getItem('continueRunInfo')
+    const continueRawInfo = localStorage.getItem('runInfo')
 
     if (continueRawInfo) {
 
@@ -153,6 +125,12 @@ continueRun.addEventListener('click', () => {
 
     newRun.classList.remove('selected')
     continueRun.classList.add('selected')
+
+})
+
+playBtn.addEventListener('click', () => {
+
+    startNewRun()
 
 })
 
@@ -212,7 +190,7 @@ document.addEventListener('keydown', (event) => {
 
         if (localStorage.getItem('noPop') !== 'true') {
 
-            const continueRawInfo = localStorage.getItem('continueRunInfo')
+            const continueRawInfo = localStorage.getItem('runInfo')
 
             if (document.getElementById('newRun').classList.contains('selected')) {
 
@@ -223,7 +201,7 @@ document.addEventListener('keydown', (event) => {
                         title: "Are you ready to start?",
                         html: `
 
-                        <p>Your current state of run is ${decksList[deckPos]} Deck on ${stakeList[stakePos]} Stake with ${seed.value ? seed.value + ' as seed':'no seed'}?<p>
+                        <p>Your current state of run is ${runInfo[0][deckPos].name} on ${runInfo[1][stakePos].name} with ${seed.value ? seed.value + ' as seed':'no seed'}?<p>
 
                         <input type="checkbox" name="noPop" id="noPop">
                         <label for="noPop">Don't show this again</label>
@@ -247,6 +225,8 @@ document.addEventListener('keydown', (event) => {
 
                         }
 
+                        if (result.isConfirmed) startNewRun()
+
                     })
 
                     requestAnimationFrame(() => {
@@ -268,7 +248,7 @@ document.addEventListener('keydown', (event) => {
                         title: "Are you ready to start?",
                         html: `
 
-                        <p>You will continue this run with the ${decksList[continueInfo.run.deck]} Deck on ${stakeList[continueInfo.run.stake]} Stake of the ${continueInfo.run.date}<p>
+                        <p>You will continue this run with the ${runInfo[0][continueInfo.run.deck].name} on ${runInfo[1][continueInfo.run.stake].name} of the ${continueInfo.run.date}<p>
 
                         <input type="checkbox" name="noPop" id="noPop">
                         <label for="noPop">Don't show this again</label>
@@ -386,14 +366,19 @@ function openCorrespondingTab (tabs) {
 function confirmContinue (continueInfo) {
 
     if (!isJsonString(continueInfo)) return false
+    console.log('is JSON')
 
     const arrayContinue = JSON.parse(continueInfo)
 
     if (!(typeof arrayContinue === 'object')) return false
 
+    console.log('is object')
+
     for (const identifier of Object.keys(template)) {
 
         if (!(identifier in arrayContinue)) return false
+
+        console.log(identifier + ' is there')
         
         const value = template[identifier]
         
@@ -401,14 +386,20 @@ function confirmContinue (continueInfo) {
 
             value.forEach(item => {
 
+                console.log(arrayContinue[identifier], item)
 
                 if(!(item in arrayContinue[identifier])) return false
 
             })
 
+        } else if (typeof value == 'object'){
+
+            console.log('object')
+            console.log(arrayContinue[identifier], value)
+
         } else {
 
-            if (!(value in arrayContinue)) return false
+            return false
 
         }
 
@@ -434,8 +425,8 @@ function confirmContinue (continueInfo) {
 }
 function displayContinueRun (continueInfo) {
 
-    document.getElementById('deckTitleInfo').innerText = decksList[continueInfo.run.deck] + ' Deck'
-    document.getElementById('continueDeck').innerText = decksList[continueInfo.run.deck] + ' Deck'
+    document.getElementById('deckTitleInfo').innerText = runInfo[0][continueInfo.run.deck].name + ' Deck'
+    document.getElementById('continueDeck').innerText = runInfo[0][continueInfo.run.deck].name + ' Deck'
 
     document.getElementById('deckContInfo').innerHTML = document.getElementById(`${continueInfo.run.deck}DI`).innerHTML
 
@@ -443,8 +434,8 @@ function displayContinueRun (continueInfo) {
 
     document.getElementById('continueDate').innerText = continueInfo.run.date
 
-    document.getElementById('stakeTitleInfo').innerText = stakeList[continueInfo.run.stake] + ' Stake'
-    document.getElementById('continueStake').innerText = stakeList[continueInfo.run.stake] + ' Stake'
+    document.getElementById('stakeTitleInfo').innerText = runInfo[1][continueInfo.run.stake].name + ' Stake'
+    document.getElementById('continueStake').innerText = runInfo[1][continueInfo.run.stake].name + ' Stake'
 
     document.getElementById('stakeContInfo').innerHTML = document.getElementById(`${continueInfo.run.stake}SI`).innerHTML
 
@@ -458,7 +449,7 @@ function displayContinueRun (continueInfo) {
 
     } else {
 
-        document.getElementById('bestTitleInfo').innerText = continueInfo.stats.highestScore.best.hand + ' Lvl. ' + continueInfo.stats.highestScore.best.lvl
+        document.getElementById('bestTitleInfo').innerText = continueInfo.stats.highestScore.bestHand + ' Lvl. ' + continueInfo.stats.highestScore.bestLvl
 
     }
 
@@ -559,5 +550,292 @@ function cancelSfxByKeyboard () {
         }
 
     })
+
+}
+
+function startNewRun () {
+
+    const getDeck = runInfo[0][deckPos]
+    const getStake = runInfo[1][stakePos]
+
+    const getSeed = new Math.seedrandom(getPos()+localStorage.getItem('lastAlive'))
+    const potentialSeed = getSeed()
+
+    //Run info
+    const deck = {'deck': deckPos}
+    const stake = {'stake': stakePos}
+    const base = {'base': (getPropertyOnStake('scaleFast') || 0)}
+    const date = {'date': new Date()}
+    const seedValue = {'seed': checkSeed(seed.value) || formatSeed(potentialSeed)}
+    const state = {'state': 0}
+    const ante = {'ante': 0}
+    const round = {'round': 0}
+    const money = {'money': 4 + (getPropertyOnDeck('money') || 0)}
+    const handCount = {'handCount': 4 + (getPropertyOnDeck('handCount') || 0)} 
+    const discardCount = {'discardCount': 3 + (getPropertyOnDeck('discardCount') || 0) + (getPropertyOnStake('discardCount') || 0)}
+    const handSize = {'handSize': 8 + (getPropertyOnDeck('handSize') || 0)}
+    const doubleBase = {'doubleBase': deckPos == 13}
+
+    //Stats
+    const scoreInfo = {
+
+        'bestHand': '',
+        'bestLvl': 0,
+        'fireState': 0,
+        'chips': 0,
+        'mult': 0,
+        'value': 0
+
+    }
+    const highestScore = {'highestScore': scoreInfo}
+
+    //Shop
+    const handInterest = {'handInterest': 1 + (getPropertyOnDeck('handInterest') || 0)}
+    const discardInterest = {'discardInterest': 0 + (getPropertyOnDeck('discardInterest') || 0)}
+    const interestCap = {'interestCap': getPropertyOnDeck('interestCap') ?? 5}
+    const isBuyingPack = {'isBuyingPack': false}
+    const shopState = {'shopState': 0}
+    const shopSize = {'shopSize': 2}
+    const weightInfo = {
+
+        'jokerWeight': 20,
+        'jokerSticker': (getPropertyOnStake('jokerSticker') || 0),
+        'editionWeight': 1,
+        'tarotWeight': 4,
+        'planetWeight': 4,
+        'cardsWeight': 0,
+        'spectralWeight': 0 + (getPropertyOnDeck('spectralWeight') || 0)
+
+    }
+    const shopWeights = {'shopWeights': weightInfo}
+
+    //Gamestate
+    const blindState = {'blindState': 0}
+    const boss = {'boss': 0}
+    const currentScore = {'currentScore' : 0}
+    const alreadyPlayedCards = {'alreadyPlayedCards' : []}
+    const handCards = {'handCards' : []}
+    const currentHands = {'currentHands' : handCount[1]}
+    const currentDiscards = {'currentDiscards' : discardCount[1]}
+    
+    //Inventory
+    const jokerSize = {'jokerSize': 5 + (getPropertyOnDeck('jokerSize') || 0)}
+    const consumableSize = {'consumableSize': 2 + (getPropertyOnDeck('consumableSize') || 0)}
+    const lastConsumable = {'lastConsumable': 'None'}
+    const skipTags = {'skipTags': []}
+    const pokerLvls = {'pokerLvls': []}
+    const jokers = {'jokers': []}
+    const vouchers = {'vouchers': getPropertyOnDeck('vouchersObtained') || []}
+    const consumables = {'consumables': getPropertyOnDeck('consumableObjects') || []}
+
+    //Deckstate
+    const deckState = {'deckState': generateDeck()}
+
+    localStorage.setItem('runInfo', JSON.stringify({
+
+        'run': {
+
+            ...deck,
+            ...stake,
+            ...base,
+            ...date,
+            ...seedValue,
+            ...state,
+            ...ante,
+            ...round,
+            ...money,
+            ...handCount,
+            ...discardCount,
+            ...handSize,
+            ...doubleBase
+
+        },
+        'stats': {
+
+            ...highestScore
+
+        },
+        'shop': {
+
+            ...handInterest,
+            ...discardInterest,
+            ...interestCap,
+            ...isBuyingPack,
+            ...shopState,
+            ...shopSize,
+            ...shopWeights
+
+        },
+        'gameState': {
+
+            ...blindState,
+            ...boss,
+            ...currentScore,
+            ...alreadyPlayedCards,
+            ...handCards,
+            ...currentHands,
+            ...currentDiscards
+
+        },
+        'inventory': {
+
+            ...jokerSize,
+            ...consumableSize,
+            ...lastConsumable,
+            ...skipTags,
+            ...pokerLvls,
+            ...jokers,
+            ...vouchers,
+            ...consumables
+            
+        },
+        ...deckState
+
+    }))
+
+    window.location.href = '../html/ante.html'
+
+    function getPos () {
+
+        return new Promise(resolve => {
+
+            const handler = (event) => {
+
+                const x = event.clientX;
+                const y = event.clientY;
+
+                document.removeEventListener('mousemove', handler);
+
+                resolve(x * y);
+
+            };
+
+            document.addEventListener('mousemove', handler);
+        })
+
+    }
+
+    function getPropertyOnDeck (propertyName) {
+
+        const properties = Array.isArray(getDeck.property) ? getDeck.property : [getDeck.property]
+        const values = Array.isArray(getDeck.value) ? getDeck.value : [getDeck.value]
+        
+        const index = properties.findIndex(p => typeof p === "string" ? p === propertyName : p.name === propertyName)
+
+        if (index === -1) return undefined
+
+        const property = properties[index]
+
+        return typeof property === "object" ? property.inventory : values[index];
+
+    }
+
+    function getPropertyOnStake (propertyName) {
+
+        let result
+
+        for (let s = 0; s <= stakePos; s++) {
+
+            const stake = runInfo[1][s];
+
+            if (stake.property == propertyName) result = stake.value
+
+        }
+
+        return result
+        
+    }
+
+    function formatSeed (seed) {
+
+        const text = "ABCDEFGHIJKLMNPQRSTUVWXYZ123456789"
+        let result = ""
+
+        for (let i = 0; i < 8; i++) {
+
+            const char = Math.floor(getSeed() * text.length)
+            result += text[char]
+
+        }
+
+        return result;
+
+    }
+
+    function checkSeed (seed) {
+
+        const seedArr = [...seed]
+        const randomFromSeed = new Math.seedrandom(seed)
+        const text = "ABCDEFGHIJKLMNPQRSTUVWXYZ123456789"
+        let result = ""
+
+        seedArr.forEach(letter => {
+
+            if ([...text].find(l => l == letter.toUpperCase())) result += letter.toUpperCase()
+                else result += text[Math.floor(randomFromSeed() * text.length)]
+            
+        })
+
+        return result
+
+    }
+
+    function generateDeck () {
+
+        let currentDeck = standardDeck[0]
+        const deckTransform = getPropertyOnDeck('changeCards')
+
+        switch (deckTransform){
+
+            case 1: 
+
+                const face = [11, 12, 13]
+                currentDeck = currentDeck.filter(card => !face.some(f => card[1].endsWith(String(f))))
+                break
+            
+            case 2:
+
+                const suitMap = {
+
+                    D: 'H',
+                    C: 'S'
+
+                }
+                currentDeck.forEach(card => {
+
+                    const suit = card[1][0]
+
+                    if (suitMap[suit]) {
+
+                        card[1] = suitMap[suit] + card[1].slice(1)
+
+                    }
+
+                })
+                break
+            
+            case 3:
+
+                currentDeck = []
+                const cardCreation = new Math.seedrandom(seedValue[1])
+                const suits = ['D', 'S', 'H', 'C']
+
+                for (let i = 0; i < 52; i++) {
+
+                    const currentCard = suits[Math.floor(cardCreation()*4)] +  (Math.floor(cardCreation() * 13) + 1)
+                    currentDeck.push([i, currentCard , 0, 0, 0, true])
+                    
+                }
+                break
+
+            default:
+
+                currentDeck = standardDeck[0]
+            
+        }
+
+        return currentDeck
+
+    }
 
 }
