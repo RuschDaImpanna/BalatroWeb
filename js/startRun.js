@@ -395,7 +395,11 @@ function confirmContinue (continueInfo) {
         } else if (typeof value == 'object'){
 
             console.log('object')
-            console.log(arrayContinue[identifier], value)
+            for (const metaIdentifier of Object.keys(value)) {
+
+                if (!(metaIdentifier in arrayContinue[identifier])) return false
+                
+            }
 
         } else {
 
@@ -425,8 +429,8 @@ function confirmContinue (continueInfo) {
 }
 function displayContinueRun (continueInfo) {
 
-    document.getElementById('deckTitleInfo').innerText = runInfo[0][continueInfo.run.deck].name + ' Deck'
-    document.getElementById('continueDeck').innerText = runInfo[0][continueInfo.run.deck].name + ' Deck'
+    document.getElementById('deckTitleInfo').innerText = runInfo[0][continueInfo.run.deck].name
+    document.getElementById('continueDeck').innerText = runInfo[0][continueInfo.run.deck].name
 
     document.getElementById('deckContInfo').innerHTML = document.getElementById(`${continueInfo.run.deck}DI`).innerHTML
 
@@ -434,10 +438,12 @@ function displayContinueRun (continueInfo) {
 
     document.getElementById('continueDate').innerText = continueInfo.run.date
 
-    document.getElementById('stakeTitleInfo').innerText = runInfo[1][continueInfo.run.stake].name + ' Stake'
-    document.getElementById('continueStake').innerText = runInfo[1][continueInfo.run.stake].name + ' Stake'
+    document.getElementById('stakeTitleInfo').innerText = runInfo[1][continueInfo.run.stake].name
+    document.getElementById('continueStake').innerText = runInfo[1][continueInfo.run.stake].name
 
     document.getElementById('stakeContInfo').innerHTML = document.getElementById(`${continueInfo.run.stake}SI`).innerHTML
+
+    document.querySelector('#currentDeckImg img').src = `../assets/playCards/cards_b${continueInfo.run.deck}.png`
 
     document.getElementById('continueAnte').innerText = continueInfo.run.ante
     document.getElementById('continueRound').innerText = continueInfo.run.round
