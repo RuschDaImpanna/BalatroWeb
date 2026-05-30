@@ -58,12 +58,15 @@
     "gameState": [
 
         "blindState",
+        "hasRerolled",
         "boss",
+        "playedBosses",
         "currentScore",
         "alreadyPlayedCards",
         "handCards",
         "currentHands",
-        "currentDiscards"
+        "currentDiscards",
+        "currentToScore"
 
     ],
 

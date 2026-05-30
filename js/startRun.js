@@ -436,7 +436,9 @@ function displayContinueRun (continueInfo) {
 
     console.log(continueInfo)
 
-    document.getElementById('continueDate').innerText = continueInfo.run.date
+    const registeredDate = new Date (continueInfo.run.date)
+
+    document.getElementById('continueDate').innerText = new Intl.DateTimeFormat("en-US", { day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "2-digit", }).format(registeredDate)
 
     document.getElementById('stakeTitleInfo').innerText = runInfo[1][continueInfo.run.stake].name
     document.getElementById('continueStake').innerText = runInfo[1][continueInfo.run.stake].name
@@ -574,7 +576,7 @@ function startNewRun () {
     const date = {'date': new Date()}
     const seedValue = {'seed': checkSeed(seed.value) || formatSeed(potentialSeed)}
     const state = {'state': 0}
-    const ante = {'ante': 0}
+    const ante = {'ante': 1}
     const round = {'round': 0}
     const money = {'money': 4 + (getPropertyOnDeck('money') || 0)}
     const handCount = {'handCount': 4 + (getPropertyOnDeck('handCount') || 0)} 
@@ -617,19 +619,37 @@ function startNewRun () {
 
     //Gamestate
     const blindState = {'blindState': 0}
+    const hasRerolled = {'hasRerolled': false}
     const boss = {'boss': 0}
+    const playedBosses = {'playedBosses': []}
     const currentScore = {'currentScore' : 0}
     const alreadyPlayedCards = {'alreadyPlayedCards' : []}
     const handCards = {'handCards' : []}
-    const currentHands = {'currentHands' : handCount[1]}
-    const currentDiscards = {'currentDiscards' : discardCount[1]}
-    
+    const currentHands = {'currentHands' : handCount.handCount}
+    const currentDiscards = {'currentDiscards' : discardCount.discardCount}
+    const currentToScore = {'currentToScore' : [0, 0, '']}
+
     //Inventory
     const jokerSize = {'jokerSize': 5 + (getPropertyOnDeck('jokerSize') || 0)}
     const consumableSize = {'consumableSize': 2 + (getPropertyOnDeck('consumableSize') || 0)}
     const lastConsumable = {'lastConsumable': 'None'}
     const skipTags = {'skipTags': []}
-    const pokerLvls = {'pokerLvls': []}
+    const pokerLvls = {'pokerLvls': [
+
+        {id:0, lvl:1, times:0},
+        {id:1, lvl:1, times:0},
+        {id:2, lvl:1, times:0},
+        {id:3, lvl:1, times:0},
+        {id:4, lvl:1, times:0},
+        {id:5, lvl:1, times:0},
+        {id:6, lvl:1, times:0},
+        {id:7, lvl:1, times:0},
+        {id:8, lvl:1, times:0},
+        {id:9, lvl:1, times:0},
+        {id:10, lvl:1, times:0},
+        {id:11, lvl:1, times:0},
+
+     ]}
     const jokers = {'jokers': []}
     const vouchers = {'vouchers': getPropertyOnDeck('vouchersObtained') || []}
     const consumables = {'consumables': getPropertyOnDeck('consumableObjects') || []}
@@ -675,12 +695,15 @@ function startNewRun () {
         'gameState': {
 
             ...blindState,
+            ...hasRerolled,
             ...boss,
+            ...playedBosses,
             ...currentScore,
             ...alreadyPlayedCards,
             ...handCards,
             ...currentHands,
-            ...currentDiscards
+            ...currentDiscards,
+            ...currentToScore
 
         },
         'inventory': {

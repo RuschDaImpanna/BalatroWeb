@@ -26,6 +26,7 @@
             [
                 {
 
+                    "id": 0,
                     "name": "The Hook",
                     "description": "Discards 2 random cards per hand played",
                     "image": "../assets/blinds/blind_03.png",
@@ -34,6 +35,7 @@
                 },
                 {
 
+                    "id": 1,
                     "name": "The Club",
                     "description": "All Club cards are debuffed",
                     "image": "../assets/blinds/blind_04.png",
@@ -42,6 +44,7 @@
                 },
                 {
 
+                    "id": 2,
                     "name": "The Goad",
                     "description": "All Spade cards are debuffed",
                     "image": "../assets/blinds/blind_05.png",
@@ -50,6 +53,7 @@
                 },
                 {
 
+                    "id": 3,
                     "name": "The Window",
                     "description": "All Diamond cards are debuffed",
                     "image": "../assets/blinds/blind_06.png",
@@ -58,6 +62,7 @@
                 },
                 {
 
+                    "id": 4,
                     "name": "The Head",
                     "description": "All Heart cards are debuffed",
                     "image": "../assets/blinds/blind_07.png",
@@ -66,6 +71,7 @@
                 },
                 {
 
+                    "id": 5,
                     "name": "The Psychic",
                     "description": "Must play 5 cards",
                     "image": "../assets/blinds/blind_08.png",
@@ -74,6 +80,7 @@
                 },
                 {
 
+                    "id": 6,
                     "name": "The Manacle",
                     "description": "-1 Hand Size",
                     "image": "../assets/blinds/blind_09.png",
@@ -82,6 +89,7 @@
                 },
                 {
 
+                    "id": 7,
                     "name": "The Pillar",
                     "description": "Cards played previously on this Ante are debuffed",
                     "image": "../assets/blinds/blind_0A.png",
@@ -92,6 +100,7 @@
             [
                 {
 
+                    "id": 8,
                     "name": "The House",
                     "description": "First hand is drawn face down",
                     "image": "../assets/blinds/blind_0B.png",
@@ -100,6 +109,7 @@
                 },
                 {
 
+                    "id": 9,
                     "name": "The Wall",
                     "description": "Extra large Blind",
                     "image": "../assets/blinds/blind_0C.png",
@@ -108,6 +118,7 @@
                 },
                 {
 
+                    "id": 10,
                     "name": "The Wheel",
                     "description": "1 in 7 cards get drawn face down",
                     "image": "../assets/blinds/blind_0D.png",
@@ -116,6 +127,7 @@
                 },
                 {
 
+                    "id": 11,
                     "name": "The Arm",
                     "description": "Decreases level of player poker hand",
                     "image": "../assets/blinds/blind_0E.png",
@@ -124,6 +136,7 @@
                 },
                 {
 
+                    "id": 12,
                     "name": "The Fish",
                     "description": "Cards drawn face down after each hand played",
                     "image": "../assets/blinds/blind_0F.png",
@@ -132,6 +145,7 @@
                 },
                 {
 
+                    "id": 13,
                     "name": "The Water",
                     "description": "Start with 0 discards",
                     "image": "../assets/blinds/blind_10.png",
@@ -140,6 +154,7 @@
                 },
                 {
 
+                    "id": 14,
                     "name": "The Mouth",
                     "description": "Play only 1 hand type this round",
                     "image": "../assets/blinds/blind_11.png",
@@ -148,6 +163,7 @@
                 },
                 {
 
+                    "id": 15,
                     "name": "The Needle",
                     "description": "Play only 1 hand",
                     "image": "../assets/blinds/blind_12.png",
@@ -156,6 +172,7 @@
                 },
                 {
 
+                    "id": 16,
                     "name": "The Flint",
                     "description": "Base Chips and Mult are halved",
                     "image": "../assets/blinds/blind_13.png",
@@ -164,6 +181,7 @@
                 },
                 {
 
+                    "id": 17,
                     "name": "The Mark",
                     "description": "All face cards are drawn face down",
                     "image": "../assets/blinds/blind_14.png",
@@ -174,6 +192,7 @@
             [
                 {
 
+                    "id": 18,
                     "name": "The Eye",
                     "description": "No repeat hand types this round",
                     "image": "../assets/blinds/blind_15.png",
@@ -182,6 +201,7 @@
                 },
                 {
 
+                    "id": 19,
                     "name": "The Tooth",
                     "description": "Lose $1 per card played",
                     "image": "../assets/blinds/blind_16.png",
@@ -191,6 +211,7 @@
             ],
             [{
 
+                "id": 20,
                 "name":"The Plant",
                 "description": "All face cards are debuffed",
                 "image": "../assets/blinds/blind_17.png",
@@ -199,6 +220,7 @@
             }],
             [{
 
+                "id": 21,
                 "name":"The Serpent",
                 "description": "After Play or Discard always draw 3 cards",
                 "image": "../assets/blinds/blind_18.png",
@@ -207,6 +229,7 @@
             }],
             [{
 
+                "id": 22,
                 "name":"The Ox",
                 "description": "Playing ##MOSTPOKERHAND## sets money $0",
                 "image": "../assets/blinds/blind_19.png",
@@ -217,6 +240,7 @@
         [
             {
 
+                "id": 23,
                 "name":"Amber Acorn",
                 "description": "Flips and shuffles all Joker cards",
                 "image": "../assets/blinds/blind_1A.png",
@@ -225,6 +249,7 @@
             },
             {
 
+                "id": 24,
                 "name":"Verdant Leaf",
                 "description": "All cards debuffed until 1 Joker is sold",
                 "image": "../assets/blinds/blind_1B.png",
@@ -233,6 +258,7 @@
             },
             {
 
+                "id": 25,
                 "name":"Violet Vessel",
                 "description": "Very large Blind",
                 "image": "../assets/blinds/blind_1C.png",
@@ -241,6 +267,7 @@
             },
             {
 
+                "id": 26,
                 "name":"Crimson Heart",
                 "description": "One random Joker gets debuffed for each hand",
                 "image": "../assets/blinds/blind_1D.png",
@@ -249,6 +276,7 @@
             },
             {
 
+                "id": 27,
                 "name":"Cerulean Bell",
                 "description": "Forces 1 card to always be selected",
                 "image": "../assets/blinds/blind_1E.png",

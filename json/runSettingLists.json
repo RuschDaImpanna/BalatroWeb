@@ -51,7 +51,7 @@
                     {
 
                         "id": 4,
-                        "phase": 1
+                        "phase": 0
 
                     }
 
@@ -85,7 +85,7 @@
                     {
 
                         "id": 5,
-                        "phase": 1
+                        "phase": 0
 
                     }
 
@@ -147,19 +147,19 @@
                     {
 
                         "id": 0,
-                        "phase": 1
+                        "phase": 0
 
                     },
                     {
 
                         "id": 8,
-                        "phase": 1
+                        "phase": 0
 
                     },
                     {
 
                         "id": 9,
-                        "phase": 1
+                        "phase": 0
 
                     }
 

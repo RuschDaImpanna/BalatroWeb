@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="../css/objects.css">
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
@@ -132,7 +133,7 @@
 
             </div>
 
-            <div class="blinds">
+            <div class="blinds hidden">
 
                 <div class="blind normal current" id="small">
 
@@ -165,18 +166,7 @@
                     
                     <div class="tagSelInfo">
                         
-                        <div class="skipWrap">
-
-                            <img src="" alt="SkipTag" class="skipTag">
-
-                            <div class="infoWrap">
-
-                                <h6 id="tagSmallTitle">##TAGTITLE##</h6>
-                                <p id="tagSmallInfo">##TAGINFO##</p>
-
-                            </div>
-
-                        </div>
+                        
                         <button type="button" class="tagBtn" id="smallTagSelect">Skip</button>
 
                     </div>
@@ -215,18 +205,7 @@
 
                     <div class="tagSelInfo">
 
-                        <div class="skipWrap">
-
-                            <img src="" alt="SkipTag" class="skipTag">
-
-                            <div class="infoWrap">
-
-                                <h6 id="tagBigTitle">##TAGTITLE##</h6>
-                                <p id="tagBigInfo">##TAGINFO##</p>
-
-                            </div>
-
-                        </div>
+                        
                         <button type="button" class="tagBtn" id="bigTagSelect" disabled>Skip</button>
 
                     </div>
@@ -284,6 +263,7 @@
         
     </body>
 
+    <script src="../js/ante.js" type="module"></script>
     <script src="../js/infoTab.js" type="module"></script>
     <script src="../js/optionTab.js" type="module"></script>
     <script src="../js/musicHandler.js" type="module"></script>

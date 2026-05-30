@@ -37,17 +37,17 @@ body {
 
     }
 
-    .skipWrap{
+    .tagWrap{
 
         position: relative;
 
-        .infoWrap {
+        .tagInfo {
 
             visibility: hidden;
             opacity: 0;
 
             position: absolute;
-            transform: translate(-50%, -40%);
+            transform: translate(-50%, 0%);
             top: -150%;
             left: 50%;
 
@@ -85,6 +85,25 @@ body {
                 font-size: 0.75em;
 
             }
+
+        }
+
+    }
+
+    .tagWrap:hover:not(.dragging) {
+
+        z-index: 1;
+
+        .tagInfo {
+
+            transform: translate(-50%, 10%);
+            opacity: 1;
+
+            visibility: visible;
+
+            transition-delay: 0.1s;
+
+            z-index: 1;
 
         }
 
@@ -232,15 +251,20 @@ body {
 
         #rerollBlind {
 
-            position: absolute;
-
-            width: 60%;
+            width: 75%;
             height: 30%;
 
-            transform: translate(-50%, -50%);
-            top: 70%;
-            left: 50%;
+            margin-top: 10px;
 
+            background-color: #F3AD16;
+            border-radius: 10px;
+
+        }
+
+        #rerollBlind:disabled {
+
+            background-color: #7c7c7c;
+            text-decoration: line-through;
 
         }
 
