@@ -109,19 +109,7 @@ export function buttonSfx (classTxt) {
             player1.src = `../assets/sound/button.wav`
             player1.load()
 
-            player1.addEventListener('canplay', async () => {
-
-                try {
-
-                    await player1.play()
-
-                } catch (err) {
-
-                    errorPlay()
-                    
-                }
-
-            })
+            player1.play().catch(errorPlay)
 
         })
         
@@ -140,19 +128,7 @@ export function hoverCardSfx (classTxt) {
             player1.src = `../assets/sound/hoverCard.wav`
             player1.load()
 
-            player1.addEventListener('canplay', async () => {
-
-                try {
-
-                    await player1.play()
-
-                } catch (err) {
-
-                    errorPlay()
-                    
-                }
-
-            })
+            player1.play().catch(errorPlay)
 
         })
         
@@ -165,19 +141,21 @@ export function tagSfx () {
     player1.src = `../assets/sound/tag.wav`
     player1.load()
 
-    player1.addEventListener('canplay', async () => {
+    player1.play().catch(errorPlay)
 
-        try {
+}
 
-            await player1.play()
+export function playDynamically (players, toPlay, delay) {
 
-        } catch (err) {
+    setTimeout(() => {
 
-            errorPlay()
-            
-        }
+        const player = players.find(a => !a.src || a.paused || a.ended)
+        player.src = toPlay
+        player.load()
 
-    })
+        player.play().catch(errorPlay)
+
+    }, delay + 5)
 
 }
 

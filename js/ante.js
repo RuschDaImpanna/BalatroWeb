@@ -1,10 +1,14 @@
 import blindList from '../json/blindLists.json' with { type: 'json' }
 import tagList from '../json/tagList.json' with { type: 'json' }
 import { createTag } from './generateCards.js'
+import { playDynamically } from './musicHandler.js'
+const sfx0 = document.getElementById('player1')
+const sfx1 = document.getElementById('player2')
 
 setTimeout(() => {
 
     document.querySelector('.blinds.hidden').classList.remove('hidden')
+    playDynamically([sfx0, sfx1], `../assets/sound/cancel.wav`, 50)
 
 }, 500)
 
@@ -20,6 +24,21 @@ const rerollButton = document.getElementById('rerollBlind')
 
 const smallScore = document.getElementById('smallScore')
 const bigScore = document.getElementById('bigScore')
+
+let availableTags = tagList
+if (runUtilities.run.ante <= 1) {
+
+    const bannedTags = [2, 9, 11, 12, 13, 14, 15, 20, 22]
+    availableTags = availableTags.filter(t => !bannedTags.some(b => b == t.id))
+
+}
+const tagRand = [Math.floor(randomFromSeed(runUtilities.run.ante)*availableTags.length), Math.floor(randomFromSeed(runUtilities.run.ante)*availableTags.length)]
+while (tagRand[0] == tagRand[1]) {
+
+    tagRand[1] = Math.floor(randomFromSeed(runUtilities.run.ante)*availableTags.length)
+
+}
+const tagDisplay = document.getElementById('tags')
 
 //Set all variables
 document.addEventListener('DOMContentLoaded', () => {
@@ -113,32 +132,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
         runUtilities.gameState.boss = bossesToChoose[Math.floor(randomFromSeed()*bossesToChoose.length)]
         runUtilities.gameState.playedBosses.push(bossesToChoose.indexOf(runUtilities.gameState.boss))
-        //saveToLocal()
+        saveToLocal()
         console.log(runUtilities.gameState.boss, runUtilities.gameState.playedBosses)
 
     }
 
-    document.getElementById('bossTitle').innerText = runUtilities.gameState.boss.name
+    document.getElementById('boss').style.borderColor = runUtilities.gameState.boss.color
+    const bossTitle =  document.getElementById('bossTitle')
+    bossTitle.innerText = runUtilities.gameState.boss.name
+    bossTitle.style.backgroundColor = runUtilities.gameState.boss.color
     document.getElementById('bossCondition').innerText = runUtilities.gameState.boss.description
     document.getElementById('bossScore').innerText = new Intl.NumberFormat('en-US').format(anteBase*runUtilities.gameState.boss.scale)
     const bossReward = runUtilities.gameState.boss.id >= 23 ? '$$$$$$$$':'$$$$$'
     document.getElementById('bossReward').innerText = bossReward
     document.getElementById('bossBlindImg').src = runUtilities.gameState.boss.image
 
+
+
     document.getElementById('deckImg').src = `../assets/playCards/cards_b${runUtilities.run.deck.toString(16)}.png`
 
 
-    const tagRand = [randomFromSeed(runUtilities.run.ante), randomFromSeed(runUtilities.run.ante)]
-    console.log(tagRand, tagList)
-
     document.querySelectorAll('.tagSelInfo').forEach((element, i) => {
 
-        console.log(tagList[Math.floor(tagRand[i]*tagList.length)])
+        console.log(availableTags[tagRand[i]])
 
-        element.insertBefore(createTag(tagList[Math.floor(tagRand[i]*tagList.length)].info, false), element.querySelector('.tagBtn'))
+        element.insertBefore(createTag(availableTags[tagRand[i]].info, false), element.querySelector('.tagBtn'))
         
     })
 
+    runUtilities.inventory.skipTags.forEach(tag => {
+
+        const tagInfo = tagList.find(t => t.id == tag)
+        tagDisplay.append(createTag(tagInfo.info, false))
+        
+    })
+
+})
+
+document.querySelectorAll('.tagBtn').forEach((btn, id) => {
+
+    btn.addEventListener('click', () => {
+
+        const tagInfo = availableTags[tagRand[id]]
+        tagDisplay.append(createTag(tagInfo.info, false))
+        console.log(tagInfo.info)
+        playDynamically([sfx0, sfx1], `../assets/sound/tag.wav`, 45)
+
+    })
+    
 })
 
 function saveToLocal () {
