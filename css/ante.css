@@ -34,7 +34,7 @@
     
 }
 
-.blinds.hidden {
+.hidden {
 
     transform: translateY(100vh)
 
@@ -54,6 +54,9 @@
 
     border: 5px solid;
     border-radius: 15px 15px 0 0;
+
+    transition: transform 0.2s cubic-bezier(0.25, 0.05, 0.48, 1.33) ;
+
 
     h2, h3, h4, p, button {
 
@@ -247,7 +250,8 @@
 
 .current {
 
-    bottom: 15px;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.25, 0.05, 0.48, 1.33);
 
 }
 

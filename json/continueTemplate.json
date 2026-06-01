@@ -29,6 +29,13 @@
             "mult",
             "value"
 
+        ],
+        "playingInfo": [
+
+            "skips",
+            "playedHands",
+            "lostDiscards"
+
         ]
 
     },

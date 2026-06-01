@@ -158,7 +158,7 @@
         "info": { 
 
             "name": "Handy Tag",
-            "description": "Gives <strong style=\"color: #F3AD16\">$1</strong> per played <strong style=\"color: #1199F0\">hand</strong> this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\">$[hands]</strong>)</i>",
+            "description": "Gives <strong style=\"color: #F3AD16\">$1</strong> per played <strong style=\"color: #1199F0\">hand</strong> this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\" id=\"handsForMoney\">##HANDS##]</strong>)</i>",
             "image": "../assets/tags_vouchers/tag_0D.png"
 
         }
@@ -170,7 +170,7 @@
         "info": { 
 
             "name": "Garbage Tag",
-            "description": "Gives <strong style=\"color: #F3AD16\">$1</strong> per unused <strong style=\"color: #DF2525\">discard</strong> this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\">$[discards]</strong>)</i>",
+            "description": "Gives <strong style=\"color: #F3AD16\">$1</strong> per unused <strong style=\"color: #DF2525\">discard</strong> this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\" id=\"discardsForMoney\">##DISCARDS##</strong>)</i>",
             "image": "../assets/tags_vouchers/tag_0E.png"
 
         }
@@ -254,7 +254,7 @@
         "info": { 
 
             "name": "Speed Tag",
-            "description": "Gives <strong style=\"color: #F3AD16\">$5</strong> per skipped Blind this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\">$[skips]</strong>)</i>",
+            "description": "Gives <strong style=\"color: #F3AD16\">$5</strong> per skipped Blind this run <br> <i style=\"color: #3C565E;\">(Will give <strong style=\"color: #F3AD16\" id=\"skipsForMoney\">##SKIPS##</strong>)</i>",
             "image": "../assets/tags_vouchers/tag_15.png"
 
         }

@@ -596,6 +596,14 @@ function startNewRun () {
 
     }
     const highestScore = {'highestScore': scoreInfo}
+    const gettingPlaying = {
+
+        'skips': 0,
+        'playedHands': 0,
+        'lostDiscards': 0
+
+    }
+    const playingInfo = {'playingInfo': gettingPlaying}
 
     //Shop
     const handInterest = {'handInterest': 1 + (getPropertyOnDeck('handInterest') || 0)}
@@ -678,7 +686,8 @@ function startNewRun () {
         },
         'stats': {
 
-            ...highestScore
+            ...highestScore,
+            ...playingInfo
 
         },
         'shop': {
