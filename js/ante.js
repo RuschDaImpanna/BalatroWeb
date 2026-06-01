@@ -2,12 +2,15 @@ import blindList from '../json/blindLists.json' with { type: 'json' }
 import tagList from '../json/tagList.json' with { type: 'json' }
 import { createTag } from './generateCards.js'
 import { playDynamically } from './musicHandler.js'
+import { updateLeftInfo, sumAnimation } from './UIFixing.js'
 const sfx0 = document.getElementById('player1')
 const sfx1 = document.getElementById('player2')
 
 const blindsHolder = document.querySelector('.blinds')
 
 setTimeout(() => {
+
+    if (!blindsHolder) return
 
     blindsHolder.classList.remove('hidden')
     playDynamically([sfx0, sfx1], `../assets/sound/cancel.wav`, 50)
@@ -17,16 +20,9 @@ setTimeout(() => {
 const runUtilities = JSON.parse(localStorage.getItem('runInfo'))
 const randomFromSeed = new Math.seedrandom(runUtilities.run.seed)
 
-
-const anteScore = document.getElementById('ante')
 const anteBase = blindList[1][runUtilities.run.base][runUtilities.run.ante]
-const roundScore = document.getElementById('round')
-const moneyScore = document.getElementById('dollars')
 
 const rerollButton = document.getElementById('rerollBlind')
-
-const smallScore = document.getElementById('smallScore')
-const bigScore = document.getElementById('bigScore')
 
 let availableTags = tagList
 if (runUtilities.run.ante <= 1) {
@@ -43,24 +39,16 @@ while (tagRand[0] == tagRand[1]) {
 }
 const tagDisplay = document.getElementById('tags')
 
+
 //Set all variables
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log(runUtilities)
+    const smallScore = document.getElementById('smallScore')
+    const bigScore = document.getElementById('bigScore')
+
+    updateLeftInfo()
 
     document.title = `Ante ${runUtilities.run.ante} - Balatro Web Port`
-
-    anteScore.innerText = runUtilities.run.ante
-    roundScore.innerHTML = runUtilities.run.round
-    moneyScore.innerText = `$${runUtilities.run.money}`
-
-    document.getElementById('chips').innerText = 0
-    document.getElementById('mult').innerText = 0
-    document.getElementById('handType').innerText = ''
-    document.getElementById('currentScore').innerText = 0
-
-    document.querySelector('.jokers').setAttribute('jokerSize', `${runUtilities.inventory.jokers.length}/${runUtilities.inventory.jokerSize}`)
-    document.querySelector('.consumables').setAttribute('consumableSize', `${runUtilities.inventory.consumables.length}/${runUtilities.inventory.consumableSize}`)
 
     rerollButton.hidden = true
 
@@ -147,6 +135,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('deckImg').src = `../assets/playCards/cards_b${runUtilities.run.deck.toString(16)}.png`
 
+    const theCurrent = document.querySelector('.blind.current')
+    theCurrent.classList.remove('current')
+    theCurrent.querySelectorAll('button').forEach(btn => {
+
+        btn.disabled = true
+        
+    })
+    const getNewCurrent = [...blindsHolder.children][runUtilities.gameState.blindState]
+    getNewCurrent.classList.add('current')
+    getNewCurrent.querySelectorAll('button').forEach(btn => {
+
+        btn.disabled = false
+        
+    })
+
+    for (let i = 0; i < runUtilities.gameState.blindState; i++) {
+
+        const skipped = [...blindsHolder.children][i]
+        skipped.querySelector('.blindSelInfo').style.opacity = 0.5
+        
+    }
+
+
 
     document.querySelectorAll('.tagSelInfo').forEach((element, i) => {
 
@@ -228,6 +239,7 @@ document.querySelectorAll('.tagBtn').forEach((btn, id) => {
             
         })
         currentBlind.querySelector('.skipMark').classList.remove('noSkip')
+        runUtilities.gameState.blindState++
 
         //Save tag
         const created = createTag(tagInfo.info, false)
@@ -263,6 +275,31 @@ document.querySelectorAll('.tagBtn').forEach((btn, id) => {
             })
 
         }
+
+    })
+    
+})
+
+document.querySelectorAll('.blindBtn').forEach((btn, id) => {
+
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+    btn.addEventListener('click', async () => {
+
+        blindsHolder.classList.add('hidden')
+        await delay(250)
+
+        runUtilities.run.round++
+
+        //Play sound
+        playDynamically([sfx0, sfx1], `../assets/sound/tag.wav`, 50)
+        sumAnimation(document.getElementById('round'), 1, runUtilities.run.round).then(() => {
+
+            saveToLocal()
+            window.location.href = '../html/blind.html'
+
+        })
+        
 
     })
     
@@ -421,31 +458,6 @@ export async function checkTagUpdate() {
         saveToLocal()
         
     }
-}
-
-export function sumAnimation (container, value, finalValue) {
-
-    return new Promise(resolve => {
-
-        const colorBg = value >= 0 ? '#F3AD16':'#DF2525'
-        const symbol = value >= 0 ? '+': ''
-
-        container.innerText = symbol + value
-        container.style.color = 'white'
-        container.style.backgroundColor = colorBg
-
-        setTimeout(() => {
-
-            container.innerText = finalValue
-            container.style.color = ''
-            container.style.backgroundColor = ''
-
-            resolve()
-
-        }, 500)
-
-    })
-
 }
 
 export function rerollBoss (blindBoss) {

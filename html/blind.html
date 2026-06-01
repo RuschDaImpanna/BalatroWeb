@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="../css/objects.css">
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
@@ -27,6 +28,10 @@
 
     </head>
     <body>
+
+        <audio id="player0" loop preload="auto"></audio>
+        <audio id="player1" preload="auto"></audio>
+        <audio id="player2" preload="auto"></audio>
 
         <div id="deck">
 
@@ -201,6 +206,6 @@
 
     <script src="../js/infoTab.js" type="module"></script>
     <script src="../js/optionTab.js" type="module"></script>
-    <script src="../js/blind.js"></script>
+    <script src="../js/blind.js" type="module"></script>
 
 </html>
